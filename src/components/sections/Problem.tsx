@@ -49,51 +49,54 @@ export function Problem() {
 
         {/* Pain points — asymmetric 5fr 3fr split */}
         <ScrollReveal>
-        <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-[5fr_3fr] md:gap-12">
-          {/* Left: pain list */}
-          <div className="space-y-5">
-            {painPoints.map((point) => (
-              <div
-                key={point.title}
-                className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
-                style={{ transition: "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)" }}
-              >
-                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
-                  {point.icon}
+          <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-[5fr_3fr] md:gap-12">
+            {/* Left: pain list */}
+            <div className="space-y-5">
+              {painPoints.map((point) => (
+                <div
+                  key={point.title}
+                  className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
+                  style={{
+                    transition:
+                      "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                >
+                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
+                    {point.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-base font-bold text-stone-800 tracking-wide">
+                      {point.title}
+                    </h3>
+                    <p className="mt-1 font-sans text-sm leading-relaxed text-stone-500">
+                      {point.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-heading text-base font-semibold text-stone-800">
-                    {point.title}
-                  </h3>
-                  <p className="mt-1 font-sans text-sm leading-relaxed text-stone-500">
-                    {point.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Right: stark stat */}
-          <div className="flex flex-col justify-center rounded-2xl border border-stone-200 bg-white p-6 md:p-8">
-            <p className="font-sans text-sm text-stone-400">The reality</p>
-            <div className="mt-2 font-heading text-5xl font-bold text-stone-900 md:text-6xl">
-              40+ hours
-            </div>
-            <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
-              The average organising committee spends over 40 hours on manual
-              registration management — time that should have gone into making
-              the fest better.
-            </p>
-            <div className="mt-6 border-t border-stone-100 pt-4">
-              <p className="font-heading text-lg font-semibold italic text-amber-700">
-                "There has to be a better way."
+            {/* Right: stark stat */}
+            <div className="flex flex-col justify-center rounded-2xl border border-stone-200 bg-white p-6 md:p-8">
+              <p className="font-sans text-sm text-stone-400">The reality</p>
+              <div className="mt-2 font-heading text-5xl font-bold text-stone-900 md:text-6xl">
+                40+ hours
+              </div>
+              <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
+                The average organising committee spends over 40 hours on manual
+                registration management — time that should have gone into making
+                the fest better.
               </p>
-              <p className="mt-1 font-sans text-xs text-stone-400">
-                — Every fest coordinator, ever
-              </p>
+              <div className="mt-6 border-t border-stone-100 pt-4">
+                <p className="font-heading text-lg font-semibold italic text-amber-700">
+                  "There has to be a better way."
+                </p>
+                <p className="mt-1 font-sans text-xs text-stone-400">
+                  — Every fest coordinator, ever
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </ScrollReveal>
       </div>
     </section>

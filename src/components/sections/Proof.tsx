@@ -48,8 +48,7 @@ export function Proof() {
             The numbers
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Proven at scale.{" "}
-            <span className="italic">Not a prototype.</span>
+            Proven at scale. <span className="italic">Not a prototype.</span>
           </h2>
           <p className="mt-4 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
             This handled a real 3-day medical college festival with 1700+
@@ -86,40 +85,36 @@ export function Proof() {
           </div>
         </ScrollReveal>
 
-        {/* Analytics screenshot placeholder */}
-        <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-16">
-          <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
-            <div className="h-3 w-3 rounded-full bg-red-400" />
-            <div className="h-3 w-3 rounded-full bg-amber-400" />
-            <div className="h-3 w-3 rounded-full bg-green-400" />
-            <span className="ml-3 font-sans text-xs text-stone-400">
-              Vercel Analytics — Tatvam 2026
-            </span>
-          </div>
-          <div className="flex items-center justify-center bg-stone-100/50 p-8 md:p-12">
-            <div className="text-center">
-              <BarChart3 className="mx-auto h-12 w-12 text-stone-300" />
-              <p className="mt-3 font-sans text-sm text-stone-400">
-                Analytics screenshot placeholder
-              </p>
-              <p className="mt-1 font-sans text-xs text-stone-300">
-                Replace with your Vercel Analytics screenshot
-              </p>
+        {/* Vercel Analytics screenshot */}
+        <ScrollReveal>
+          <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-16">
+            <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
+              <div className="h-3 w-3 rounded-full bg-red-400" />
+              <div className="h-3 w-3 rounded-full bg-amber-400" />
+              <div className="h-3 w-3 rounded-full bg-green-400" />
+              <span className="ml-3 font-sans text-xs text-stone-400">
+                Analytics — Tatvam 2026
+              </span>
             </div>
+            <img
+              src="/analytics.webp"
+              alt="Analytics dashboard showing traffic and performance metrics for Tatvam 2026"
+              className="w-full"
+              width={1225}
+              height={690}
+              loading="lazy"
+            />
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Trust points */}
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-12">
           {trustPoints.map((point) => (
             <div
               key={point.title}
-              className={cn(
-                "rounded-2xl border border-stone-200 bg-white p-5",
-              )}
+              className={cn("rounded-2xl border border-stone-200 bg-white p-5")}
               style={{
-                transition:
-                  "box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1)",
+                transition: "box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1)",
               }}
             >
               <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
