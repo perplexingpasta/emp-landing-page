@@ -69,8 +69,12 @@ export function Hero() {
             Drag the slider to compare
           </p>
           <Compare
-            firstImage="https://placehold.co/900x600/e5e0d8/78716c?text=Old+Fest+Website"
-            secondImage="https://placehold.co/900x600/d4f0e8/0d9488?text=Tatvam+2026+Platform"
+            firstImage="/old.webp"
+            firstImageSrcSet="/old-mobile.webp 960w, /old-tablet.webp 1440w, /old.webp 1920w"
+            firstImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
+            secondImage="/new.webp"
+            secondImageSrcSet="/new-mobile.webp 960w, /new-tablet.webp 1440w, /new.webp 1920w"
+            secondImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
             firstImageClassName="object-cover object-left-top"
             secondImageClassname="object-cover object-left-top"
             slideMode="hover"

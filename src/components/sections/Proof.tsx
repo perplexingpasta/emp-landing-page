@@ -40,8 +40,8 @@ const trustPoints = [
 
 export function Proof() {
   return (
-    <section id="proof" className="py-20 md:py-[96px]">
-      <div className="mx-auto max-w-[1060px] px-4 md:px-6">
+    <section id="proof" className="py-20 md:py-24">
+      <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
