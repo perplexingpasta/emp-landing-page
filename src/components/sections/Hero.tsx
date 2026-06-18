@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Compare } from "@/components/ui/compare";
@@ -12,35 +11,36 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] overflow-hidden bg-gradient-to-b from-stone-50 via-white to-white pt-20"
+      className="relative min-h-[100svh] overflow-hidden pt-20"
     >
-      {/* Subtle background pattern */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,119,6,0.04)_0%,transparent_70%)]" />
-
-      <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-12 md:px-6 md:pb-24 md:pt-20">
+      <div className="relative mx-auto max-w-[1060px] px-4 pb-16 pt-[88px] md:px-6 md:pb-24 md:pt-[120px]">
         {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mx-auto max-w-3xl text-center"
-        >
-          <span className="mb-4 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+        <div className="mx-auto max-w-3xl text-center">
+          {/*<span className="mb-4 inline-block rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
             Trusted by 1700+ delegates at JSS Medical College
-          </span>
-          <h1 className="font-heading text-4xl font-extrabold leading-tight text-stone-900 md:text-5xl lg:text-6xl">
+          </span>*/}
+          <h1 className="font-heading text-4xl font-bold leading-tight text-stone-800 md:text-5xl lg:text-6xl">
             Your college fest deserves{" "}
-            <span className="text-amber-600">better than Google Forms</span>
+            <span className="italic text-amber-600">better</span> than Google
+            Forms
           </h1>
-          <p className="mt-6 text-base leading-relaxed text-stone-500 md:text-lg">
+          <p className="mt-6 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
+            <span>Presenting FestFlow</span>
+            <br />
+            <span>
+              The all-in-one fest management platform for Indian medical
+              colleges.
+            </span>
+          </p>
+          {/*<p className="mt-6 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
             The all-in-one fest management platform. Registrations, payments,
             merch, live dashboards, and QR check-ins — everything handled
             seamlessly. Built by a medic, for medics.
-          </p>
+          </p>*/}
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="group w-full font-sans text-base sm:w-auto"
+              className="group w-full bg-amber-600 font-sans text-base text-white hover:bg-amber-700 sm:w-auto"
               onClick={scrollToCTA}
             >
               Get This for Your Fest
@@ -49,7 +49,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full font-sans text-base sm:w-auto"
+              className="w-full border-stone-300 font-sans text-base text-stone-600 hover:bg-stone-100 hover:text-stone-800 sm:w-auto"
               asChild
             >
               <a
@@ -61,15 +61,10 @@ export function Hero() {
               </a>
             </Button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Before/After Comparison */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="mx-auto mt-12 flex max-w-5xl flex-col items-center gap-4 md:mt-16"
-        >
+        <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center gap-4 md:mt-20">
           <p className="font-sans text-sm font-medium text-stone-400">
             Drag the slider to compare
           </p>
@@ -92,22 +87,17 @@ export function Hero() {
               FestFlow powered
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Quick trust stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 rounded-2xl border border-stone-200/80 bg-white/60 p-6 backdrop-blur-sm md:mt-16 md:gap-8 md:p-8"
-        >
+        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 rounded-2xl border border-stone-200/80 bg-white/60 p-6 backdrop-blur-sm md:mt-16 md:gap-8 md:p-8">
           {[
             { value: "1,700+", label: "Delegates" },
             { value: "50+", label: "Events" },
             { value: "₹10L+", label: "Payments" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-heading text-2xl font-bold text-stone-900 md:text-3xl">
+              <div className="font-heading text-2xl font-bold text-stone-800 md:text-3xl">
                 {stat.value}
               </div>
               <div className="mt-1 font-sans text-xs text-stone-500 md:text-sm">
@@ -115,7 +105,7 @@ export function Hero() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

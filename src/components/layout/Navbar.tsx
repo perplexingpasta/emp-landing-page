@@ -1,15 +1,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  X,
+  AlertTriangle,
+  LayoutGrid,
+  BarChart3,
+  Route,
+  MessageSquareHeart,
+  MessageCircle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Proof", href: "#proof" },
-  { label: "Contact", href: "#cta" },
+  { label: "The Problem", href: "#problem", icon: AlertTriangle },
+  { label: "Features", href: "#features", icon: LayoutGrid },
+  { label: "Proof", href: "#proof", icon: BarChart3 },
+  { label: "How It Works", href: "#how-it-works", icon: Route },
+  { label: "Testimonials", href: "#testimonials", icon: MessageSquareHeart },
+  { label: "Contact", href: "#cta", icon: MessageCircle },
 ];
 
 export function Navbar() {
@@ -49,7 +59,7 @@ export function Navbar() {
         className={cn(
           "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
           isScrolled
-            ? "border-b border-stone-200/80 bg-white/80 shadow-sm backdrop-blur-lg"
+            ? "border-b border-stone-200/40 bg-[#faf5ed]/70 shadow-sm backdrop-blur-lg"
             : "bg-transparent",
         )}
       >
@@ -62,7 +72,7 @@ export function Navbar() {
             }}
             className="flex items-center gap-2"
           >
-            <span className="font-heading text-xl font-bold text-stone-900">
+            <span className="font-heading text-xl font-bold text-stone-800">
               FestFlow
             </span>
             <span className="hidden rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[10px] font-semibold text-amber-700 sm:inline-block">
@@ -76,13 +86,13 @@ export function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="rounded-lg px-3 py-2 font-sans text-sm font-medium text-stone-600 transition-colors hover:bg-stone-100 hover:text-stone-900"
+                className="rounded-lg px-3 py-2 font-sans text-sm font-medium text-stone-600 transition-colors hover:bg-stone-200/60 hover:text-stone-800"
               >
                 {link.label}
               </button>
             ))}
             <Button
-              size="sm"
+              size="lg"
               className="ml-3 font-sans"
               onClick={() => handleNavClick("#cta")}
             >
@@ -105,45 +115,85 @@ export function Navbar() {
         </nav>
       </motion.header>
 
-      {/* Mobile fullscreen menu */}
+      {/* Mobile slide-in drawer + backdrop */}
       <AnimatePresence>
         {isMobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 flex flex-col bg-white pt-20"
-          >
-            <nav className="flex flex-col items-center gap-2 px-6">
-              {navLinks.map((link, i) => (
-                <motion.button
-                  key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * i }}
-                  onClick={() => handleNavClick(link.href)}
-                  className="w-full rounded-xl px-6 py-4 text-center font-heading text-lg font-semibold text-stone-700 transition-colors hover:bg-stone-50 hover:text-stone-900"
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden"
+              onClick={() => setIsMobileOpen(false)}
+            />
+
+            {/* Drawer — slides from left */}
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-y-0 left-0 z-50 w-[280px] bg-[#faf5ed] shadow-2xl md:hidden"
+            >
+              {/* Drawer header */}
+              <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">
+                <span className="font-heading text-lg font-bold text-stone-800">
+                  FestFlow
+                </span>
+                <button
+                  onClick={() => setIsMobileOpen(false)}
+                  className="rounded-lg p-2 text-stone-500 transition-colors hover:bg-stone-100 hover:text-stone-700"
+                  aria-label="Close menu"
                 >
-                  {link.label}
-                </motion.button>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="mt-4 w-full"
-              >
-                <Button
-                  size="lg"
-                  className="w-full font-sans"
-                  onClick={() => handleNavClick("#cta")}
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+
+              {/* Nav links — staggered slide-in + fade */}
+              <nav className="flex flex-col gap-1 px-3 pt-4">
+                {navLinks.map((link, i) => (
+                  <motion.button
+                    key={link.href}
+                    initial={{ opacity: 0, x: -24 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -16 }}
+                    transition={{
+                      delay: 0.08 * i,
+                      duration: 0.35,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    onClick={() => handleNavClick(link.href)}
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-4 font-heading text-lg font-semibold text-stone-800 transition-colors hover:bg-stone-100"
+                  >
+                    {link.label}
+                    <link.icon className="h-5 w-5 shrink-0 text-stone-400" />
+                  </motion.button>
+                ))}
+
+                <motion.div
+                  initial={{ opacity: 0, x: -24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -16 }}
+                  transition={{
+                    delay: 0.08 * navLinks.length,
+                    duration: 0.35,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="mt-3 px-2"
                 >
-                  Get Started
-                </Button>
-              </motion.div>
-            </nav>
-          </motion.div>
+                  <Button
+                    size="lg"
+                    className="w-full font-heading font-bold text-lg"
+                    onClick={() => handleNavClick("#cta")}
+                  >
+                    Get Started
+                  </Button>
+                </motion.div>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

@@ -1,6 +1,6 @@
 import { BarChart3, Globe, Zap, Shield } from "lucide-react";
 import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
-import { SectionHeading } from "@/components/shared/SectionHeading";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { cn } from "@/lib/utils";
 
@@ -16,96 +16,122 @@ const trustPoints = [
     icon: <BarChart3 className="h-5 w-5" />,
     title: "Real analytics",
     description:
-      "The platform served 15,000+ page views across 3 fest days. Peak traffic of 200+ concurrent users — zero crashes.",
+      "15,000+ page views across 3 fest days. Peak of 200+ concurrent users — zero crashes.",
   },
   {
     icon: <Globe className="h-5 w-5" />,
     title: "Pan-India reach",
     description:
-      "Delegates registered from 100+ medical colleges across India. The college autocomplete covers 590+ recognised institutions.",
+      "Delegates from 100+ medical colleges. College autocomplete covers 590+ recognised institutions.",
   },
   {
     icon: <Zap className="h-5 w-5" />,
     title: "Blazing fast",
     description:
-      "Built on Next.js 16, deployed on Vercel's edge network. Pages load in under 1 second, even on 3G mobile networks.",
+      "Next.js 16 on Vercel's edge. Pages load under 1 second, even on 3G mobile networks.",
   },
   {
     icon: <Shield className="h-5 w-5" />,
     title: "Battle-tested",
     description:
-      "Payment system processed 500+ Razorpay transactions. Google Sheets sync handled 2000+ row updates without a single data loss.",
+      "500+ Razorpay transactions. 2000+ Google Sheets row updates. Zero data loss.",
   },
 ];
 
 export function Proof() {
   return (
-    <section id="proof" className="bg-stone-50 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <SectionHeading
-          label="The Numbers"
-          title="Proven at scale. Not a prototype."
-          description="This isn't a side project. It handled a real 3-day medical college festival with 1700+ delegates and zero downtime."
-        />
-
-        {/* Animated stats row */}
-        <div className="mx-auto mb-16 grid max-w-3xl grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-          {stats.map((stat) => (
-            <AnimatedCounter
-              key={stat.label}
-              value={stat.value}
-              suffix={stat.suffix}
-              prefix={stat.prefix}
-              label={stat.label}
-            />
-          ))}
+    <section id="proof" className="py-20 md:py-[96px]">
+      <div className="mx-auto max-w-[1060px] px-4 md:px-6">
+        {/* Section header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            The numbers
+          </span>
+          <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+            Proven at scale.{" "}
+            <span className="italic">Not a prototype.</span>
+          </h2>
+          <p className="mt-4 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
+            This handled a real 3-day medical college festival with 1700+
+            delegates and zero downtime.
+          </p>
         </div>
 
-        {/* Analytics screenshot placeholder */}
+        {/* Animated stats with glowing borders */}
         <ScrollReveal>
-          <div className="mx-auto mb-16 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg">
-            <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
-              <div className="h-3 w-3 rounded-full bg-red-400" />
-              <div className="h-3 w-3 rounded-full bg-amber-400" />
-              <div className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-3 font-sans text-xs text-stone-400">
-                Vercel Analytics — Tatvam 2026
-              </span>
-            </div>
-            <div className="flex items-center justify-center bg-stone-100/50 p-8 md:p-12">
-              <div className="text-center">
-                <BarChart3 className="mx-auto h-12 w-12 text-stone-300" />
-                <p className="mt-3 font-sans text-sm text-stone-400">
-                  Analytics screenshot placeholder
-                </p>
-                <p className="mt-1 font-sans text-xs text-stone-300">
-                  Replace with your Vercel Analytics screenshot
-                </p>
+          <div className="mt-14 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4 md:gap-6">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="relative rounded-2xl border border-stone-200 bg-white p-5 md:p-6"
+              >
+                <GlowingEffect
+                  disabled={false}
+                  glow
+                  blur={15}
+                  spread={30}
+                  proximity={64}
+                  inactiveZone={0.5}
+                  borderWidth={1.5}
+                  movementDuration={3}
+                />
+                <AnimatedCounter
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  prefix={stat.prefix}
+                  label={stat.label}
+                />
               </div>
-            </div>
+            ))}
           </div>
         </ScrollReveal>
 
-        {/* Trust points grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {trustPoints.map((point, i) => (
-            <ScrollReveal key={point.title} delay={i * 0.1}>
-              <div
-                className={cn(
-                  "rounded-2xl border border-stone-200 bg-white p-5 transition-shadow hover:shadow-md",
-                )}
-              >
-                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
-                  {point.icon}
-                </div>
-                <h3 className="font-heading text-sm font-semibold text-stone-900">
-                  {point.title}
-                </h3>
-                <p className="mt-1.5 font-sans text-sm leading-relaxed text-stone-500">
-                  {point.description}
-                </p>
+        {/* Analytics screenshot placeholder */}
+        <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-16">
+          <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
+            <div className="h-3 w-3 rounded-full bg-red-400" />
+            <div className="h-3 w-3 rounded-full bg-amber-400" />
+            <div className="h-3 w-3 rounded-full bg-green-400" />
+            <span className="ml-3 font-sans text-xs text-stone-400">
+              Vercel Analytics — Tatvam 2026
+            </span>
+          </div>
+          <div className="flex items-center justify-center bg-stone-100/50 p-8 md:p-12">
+            <div className="text-center">
+              <BarChart3 className="mx-auto h-12 w-12 text-stone-300" />
+              <p className="mt-3 font-sans text-sm text-stone-400">
+                Analytics screenshot placeholder
+              </p>
+              <p className="mt-1 font-sans text-xs text-stone-300">
+                Replace with your Vercel Analytics screenshot
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust points */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-12">
+          {trustPoints.map((point) => (
+            <div
+              key={point.title}
+              className={cn(
+                "rounded-2xl border border-stone-200 bg-white p-5",
+              )}
+              style={{
+                transition:
+                  "box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1)",
+              }}
+            >
+              <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
+                {point.icon}
               </div>
-            </ScrollReveal>
+              <h3 className="font-heading text-sm font-semibold text-stone-900">
+                {point.title}
+              </h3>
+              <p className="mt-1.5 font-sans text-sm leading-relaxed text-stone-500">
+                {point.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

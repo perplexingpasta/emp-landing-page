@@ -5,38 +5,23 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
-  direction?: "up" | "down" | "left" | "right";
   delay?: number;
-  duration?: number;
 }
 
-const directionMap = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: 40, y: 0 },
-  right: { x: -40, y: 0 },
-};
-
-export function ScrollReveal({
-  children,
-  className,
-  direction = "up",
-  delay = 0,
-  duration = 0.6,
-}: ScrollRevealProps) {
+export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealProps) {
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, ...directionMap[direction] }}
-      animate={
-        isInView
-          ? { opacity: 1, x: 0, y: 0 }
-          : { opacity: 0, ...directionMap[direction] }
-      }
-      transition={{ duration, delay, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 24 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{
+        duration: 0.5,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
     </motion.div>
