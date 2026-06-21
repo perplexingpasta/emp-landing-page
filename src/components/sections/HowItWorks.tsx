@@ -1,6 +1,12 @@
-import { MessageCircle, Settings, Eye, Rocket, Headphones } from "lucide-react";
+import { MessageCircle, Settings, Eye, Rocket, Headphones, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+
+const whatsappNumber = "+919XXXXXXXXX";
+const whatsappMessage = encodeURIComponent(
+  "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
+);
 
 const steps = [
   {
@@ -17,7 +23,7 @@ const steps = [
     title: "I Set Up Your Platform",
     description:
       "Give me 4-6 weeks and I'll have your branded platform ready. Fest name, dates, delegate tiers, event list — everything in place.",
-    color: "bg-stone-100 text-stone-700",
+    color: "bg-amber-100 text-amber-700",
   },
   {
     step: "03",
@@ -25,7 +31,7 @@ const steps = [
     title: "Your Team Reviews",
     description:
       "Take it for a spin. Register as a delegate, try the event cart, check out the merch. I'll hop on a call and walk your team through everything.",
-    color: "bg-stone-100 text-stone-700",
+    color: "bg-amber-100 text-amber-700",
   },
   {
     step: "04",
@@ -106,6 +112,24 @@ export function HowItWorks() {
                     <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
                       {step.description}
                     </p>
+                    {step.step === "01" && (
+                      <div className="mt-3">
+                        <Button
+                          className="group w-full font-sans text-sm"
+                          asChild
+                        >
+                          <a
+                            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <MessageCircle className="h-5 w-5" />
+                            Chat on WhatsApp
+                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                          </a>
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </ScrollReveal>
