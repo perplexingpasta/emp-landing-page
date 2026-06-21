@@ -1,4 +1,11 @@
-import { MessageCircle, Settings, Eye, Rocket, Headphones, ArrowRight } from "lucide-react";
+import {
+  MessageCircle,
+  Settings,
+  Eye,
+  Rocket,
+  Headphones,
+  ArrowRight,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -14,7 +21,7 @@ const steps = [
     icon: <MessageCircle className="h-5 w-5" />,
     title: "You Reach Out on WhatsApp",
     description:
-      "We'll talk about your fest — how many delegates you're expecting, what events you're running, anything unique about your college.",
+      "We talk about your fest — how many delegates you're expecting, what events you're running, your fest requirements.",
     color: "bg-amber-100 text-amber-700",
   },
   {
@@ -22,7 +29,7 @@ const steps = [
     icon: <Settings className="h-5 w-5" />,
     title: "I Set Up Your Platform",
     description:
-      "Give me 4-6 weeks and I'll have your branded platform ready. Fest name, dates, delegate tiers, event list — everything in place.",
+      "Give me 4-6 weeks and I'll have your branded platform completely ready.",
     color: "bg-amber-100 text-amber-700",
   },
   {
@@ -30,7 +37,7 @@ const steps = [
     icon: <Eye className="h-5 w-5" />,
     title: "Your Team Reviews",
     description:
-      "Take it for a spin. Register as a delegate, try the event cart, check out the merch. I'll hop on a call and walk your team through everything.",
+      "You test out the website. I'll hop on a call and walk your team through everything.",
     color: "bg-amber-100 text-amber-700",
   },
   {
@@ -38,7 +45,7 @@ const steps = [
     icon: <Rocket className="h-5 w-5" />,
     title: "Launch & Go Live",
     description:
-      "Your platform goes live on your domain. Registration links shared, emails flowing. You focus on making the fest amazing — I'll keep the platform up & running.",
+      "Your platform goes live! You focus on making the fest amazing — I'll keep the platform up & running.",
     color: "bg-amber-100 text-amber-700",
   },
   {
@@ -46,7 +53,7 @@ const steps = [
     icon: <Headphones className="h-5 w-5" />,
     title: "Real-Time Support",
     description:
-      "I'll be active and monitoring throughout the fest. If anything breaks, we coordinate on WhatsApp and I'll fix it in minutes.",
+      "I'll be active and monitoring throughout the fest to see if anything breaks and fix it right away.",
     color: "bg-amber-100 text-amber-700",
   },
 ];
