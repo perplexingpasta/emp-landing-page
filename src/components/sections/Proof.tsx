@@ -19,9 +19,16 @@ export function Proof() {
             The numbers
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Proven at scale. <span className="italic text-amber-600">Not a prototype.</span>
+            Proven at scale.{" "}
+            <span className="italic text-amber-600">Not a prototype.</span>
           </h2>
         </div>
+
+        {/* Framing */}
+        <p className="mt-6 text-center font-sans text-base text-stone-500 md:text-lg">
+          These aren't projected numbers. This is what FestFlow processed at
+          Tatvam 2026, JSSMC.
+        </p>
 
         {/* Animated stats with glowing borders */}
         <ScrollReveal>
@@ -72,8 +79,8 @@ export function Proof() {
               loading="lazy"
             />
           </div>
-          <div className="mt-8 md:hidden max-w-xs mx-auto">
-            <div className="grid grid-cols-3 divide-x divide-stone-200 rounded-2xl border border-stone-200 bg-white py-1">
+          <div className="mt-8 md:hidden max-w-3xs mx-auto">
+            <div className="grid grid-cols-2 divide-x divide-stone-200 rounded-2xl border border-stone-200 bg-white">
               <div className="flex flex-col items-center py-2">
                 <span className="font-sans text-lg font-semibold text-stone-900">
                   8,846
@@ -88,14 +95,6 @@ export function Proof() {
                 </span>
                 <span className="font-sans text-xs text-stone-500">
                   Page views
-                </span>
-              </div>
-              <div className="flex flex-col items-center py-2">
-                <span className="font-sans text-lg font-semibold text-stone-900">
-                  46%
-                </span>
-                <span className="font-sans text-xs text-stone-500">
-                  Bounce rate
                 </span>
               </div>
             </div>

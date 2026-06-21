@@ -75,6 +75,11 @@ export function Problem() {
             ))}
           </div>
         </ScrollReveal>
+
+        {/* Bridge transition */}
+        <p className="mt-8 text-center font-heading text-xl font-bold italic text-stone-600 md:mt-10 md:text-2xl">
+          It doesn't have to be this way.
+        </p>
       </div>
     </section>
   );

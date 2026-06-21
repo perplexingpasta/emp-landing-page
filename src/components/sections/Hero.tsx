@@ -9,11 +9,8 @@ export function Hero() {
   };
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-[100svh] overflow-hidden pt-20"
-    >
-      <div className="relative mx-auto max-w-[1060px] px-4 pb-12 pt-[88px] md:px-6 md:pb-20 md:pt-[120px]">
+    <section id="hero" className="relative min-h-svh overflow-hidden pt-20">
+      <div className="relative mx-auto max-w-265 px-4 pb-12 pt-22 md:px-6 md:pb-20 md:pt-30">
         {/* Headline */}
         <div className="mx-auto max-w-3xl text-center">
           {/*<span className="mb-4 inline-block rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
