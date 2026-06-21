@@ -30,7 +30,7 @@ const painPoints = [
 
 export function Problem() {
   return (
-    <section id="problem" className="py-20 md:py-28">
+    <section id="problem" className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -50,7 +50,7 @@ export function Problem() {
 
         {/* Pain points — 2×2 grid */}
         <ScrollReveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 md:gap-5">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
             {painPoints.map((point) => (
               <div
                 key={point.title}

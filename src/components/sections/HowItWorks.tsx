@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
-const whatsappNumber = "+919XXXXXXXXX";
+const whatsappNumber = "+916362840780";
 const whatsappMessage = encodeURIComponent(
   "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
 );
@@ -53,11 +53,11 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 md:py-28">
+    <section id="how-it-works" className="bg-[#faf5ed] py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-stone-200 bg-stone-100 px-3 py-1 font-sans text-xs font-medium tracking-wider text-stone-600 uppercase">
+          <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-sky-600 uppercase">
             How it works
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
@@ -66,7 +66,7 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <div className="relative mx-auto mt-14 max-w-3xl md:mt-16">
+        <div className="relative mx-auto mt-12 max-w-3xl md:mt-14">
           {/* Connector line */}
           <div className="absolute top-8 bottom-8 left-[23px] w-px bg-stone-200 md:left-1/2 md:-translate-x-px" />
 

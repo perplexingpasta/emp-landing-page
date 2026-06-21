@@ -9,7 +9,7 @@ export function CTA() {
   );
 
   return (
-    <section id="cta" className="relative overflow-hidden py-20 md:py-20">
+    <section id="cta" className="relative overflow-hidden bg-[#faf5ed] py-16 md:py-20">
       {/* Subtle background accent */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(217,119,6,0.06)_0%,transparent_70%)]" />
 

@@ -11,11 +11,11 @@ const stats = [
 
 export function Proof() {
   return (
-    <section id="proof" className="py-20 md:py-28">
+    <section id="proof" className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+          <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
             The numbers
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
@@ -25,7 +25,7 @@ export function Proof() {
 
         {/* Animated stats with glowing borders */}
         <ScrollReveal>
-          <div className="mt-14 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4 md:gap-6">
+          <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">
             {stats.map((stat) => (
               <div
                 key={stat.label}
@@ -54,7 +54,7 @@ export function Proof() {
 
         {/* Analytics */}
         <ScrollReveal>
-          <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-16">
+          <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-14">
             <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <div className="h-3 w-3 rounded-full bg-amber-400" />

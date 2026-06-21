@@ -29,7 +29,7 @@ const organiserFeatures: { text: string; negative?: boolean }[] = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 md:py-28">
+    <section id="features" className="bg-stone-50 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -44,7 +44,7 @@ export function Features() {
 
         {/* Two-column feature lists */}
         <ScrollReveal>
-          <div className="mt-14 pl-4 grid gap-10 md:mt-16 md:grid-cols-2 md:gap-16">
+          <div className="mt-12 pl-4 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
             {/* Delegates */}
             <div>
               <div className="mb-5 flex items-center gap-2.5">

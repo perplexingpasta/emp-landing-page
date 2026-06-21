@@ -13,7 +13,7 @@ export function Hero() {
       id="hero"
       className="relative min-h-[100svh] overflow-hidden pt-20"
     >
-      <div className="relative mx-auto max-w-[1060px] px-4 pb-16 pt-[88px] md:px-6 md:pb-24 md:pt-[120px]">
+      <div className="relative mx-auto max-w-[1060px] px-4 pb-12 pt-[88px] md:px-6 md:pb-20 md:pt-[120px]">
         {/* Headline */}
         <div className="mx-auto max-w-3xl text-center">
           {/*<span className="mb-4 inline-block rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
@@ -59,7 +59,7 @@ export function Hero() {
         </div>
 
         {/* Before/After Comparison */}
-        <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center gap-4 md:mt-20">
+        <div className="mx-auto mt-12 flex max-w-5xl flex-col items-center gap-4 md:mt-16">
           {/*<p className="font-sans text-sm font-medium text-stone-400">
             Drag the slider to compare
           </p>*/}
@@ -89,7 +89,7 @@ export function Hero() {
         </div>
 
         {/* Quick trust stats */}
-        <div className="mx-auto mt-12 flex justify-center md:mt-16">
+        <div className="mx-auto mt-10 flex justify-center md:mt-14">
           <span className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 font-sans text-xs font-medium text-amber-700">
             <ShieldCheck className="h-4 w-4" />
             Trusted by JSS Medical College, Mysuru

@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { SectionDivider } from "@/components/shared/SectionDivider";
 
 // Lazy-load below-fold sections for performance
 const Problem = lazy(() =>
@@ -44,21 +45,27 @@ function App() {
 
       <main>
         <Hero />
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Problem />
         </Suspense>
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Features />
         </Suspense>
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Proof />
         </Suspense>
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <HowItWorks />
         </Suspense>
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Testimonials />
         </Suspense>
+        <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <CTA />
         </Suspense>
