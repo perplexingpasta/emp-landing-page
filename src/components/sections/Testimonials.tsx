@@ -24,7 +24,8 @@ export function Testimonials() {
             Social proof
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            What people are <span className="italic">saying</span>
+            What people are{" "}
+            <span className="italic text-amber-600">saying</span>
           </h2>
           <p className="mt-4 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
             Real feedback from delegates, organisers, and faculty at JSS Medical
@@ -35,17 +36,17 @@ export function Testimonials() {
 
       {/* Edge-to-edge carousel */}
       <ScrollReveal>
-      <div className="relative mt-12 md:mt-14">
-        {/* Gradient fades on edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-32" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-r from-transparent to-white md:w-32" />
+        <div className="relative mt-12 md:mt-14">
+          {/* Gradient fades on edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-32" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-r from-transparent to-white md:w-32" />
 
-        <ImageCarousel
-          images={testimonialImages}
-          speed="normal"
-          className="[mask-image:none]"
-        />
-      </div>
+          <ImageCarousel
+            images={testimonialImages}
+            speed="normal"
+            className="[mask-image:none]"
+          />
+        </div>
       </ScrollReveal>
 
       <p className="mt-8 text-center font-sans text-sm text-stone-400">

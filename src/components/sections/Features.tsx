@@ -20,9 +20,10 @@ const organiserFeatures: { text: string; negative?: boolean }[] = [
   { text: "Payment Verification" },
   { text: "Marketing Emails" },
   { text: "Data Analytics" },
+  { text: "Zero Data Loss" },
+  { text: "Custom Domain" },
   { text: "Live Admin Dashboard" },
   { text: "System Health & Diagnostics" },
-  { text: "Zero Data Loss" },
   { text: "Event Organization Headache", negative: true },
 ];
 
@@ -37,7 +38,7 @@ export function Features() {
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             Everything your fest needs,{" "}
-            <span className="italic">in one place</span>
+            <span className="italic text-amber-600">in one place</span>
           </h2>
         </div>
 

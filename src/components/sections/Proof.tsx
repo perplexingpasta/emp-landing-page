@@ -19,7 +19,7 @@ export function Proof() {
             The numbers
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Proven at scale. <span className="italic">Not a prototype.</span>
+            Proven at scale. <span className="italic text-amber-600">Not a prototype.</span>
           </h2>
         </div>
 

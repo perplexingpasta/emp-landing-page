@@ -39,14 +39,14 @@ export function Problem() {
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             Managing a college fest shouldn't feel like running a{" "}
-            <span className="italic">startup</span>
+            <span className="italic text-amber-600">startup</span>
           </h2>
         </div>
 
         {/* Compact stat callout */}
-        <p className="mt-4 text-center font-sans text-sm font-medium text-red-600 md:text-base">
+        {/*<p className="mt-4 text-center font-sans text-sm font-medium text-red-600 md:text-base">
           40+ hours lost to manual admin. Every. Single. Fest.
-        </p>
+        </p>*/}
 
         {/* Pain points — 2×2 grid */}
         <ScrollReveal>
