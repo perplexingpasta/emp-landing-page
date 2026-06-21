@@ -34,7 +34,7 @@ export function CTA() {
               <div className="mt-8 flex flex-col items-center gap-4">
                 <Button
                   size="lg"
-                  className="group w-full font-sans text-base sm:w-auto"
+                  className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02] sm:w-auto"
                   asChild
                 >
                   <a

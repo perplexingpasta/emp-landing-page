@@ -53,7 +53,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 md:py-21">
+    <section id="how-it-works" className="py-20 md:py-28">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -115,7 +115,7 @@ export function HowItWorks() {
                     {step.step === "01" && (
                       <div className="mt-3">
                         <Button
-                          className="group w-full font-sans text-sm"
+                          className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02]"
                           asChild
                         >
                           <a

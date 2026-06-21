@@ -1,5 +1,7 @@
 import { ImageCarousel } from "@/components/shared/ImageCarousel";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 // Placeholder images — replace with actual testimonial screenshots
 const testimonialImages = [
@@ -15,7 +17,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden py-20 md:py-[72px]"
+      className="relative overflow-hidden py-20 md:py-28"
     >
       <div className="mx-auto max-w-[1060px] px-4 md:px-6">
         {/* Section header */}
@@ -27,10 +29,6 @@ export function Testimonials() {
             What people are{" "}
             <span className="italic text-amber-600">saying</span>
           </h2>
-          <p className="mt-4 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
-            Real feedback from delegates, organisers, and faculty at JSS Medical
-            College, Mysuru.
-          </p>
         </div>
       </div>
 
@@ -38,28 +36,34 @@ export function Testimonials() {
       <ScrollReveal>
         <div className="relative mt-12 md:mt-14">
           {/* Gradient fades on edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-32" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-r from-transparent to-white md:w-32" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-white to-transparent md:w-32" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-r from-transparent to-white md:w-32" />
 
           <ImageCarousel
             images={testimonialImages}
             speed="normal"
-            className="[mask-image:none]"
+            className="mask-none"
           />
         </div>
       </ScrollReveal>
 
-      <p className="mt-8 text-center font-sans text-sm text-stone-400">
-        Want to see more?{" "}
-        <a
-          href="https://www.tatvam2026.in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-amber-600 underline underline-offset-2 hover:text-amber-700"
+      <div className="mt-8 px-4 md:flex md:justify-center">
+        <Button
+          variant="outline"
+          size="lg"
+          className="group w-full rounded-xl border-2 border-amber-600 bg-amber-50/50 font-sans text-base text-stone-900 font-semibold shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-400 hover:bg-amber-100 md:w-auto"
+          asChild
         >
-          Visit the live platform
-        </a>
-      </p>
+          <a
+            href="https://www.tatvam2026.in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Live Website
+            {/*<ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />*/}
+          </a>
+        </Button>
+      </div>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Compare } from "@/components/ui/compare";
 
@@ -35,7 +35,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="group w-full bg-amber-600 font-sans text-base text-white hover:bg-amber-700 sm:w-auto"
+              className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02] sm:w-auto"
               onClick={scrollToCTA}
             >
               Get This for Your Fest
@@ -44,7 +44,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full border-stone-300 font-sans text-base text-stone-600 hover:bg-stone-100 hover:text-stone-800 sm:w-auto"
+              className="w-full rounded-xl border-amber-200 font-sans text-base text-stone-600 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto"
               asChild
             >
               <a
@@ -89,21 +89,11 @@ export function Hero() {
         </div>
 
         {/* Quick trust stats */}
-        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 rounded-2xl border border-stone-200/80 bg-white/60 p-6 backdrop-blur-sm md:mt-16 md:gap-8 md:p-8">
-          {[
-            { value: "1,700+", label: "Delegates" },
-            { value: "50+", label: "Events" },
-            { value: "₹10L+", label: "Payments" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-heading text-2xl font-bold text-stone-800 md:text-3xl">
-                {stat.value}
-              </div>
-              <div className="mt-1 font-sans text-xs text-stone-500 md:text-sm">
-                {stat.label}
-              </div>
-            </div>
-          ))}
+        <div className="mx-auto mt-12 flex justify-center md:mt-16">
+          <span className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 font-sans text-xs font-medium text-amber-700">
+            <ShieldCheck className="h-4 w-4" />
+            Trusted by JSS Medical College, Mysuru
+          </span>
         </div>
       </div>
     </section>
