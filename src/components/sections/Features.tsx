@@ -4,74 +4,74 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 const delegateFeatures: { headline: string; body: string }[] = [
   {
     headline: "No more 'did you register me?'",
-    body: "Delegates get their own IDs and can check their status themselves. You stop being the human registration desk.",
+    body: "A Unique Delegate ID gets created for each delegate. You stop being the human registration desk.",
   },
   {
-    headline: "No kit chaos at the counter",
+    headline: "No chaos at the registration counter",
     body: "Different registration tiers, different kits. The system tracks who gets what — automatically.",
   },
   {
-    headline: "No form for every single event",
+    headline: "No google forms for every single event",
     body: "Delegates pick everything they want in one go. One checkout. Done.",
   },
   {
-    headline: "They find their group. You don't send 800 links.",
+    headline: "You don't send 800 links",
     body: "Delegates get directed to the right WhatsApp group automatically on registration.",
   },
   {
-    headline: "Opens before they lose interest",
-    body: "The site loads instantly on any screen. No one waits. No one pinches to zoom.",
+    headline: "Blazing fast to load",
+    body: "The site loads instantly on all devices. No one waits. No one pinches to zoom.",
   },
   {
-    headline: "No one asks if their registration went through",
-    body: "Every delegate gets a confirmation the moment they register. Your WhatsApp doesn't blow up.",
+    headline: "'Did my registration go through?'",
+    body: "Every delegate gets a confirmation email the moment they register.",
   },
+  // {
+  //   headline: "You stop being the human timetable",
+  //   body: "The entire schedule is live on the website. Any changes reflect instantly.",
+  // },
   {
-    headline: "You stop being the human timetable",
-    body: "The entire schedule is live on the website. Any changes reflect instantly.",
-  },
-  {
-    headline: "Sell merch before the fest begins",
+    headline: "Sell merch and make money",
     body: "Orders come in, payments are tracked. No cash counters, no chaos on the day.",
   },
 ];
 
 const organiserFeatures: { headline: string; body: string }[] = [
   {
-    headline: "One click. Every registration. Clean.",
-    body: "Export every delegate's data — events, sports, merch — instantly. No copy-pasting from forms.",
+    headline: "Every registration is clean",
+    body: "Export every delegate's data — events, sports, merch — instantly. No copy-pasting from google forms.",
   },
   {
     headline: "Your sheet updates itself",
     body: "Every new registration appears in your Google Sheet automatically. No manual data entry.",
   },
   {
-    headline: "No more screenshot archaeology",
-    body: "Every payment is verified and logged. No digging through WhatsApp to confirm who paid.",
+    headline: "No more screenshot hassle",
+    body: "Every payment is logged. No digging through WhatsApp to confirm who paid.",
   },
-  {
-    headline: "Reach every delegate. In one send.",
-    body: "Send updates, reminders, and announcements to every registered delegate. No copying email IDs from a spreadsheet.",
-  },
+  // {
+  //   headline: "Reach every delegate. In one send.",
+  //   body: "Send updates, reminders, and announcements to every registered delegate. No copying email IDs from a spreadsheet.",
+  // },
   {
     headline: "Know exactly how your fest is performing",
-    body: "See which events are filling up, where delegates are coming from, and what's trending — in real time.",
+    body: "See which events are filling up, where delegates are coming from, etc.",
   },
   {
-    headline: "Your data. Always safe.",
-    body: "Every registration, every payment, every delegate detail is backed up. Even if something goes wrong.",
+    headline: "Your data is always safe",
+    body: "Every registration, every payment, every delegate detail is backed up.",
   },
+  // {
+  //   headline: "It's your fest. It's your domain.",
+  //   body: "Your website lives at yourcollegefest2026.com — not a subdomain of someone else's platform.",
+  // },
   {
-    headline: "It's your fest. It's your domain.",
-    body: "Your website lives at yourcollegefest2026.com — not a subdomain of someone else's platform.",
-  },
-  {
-    headline: "Your entire fest. From your phone.",
+    headline: "Monitor the entire fest from your phone",
     body: "See registrations, delegate counts, payment status — live, from anywhere.",
   },
   {
     headline: "One person. One entry. Always.",
-    body: "The system flags duplicates so you never chase the same person twice.",
+    body: "The system flags duplicates so you never chase the same person or registration twice.",
   },
 ];
 
@@ -97,15 +97,18 @@ export function Features() {
           <div className="mt-12 pl-4 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
             {/* Delegates */}
             <div>
-              <div className="mb-5 flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+              <div className="mb-5 flex items-start gap-2.5">
+                <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                   <Users className="h-4 w-4" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-stone-800">
-                  For delegates
-                </h3>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-stone-800">
+                    For delegates
+                  </h3>
+                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
+                </div>
               </div>
-              <ul className="space-y-5 pl-6">
+              <ul className="space-y-5 pl-6 max-w-80">
                 {delegateFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
@@ -124,15 +127,18 @@ export function Features() {
 
             {/* Organisers */}
             <div>
-              <div className="mb-5 flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+              <div className="mb-5 flex items-start gap-2.5">
+                <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                   <LayoutDashboard className="h-4 w-4" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-stone-800">
-                  For organisers
-                </h3>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-stone-800">
+                    For organisers
+                  </h3>
+                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
+                </div>
               </div>
-              <ul className="space-y-5 pl-6">
+              <ul className="space-y-5 pl-6 max-w-80">
                 {organiserFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
