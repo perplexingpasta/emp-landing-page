@@ -6,25 +6,25 @@ const painPoints = [
     icon: <FileSpreadsheet className="h-5 w-5" />,
     title: "Google Forms chaos",
     description:
-      "One form for delegates, another for events, a third for payments. Data scattered across 10 different sheets. Someone always messes up a formula.",
+      "Ten sheets, three forms, zero coherence. Someone always breaks a formula.",
   },
   {
     icon: <Users className="h-5 w-5" />,
     title: "Duplicate registrations",
     description:
-      "Same person registers twice with different emails. No way to catch it. Payment reconciliation becomes a nightmare when you can't tell who paid.",
+      "Same person, different emails — no way to tell who actually paid.",
   },
   {
     icon: <DollarSign className="h-5 w-5" />,
     title: "Payment tracking hell",
     description:
-      "Screenshot-based payment verification. Screenshots get lost in WhatsApp groups. Someone has to manually check every single one against a bank statement.",
+      "Screenshots buried in WhatsApp. Manual bank statement cross-checking. Every. Single. Student.",
   },
   {
     icon: <Clock className="h-5 w-5" />,
     title: "Hours lost to admin work",
     description:
-      "Exporting CSVs, merging sheets, sending confirmation emails one by one, printing ID cards manually. Your organising team spends more time on admin than on the actual fest.",
+      "Your team spends more time on spreadsheets than on the actual fest.",
   },
 ];
 
@@ -41,61 +41,38 @@ export function Problem() {
             Managing a college fest shouldn't feel like running a{" "}
             <span className="italic">startup</span>
           </h2>
-          <p className="mt-4 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
-            Every medical college fest faces the same headaches. You're here
-            because you've felt them too.
-          </p>
         </div>
 
-        {/* Pain points — asymmetric 5fr 3fr split */}
-        <ScrollReveal>
-          <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-[5fr_3fr] md:gap-12">
-            {/* Left: pain list */}
-            <div className="space-y-5">
-              {painPoints.map((point) => (
-                <div
-                  key={point.title}
-                  className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
-                  style={{
-                    transition:
-                      "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)",
-                  }}
-                >
-                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
-                    {point.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-base font-bold text-stone-800 tracking-wide">
-                      {point.title}
-                    </h3>
-                    <p className="mt-1 font-sans text-sm leading-relaxed text-stone-500">
-                      {point.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Compact stat callout */}
+        <p className="mt-4 text-center font-sans text-sm font-medium text-red-600 md:text-base">
+          40+ hours lost to manual admin. Every. Single. Fest.
+        </p>
 
-            {/* Right: stark stat */}
-            <div className="flex flex-col justify-center rounded-2xl border border-stone-200 bg-white p-6 md:p-8">
-              <p className="font-sans text-sm text-stone-400">The reality</p>
-              <div className="mt-2 font-heading text-5xl font-bold text-stone-900 md:text-6xl">
-                40+ hours
+        {/* Pain points — 2×2 grid */}
+        <ScrollReveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 md:gap-5">
+            {painPoints.map((point) => (
+              <div
+                key={point.title}
+                className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
+                style={{
+                  transition:
+                    "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)",
+                }}
+              >
+                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
+                  {point.icon}
+                </div>
+                <div>
+                  <h3 className="font-heading text-base font-bold text-stone-800 tracking-wide">
+                    {point.title}
+                  </h3>
+                  <p className="mt-1 font-sans text-sm leading-relaxed text-stone-500">
+                    {point.description}
+                  </p>
+                </div>
               </div>
-              <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
-                The average organising committee spends over 40 hours on manual
-                registration management — time that should have gone into making
-                the fest better.
-              </p>
-              <div className="mt-6 border-t border-stone-100 pt-4">
-                <p className="font-heading text-lg font-semibold italic text-amber-700">
-                  "There has to be a better way."
-                </p>
-                <p className="mt-1 font-sans text-xs text-stone-400">
-                  — Every fest coordinator, ever
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </ScrollReveal>
       </div>
