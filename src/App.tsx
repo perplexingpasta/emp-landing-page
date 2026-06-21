@@ -8,9 +8,19 @@ import { SectionDivider } from "@/components/shared/SectionDivider";
 const Problem = lazy(() =>
   import("@/components/sections/Problem").then((m) => ({ default: m.Problem })),
 );
+const ImagineThis = lazy(() =>
+  import("@/components/sections/ImagineThis").then((m) => ({
+    default: m.ImagineThis,
+  })),
+);
 const Features = lazy(() =>
   import("@/components/sections/Features").then((m) => ({
     default: m.Features,
+  })),
+);
+const Prestige = lazy(() =>
+  import("@/components/sections/Prestige").then((m) => ({
+    default: m.Prestige,
   })),
 );
 const Proof = lazy(() =>
@@ -24,6 +34,11 @@ const HowItWorks = lazy(() =>
 const Testimonials = lazy(() =>
   import("@/components/sections/Testimonials").then((m) => ({
     default: m.Testimonials,
+  })),
+);
+const Pricing = lazy(() =>
+  import("@/components/sections/Pricing").then((m) => ({
+    default: m.Pricing,
   })),
 );
 const CTA = lazy(() =>
@@ -51,7 +66,15 @@ function App() {
         </Suspense>
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
+          <ImagineThis />
+        </Suspense>
+        <SectionDivider />
+        <Suspense fallback={<SectionFallback />}>
           <Features />
+        </Suspense>
+        <SectionDivider />
+        <Suspense fallback={<SectionFallback />}>
+          <Prestige />
         </Suspense>
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
@@ -64,6 +87,10 @@ function App() {
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Testimonials />
+        </Suspense>
+        <SectionDivider />
+        <Suspense fallback={<SectionFallback />}>
+          <Pricing />
         </Suspense>
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
