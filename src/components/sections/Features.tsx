@@ -1,24 +1,28 @@
-import { Users, LayoutDashboard, CheckCircle2 } from "lucide-react";
+import { Users, LayoutDashboard, CheckCircle2, XCircle } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
-const delegateFeatures = [
-  "3-Tier Delegate Registration",
-  "Event Registration Cart Checkout",
-  "WhatsApp Groups & Community",
-  "Gallery + Results Pages",
-  "Confirmation Emails",
-  "Live Fest Schedule",
-  "Merch Store",
+const delegateFeatures: { text: string; negative?: boolean }[] = [
+  { text: "Unique Delegate Registration IDs" },
+  { text: "Delegate Registration Tiers/Kits" },
+  { text: "Event Registration Cart Checkout" },
+  { text: "WhatsApp Groups & Community" },
+  { text: "Gallery + Results Pages" },
+  { text: "Confirmation Emails" },
+  { text: "Live Fest Schedule" },
+  { text: "Merch Store" },
+  { text: "Duplicate Delegate Registrations", negative: true },
+  { text: "Duplicate Event Registrations", negative: true },
 ];
 
-const organiserFeatures = [
-  "Unique Delegate ID to prevent Duplicate Registrations",
-  "Payment Verification",
-  "Google Sheets Auto-Sync",
-  "Data Analytics",
-  "Data Export for Cultural, Sports & Merch Registrations",
-  "Live Admin Dashboard",
-  "System Health & Diagnostics",
+const organiserFeatures: { text: string; negative?: boolean }[] = [
+  { text: "Data Export for Cultural, Sports & Merch Registrations" },
+  { text: "Google Sheets Auto-Sync" },
+  { text: "Payment Verification" },
+  { text: "Marketing Emails" },
+  { text: "Data Analytics" },
+  { text: "Live Admin Dashboard" },
+  { text: "System Health & Diagnostics" },
+  { text: "Event Organization Headache", negative: true },
 ];
 
 export function Features() {
@@ -51,10 +55,14 @@ export function Features() {
               </div>
               <ul className="space-y-3.5 pl-6">
                 {delegateFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
-                    <span className="font-sans text-sm text-stone-600 max-w-68">
-                      {feature}
+                  <li key={feature.text} className="flex items-start gap-3">
+                    {feature.negative ? (
+                      <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-red-400" />
+                    ) : (
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+                    )}
+                    <span className="font-sans text-sm max-w-68 text-stone-600">
+                      {feature.text}
                     </span>
                   </li>
                 ))}
@@ -73,10 +81,14 @@ export function Features() {
               </div>
               <ul className="space-y-3.5 pl-6">
                 {organiserFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
-                    <span className="font-sans text-sm text-stone-600 max-w-68">
-                      {feature}
+                  <li key={feature.text} className="flex items-start gap-3">
+                    {feature.negative ? (
+                      <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-red-400" />
+                    ) : (
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+                    )}
+                    <span className="font-sans text-sm max-w-68 text-stone-600">
+                      {feature.text}
                     </span>
                   </li>
                 ))}
