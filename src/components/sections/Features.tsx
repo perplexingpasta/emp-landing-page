@@ -6,7 +6,7 @@ const delegateFeatures: { text: string; negative?: boolean }[] = [
   { text: "Delegate Registration Tiers/Kits" },
   { text: "Event Registration Cart Checkout" },
   { text: "WhatsApp Groups & Community" },
-  { text: "Gallery + Results Pages" },
+  { text: "Blazing Fast & Responsive Website" },
   { text: "Confirmation Emails" },
   { text: "Live Fest Schedule" },
   { text: "Merch Store" },
@@ -22,6 +22,7 @@ const organiserFeatures: { text: string; negative?: boolean }[] = [
   { text: "Data Analytics" },
   { text: "Live Admin Dashboard" },
   { text: "System Health & Diagnostics" },
+  { text: "Zero Data Loss" },
   { text: "Event Organization Headache", negative: true },
 ];
 
