@@ -4,10 +4,13 @@ import {
   Menu,
   X,
   AlertTriangle,
-  LayoutGrid,
+  // Sparkles,
+  // LayoutGrid,
+  Star,
   BarChart3,
   Route,
   MessageSquareHeart,
+  IndianRupee,
   MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,10 +18,13 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "The Problem", href: "#problem", icon: AlertTriangle },
-  { label: "Features", href: "#features", icon: LayoutGrid },
+  // { label: "Imagine This", href: "#imagine", icon: Sparkles },
+  { label: "Features", href: "#features", icon: Star },
+  // { label: "Prestige", href: "#prestige", icon: Star },
   { label: "Proof", href: "#proof", icon: BarChart3 },
   { label: "How It Works", href: "#how-it-works", icon: Route },
   { label: "Testimonials", href: "#testimonials", icon: MessageSquareHeart },
+  { label: "Pricing", href: "#pricing", icon: IndianRupee },
   { label: "Contact", href: "#cta", icon: MessageCircle },
 ];
 
