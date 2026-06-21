@@ -3,9 +3,9 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const stats = [
-  { value: 1700, suffix: "+", label: "Delegates registered" },
-  { value: 50, suffix: "+", label: "Events managed" },
-  { value: 10, prefix: "₹", suffix: "L+", label: "Payments processed" },
+  { value: 1768, label: "Delegates registered" },
+  { value: 51, label: "Events managed" },
+  { value: 7, prefix: "₹", suffix: ".97L", label: "Amount handled" },
   { value: 99, suffix: ".9%", label: "Uptime during fest" },
 ];
 

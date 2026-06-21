@@ -55,7 +55,7 @@ export function ImageCarousel({
         {images.map((src, idx) => (
           <div
             key={idx}
-            className="h-64 w-80 shrink-0 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm md:h-72 md:w-96"
+            className="h-72 w-48 shrink-0 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm md:h-96 md:w-64"
           >
             <img
               src={src}
