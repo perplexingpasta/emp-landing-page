@@ -1,179 +1,174 @@
 # PLAN.md — FestFlow Landing Page
 
-A pure client-side static landing page for FestFlow, a white-label fest management platform targeting Indian medical colleges. Built with Vite + React 19 + Tailwind CSS v4.
+Static client-side landing page for FestFlow, a white-label fest management platform. Built with Vite 8 + React 19 + Tailwind CSS v4. Zero backend, zero API calls, zero runtime data dependencies.
 
 ## File Tree
 
 ```
 .
-├── index.html                    # HTML shell, Google Fonts preconnects
-├── vite.config.ts                # Vite 8, @/ path alias, Tailwind plugin
-├── tsconfig.json                 # Root TS config (references)
-├── tsconfig.app.json             # App TS: ES2023, bundler mode, React JSX
-├── tsconfig.node.json            # Node TS: for vite.config.ts
-├── eslint.config.js              # Flat config: TS, React hooks, React refresh
-├── components.json               # shadcn/ui config (new-york style, lucide icons)
-├── package.json                  # Dependencies & scripts
-├── public/
+├── index.html                       # HTML shell, Google Fonts preconnect + <link>
+├── vite.config.ts                   # Vite 8, @/ path alias, Tailwind plugin
+├── tsconfig.json                    # Root TS config (references tsconfig.app + tsconfig.node)
+├── tsconfig.app.json                # App TS: ES2023, bundler mode, React JSX
+├── tsconfig.node.json               # Node TS: covers vite.config.ts only
+├── eslint.config.js                 # Flat config: TS, React hooks, React refresh
+├── components.json                  # shadcn/ui config (new-york style, lucide icons, aceternity registry)
+├── package.json
+├── public/                          # Static assets served at /
 │   ├── favicon.svg
-│   └── icons.svg
-├── dist/                         # Pre-built output (static .html + .js + .css)
+│   ├── icons.svg
+│   ├── old.webp, old-mobile.webp, old-tablet.webp   # Before images for Compare slider
+│   ├── new.webp, new-mobile.webp, new-tablet.webp   # After images for Compare slider
+│   └── analytics.webp                                # Analytics screenshot (Proof section)
+├── dist/                            # Build output (NOT tracked in git)
 └── src/
-    ├── main.tsx                  # Entry point
-    ├── App.tsx                   # Shell: Navbar + lazy sections + Footer
-    ├── index.css                 # Tailwind v4, CSS vars, fonts, scrollbar
+    ├── main.tsx                     # Entry: ReactDOM.createRoot, StrictMode
+    ├── App.tsx                      # Shell: Navbar + sections (lazy-loaded) + SectionDividers + Footer
+    ├── index.css                    # Tailwind v4, CSS vars, fonts, scrollbar, reduced-motion
     ├── lib/
-    │   └── utils.ts              # cn() — tailwind-merge + clsx
+    │   └── utils.ts                 # cn() = twMerge(clsx(inputs))
     ├── hooks/
-    │   └── useIntersectionObserver.ts  # Scroll visibility hook
+    │   └── useIntersectionObserver.ts
     ├── components/
     │   ├── layout/
-    │   │   ├── Navbar.tsx        # Fixed nav, scroll detection, mobile drawer
-    │   │   └── Footer.tsx        # Simple copyright footer
+    │   │   ├── Navbar.tsx           # Fixed nav, scroll detection, mobile slide-in drawer
+    │   │   └── Footer.tsx           # Copyright footer
     │   ├── sections/
-    │   │   ├── Hero.tsx          # Above-fold: headline, Compare slider, stats
-    │   │   ├── Problem.tsx       # Pain points + "40+ hours" stat
-    │   │   ├── Features.tsx      # Bento grid feature cards
-    │   │   ├── Proof.tsx         # Animated stats, analytics mock, trust points
-    │   │   ├── HowItWorks.tsx    # 5-step timeline
-    │   │   ├── Testimonials.tsx  # Image carousel (placeholder images)
-    │   │   └── CTA.tsx           # WhatsApp contact, limited-slots messaging
+    │   │   ├── Hero.tsx             # Above-fold: headline, Compare slider, CTA buttons
+    │   │   ├── Problem.tsx          # 4 pain-point cards (2×2 grid)
+    │   │   ├── Features.tsx         # Two-column checklist (delegate + organiser features)
+    │   │   ├── Proof.tsx            # Animated stats + analytics screenshot
+    │   │   ├── HowItWorks.tsx       # 5-step vertical timeline (alternates L/R on desktop)
+    │   │   ├── Testimonials.tsx     # Auto-scrolling image carousel (placehold.co placeholders)
+    │   │   └── CTA.tsx              # WhatsApp contact card with real number
     │   ├── shared/
-    │   │   ├── ScrollReveal.tsx          # Scroll-triggered fade-up wrapper
-    │   │   ├── AnimatedCounter.tsx       # Eased number counter
-    │   │   └── ImageCarousel.tsx         # Infinite-scroll CSS carousel
-    │   └── ui/                           # shadcn/ui + aceternity components
-    │       ├── button.tsx        # Used (Navbar, Hero, CTA)
-    │       ├── compare.tsx       # Used (Hero — before/after slider)
-    │       ├── glowing-effect.tsx  # Used (Proof — mouse-tracking border glow)
-    │       ├── sparkles.tsx      # Used by compare.tsx (simplified stub)
-    │       ├── badge.tsx         # UNUSED — dead code
-    │       ├── card.tsx          # UNUSED — dead code
-    │       ├── separator.tsx     # UNUSED — dead code
-    │       ├── lamp.tsx          # UNUSED — dead code
-    │       ├── timeline.tsx      # UNUSED — dead code
-    │       └── noise-background.tsx  # UNUSED — dead code
+    │   │   ├── ScrollReveal.tsx     # Scroll-triggered fade-up (framer-motion)
+    │   │   ├── AnimatedCounter.tsx  # Eased number counter (requestAnimationFrame)
+    │   │   ├── ImageCarousel.tsx    # Infinite CSS-scroll carousel (clones children)
+    │   │   └── SectionDivider.tsx   # Thin horizontal rule between sections in App
+    │   └── ui/
+    │       ├── button.tsx           # USED — shadcn/ui button with cva() variants
+    │       ├── compare.tsx          # USED — aceternity before/after image slider
+    │       ├── glowing-effect.tsx   # USED — mouse-tracking conic-gradient border glow
+    │       ├── sparkles.tsx         # USED by compare.tsx — simplified stub (CSS pulses, not particles)
+    │       ├── badge.tsx            # UNUSED — dead code
+    │       ├── card.tsx             # UNUSED — dead code
+    │       ├── separator.tsx        # UNUSED — dead code
+    │       ├── lamp.tsx             # UNUSED — dead code
+    │       ├── timeline.tsx         # UNUSED — dead code
+    │       └── noise-background.tsx # UNUSED — dead code
 ```
 
 ## Key Modules (ranked by importance)
 
-### 1. `src/App.tsx` — Shell + lazy loading
-The entire page is a single scrollable `<div>` with `<Navbar>` at top, then 7 sections in `<main>`, then `<Footer>`. The first section (Hero) is eagerly loaded; all below-fold sections use `React.lazy()` + `<Suspense>` with a spinner fallback. No router — navigation is anchor-scroll (`#problem`, `#features`, etc.).
+### 1. `src/App.tsx` — Shell & lazy loading
+Single scrollable `<div>` with `<Navbar>`, then `<main>` containing `<Hero>` (eager) + 6 lazy-loaded sections separated by `<SectionDivider />`, then `<Footer>`. Uses `React.lazy()` + `React.Suspense` with a spinner `SectionFallback`. No router — anchor-scroll via `scrollIntoView`.
 
-### 2. `src/index.css` — Design token source of truth
-Tailwind v4 with `@theme inline` block. CSS custom properties for colors (all oklch), border-radius scale, and scroll animation keyframes. Two font families: `font-sans` (DM Sans) and `font-heading` (Playfair Display). Background color hardcoded as `#faf5ed` on `body`. Includes custom scrollbar styles and `prefers-reduced-motion` handling.
+### 2. `src/index.css` — Design tokens
+Tailwind v4 with `@theme inline` defining `--font-sans` (DM Sans), `--font-heading` (Playfair Display), color primitives (all map to CSS vars), radius scale, and `animate-scroll` keyframe. The `:root` block holds the actual oklch color values. Background color is hardcoded as `#faf5ed` on `body`. Includes `prefers-reduced-motion` handling and custom scrollbar styles.
 
 ### 3. `src/hooks/useIntersectionObserver.ts` — Animation trigger
-Single hook using native `IntersectionObserver`. Returns `{ ref, isInView }`. By default, fires once (`triggerOnce: true`). Used by `ScrollReveal` and `AnimatedCounter` to trigger entrance animations on scroll.
+Returns `{ ref, isInView }`. Uses native `IntersectionObserver`. Fires once by default (`triggerOnce: true`). Powers `ScrollReveal` and `AnimatedCounter`.
 
-### 4. `src/components/shared/ScrollReveal.tsx` — Standard animation wrapper
-Wraps children in a `motion.div` that fades up (`opacity: 0, y: 24` → `opacity: 1, y: 0`) when scrolled into view. Accepts `delay` prop. Used by most sections.
+### 4. `src/components/shared/ScrollReveal.tsx` — Entrance animation
+Wraps children in `motion.div` (from `framer-motion`) that fades up on scroll. Accepts `delay` prop. Used by most sections.
 
-### 5. `src/components/shared/AnimatedCounter.tsx` — Number animation
-Uses `requestAnimationFrame` with easeOutCubic easing to count from 0 to a target number when the element enters viewport. Supports `prefix` and `suffix` (e.g., "₹", "L+").
+### 5. `src/components/sections/Hero.tsx` — Above-fold
+Headline, CTA buttons (one scrolls to `#cta`, one links to `https://www.tatvam2026.in`), a `Compare` before/after slider using real `/public/` images with responsive `srcSet`/`sizes`, and a trust badge. Most visually complex section.
 
-### 6. `src/components/sections/Hero.tsx` — Above-fold section
-Headline, CTA buttons (one scrolls to `#cta`, one links to `https://www.tatvam2026.in`), a `Compare` before/after slider component, and a 3-stat trust bar. The most visually complex section.
+### 6. `src/components/ui/compare.tsx` — Before/after slider
+Aceternity UI component. Renders two `<img>` elements clipped via `clipPath`. Supports `hover` and `drag` slide modes, optional autoplay with ping-pong. Uses `motion/react` for clip-path animation and `SparklesCore` (stub) for divider effects. Handles both mouse and touch. ~180 lines.
 
-### 7. `src/components/ui/compare.tsx` — Before/after image slider
-Aceternity UI component. Renders two images with a draggable vertical divider. Supports `hover` and `drag` slide modes, optional autoplay. Uses `motion/react` for animation and `SparklesCore` for divider sparkle effects. Most complex UI component in the project (~180 lines).
+### 7. `src/components/layout/Navbar.tsx` — Fixed nav + mobile drawer
+Scroll-aware (transparent → blurred after 20px). Desktop: horizontal link buttons + "Get Started" CTA. Mobile: slide-in drawer from left with staggered link animations, backdrop, body scroll lock. Branded "FestFlow" + "by Rexon" badge.
 
-### 8. `src/components/ui/glowing-effect.tsx` — Mouse-tracking glow
-Aceternity UI component. Renders a conic-gradient border that follows the mouse cursor around a container. Uses `motion/react` for smooth angle animation and `requestAnimationFrame` for position tracking. Used solely in the Proof section around stat cards.
-
-### 9. `src/components/layout/Navbar.tsx` — Fixed nav + mobile drawer
-Scroll-aware transparency toggle (`window.scrollY > 20`). Desktop: horizontal button links. Mobile: slide-in drawer from left with staggered link animations, backdrop click-to-close. Body scroll lock when open. All nav clicks scroll to anchor targets.
-
-### 10. `src/lib/utils.ts` — cn() utility
-Standard shadcn/ui pattern: `twMerge(clsx(inputs))`. Used throughout for conditional className merging.
+### 8. `src/components/sections/Proof.tsx` — Social proof
+`AnimatedCounter` stats in a 2×2 / 4-col grid inside `GlowingEffect` bordered cards. Below that, an analytics screenshot (`/analytics.webp`) in a mock browser chrome, plus a mobile-only stats row.
 
 ## Data Flow
 
-**There is no data flow.** This is a pure static marketing page with zero runtime data dependencies:
+There is no data flow. This is a static page:
 
-- **No API calls.** No `fetch`, no `axios`, no server endpoints.
-- **No router.** It's a single HTML page. Anchor links (`#problem`, `#features`, etc.) trigger `scrollIntoView` via `handleNavClick` or direct `<a href>`.
-- **No state management.** Component-local `useState` only (mobile menu open, scroll state, animation triggers).
-- **No backend.** The `dist/` folder is deployed as static files.
-- **No environment variables.** Nothing in `.env`, no `import.meta.env` usage.
+- **No API calls.** No `fetch`, no `axios`.
+- **No router.** Single-page. Anchor links (`#problem`, `#features`, etc.) trigger `scrollIntoView`.
+- **No state management.** Only component-local `useState` (mobile menu, scroll state, animation triggers).
+- **No backend.** Deployed as static files from `dist/`.
+- **No environment variables.** No `.env`, no `import.meta.env`.
 
-The only external references are:
-- Google Fonts (preconnect in `index.html`)
-- `https://www.tatvam2026.in` (live demo link)
-- `https://wa.me/+919XXXXXXXXX` (WhatsApp CTA — placeholder number)
-- `https://placehold.co/...` (placeholder images in Hero Compare + Testimonials carousel)
+External references (hardcoded):
+- Google Fonts (CDN `<link>` in `index.html`)
+- `https://www.tatvam2026.in` (live demo link, used in Hero + Testimonials)
+- WhatsApp: `+916362840780` (CTA.tsx) and `+919XXXXXXXXX` (HowItWorks.tsx — see tech debt)
+- `https://placehold.co/...` (Testimonials carousel only)
 
 ## External Integrations & Env Vars
 
-| Service | Used In | Notes |
-|---------|---------|-------|
-| Google Fonts | `index.html` | DM Sans + Playfair Display, loaded via CDN `<link>` |
-| WhatsApp | `CTA.tsx` | Hardcoded `whatsappNumber = "+919XXXXXXXXX"` — **placeholder, must be replaced** |
-| tatvam2026.in | `Hero.tsx`, `Testimonials.tsx` | External link to live demo |
-| placehold.co | `Hero.tsx`, `Testimonials.tsx`, `Proof.tsx` | Placeholder images — replace with real screenshots |
+| Integration | Where | Notes |
+|---|---|---|
+| Google Fonts | `index.html` | DM Sans + Playfair Display via CDN `<link>` |
+| WhatsApp | `CTA.tsx`, `HowItWorks.tsx` | Two different numbers hardcoded (see tech debt) |
+| tatvam2026.in | `Hero.tsx`, `Testimonials.tsx` | External demo link |
+| placehold.co | `Testimonials.tsx` | Placeholder testimonial images |
 
-**No environment variables are needed.** This is a zero-config static site.
+**No environment variables needed.** Zero-config static site.
 
 ## Verified Conventions
 
-- **Exports:** Named exports throughout, except `App.tsx` which uses `export default function App`.
-- **Path alias:** `@/` → `./src/` (configured in `vite.config.ts` and `tsconfig.app.json`).
-- **CSS:** Tailwind v4 `@theme inline` — no `tailwind.config` file. Design tokens defined as CSS custom properties with `@theme inline` and `:root` blocks.
-- **Colors:** oklch() exclusively. Primary amber: `oklch(0.68 0.17 75)`. Background: `#faf5ed` (hardcoded, not using a CSS var).
-- **Fonts:** `font-sans` = DM Sans (body), `font-heading` = Playfair Display (headings). Applied via Tailwind utility classes.
-- **Animation:** `framer-motion` for entrance animations and gestures; `motion/react` for newer motion components (used in `compare.tsx`, `glowing-effect.tsx`, `noise-background.tsx`). Custom easing `[0.22, 1, 0.36, 1]` used consistently.
-- **Component structure:** `components/layout/` for shell, `components/sections/` for page sections, `components/shared/` for reusable animation wrappers, `components/ui/` for design-system primitives (shadcn/ui + aceternity).
+- **Exports:** Named exports throughout. Only exception: `App.tsx` uses `export default function App`.
+- **Path alias:** `@/` → `./src/` (in vite.config.ts, tsconfig.app.json, tsconfig.json).
+- **CSS:** Tailwind v4 `@theme inline` — no `tailwind.config` file. All colors in oklch(). Background `#faf5ed` hardcoded on `body`.
+- **Fonts:** `font-sans` = DM Sans, `font-heading` = Playfair Display.
+- **Animation:** `framer-motion` used in Navbar.tsx and ScrollReveal.tsx. `motion/react` used in compare.tsx, glowing-effect.tsx (and the 3 unused aceternity components). Custom easing `[0.22, 1, 0.36, 1]` used consistently.
+- **Component folders:** `layout/` (shell), `sections/` (page sections), `shared/` (reusable wrappers), `ui/` (design-system primitives).
 - **shadcn/ui patterns:** `data-slot` attributes, `cva()` for variants, `Slot.Root` for `asChild`.
-- **TypeScript:** TypeScript 6 with `verbatimModuleSyntax: true`, `erasableSyntaxOnly: true`, `noUnusedLocals: true`, `noUnusedParameters: true`.
-- **No testing framework** configured — zero test files.
-- **Server:** None. This project has no backend code whatsoever.
+- **TypeScript:** TS 6 with `verbatimModuleSyntax`, `erasableSyntaxOnly`, `noUnusedLocals`, `noUnusedParameters`.
+- **Build:** `tsc -b && vite build` → `dist/` (not tracked in git). `npm run dev` for Vite dev server.
+- **No tests.** Zero test files, no testing framework.
 
 ## Known Workarounds & Tech Debt
 
-1. **WhatsApp number is a placeholder** (`+919XXXXXXXXX` in `CTA.tsx`). The CTA button will not work until replaced with a real number.
-2. **All testimonial images are placeholders** (`placehold.co` URLs in `Testimonials.tsx`). Must be replaced with real screenshots.
-3. **Analytics screenshot is a placeholder** (`Proof.tsx` lines 78-84). Replace with the actual Vercel Analytics screenshot.
-4. **Six unused UI components** in `src/components/ui/`: `badge.tsx`, `card.tsx`, `separator.tsx`, `lamp.tsx`, `timeline.tsx`, `noise-background.tsx`. These are shadcn/ui and aceternity boilerplate copied in but never imported by any section. Safe to delete if they're not needed, but they won't add to the bundle since nothing imports them.
-5. **`motion` and `framer-motion` both installed.** `motion` (v12.40.0) is the newer package; `framer-motion` (v12.40.0) is also installed. Some components import from `framer-motion`, others from `motion/react`. Consider consolidating to one.
-6. **`radix-ui` is the meta-package** (v1.6.0). This pulls in every Radix package. Only `Slot` is actually used (in `button.tsx` and `badge.tsx`). Bundle size could be reduced by switching to `@radix-ui/react-slot`.
-7. **`SparklesCore` is a stub** — it renders CSS gradient pulses, not real particle animation. The original aceternity `SparklesCore` was replaced with a simplified version.
-8. **`lamp.tsx` exports both** a `default` function (`LampDemo`) and a named export (`LampContainer`). This is from the aceternity demo and is unconventional for the project's named-export pattern.
-9. **No README.md** — the file `college-fest-app-readme.md` exists with marketing content but isn't named `README.md`, so GitHub won't render it automatically.
-10. **Hardcoded background color** — `body { background-color: #faf5ed; }` in `index.css` bypasses the CSS variable system used for all other colors.
-11. **`dist/` is committed to version control** — the pre-built output lives in the repo. This means changes need a rebuild before they're reflected in production.
-12. **No image optimization** — all images are loaded via `<img>` tags with `loading="lazy"` but no responsive sizes, no `srcset`, no AVIF/WebP fallbacks.
+1. **Two different WhatsApp numbers.** `CTA.tsx` has `+916362840780` (real). `HowItWorks.tsx` line 7 has `+919XXXXXXXXX` (placeholder). Both must be kept in sync.
+2. **Testimonial images are placeholders.** `Testimonials.tsx` uses `placehold.co` URLs. Replace with real screenshots.
+3. **Six unused UI components** in `src/components/ui/`: `badge.tsx`, `card.tsx`, `separator.tsx`, `lamp.tsx`, `timeline.tsx`, `noise-background.tsx`. Not imported anywhere. Won't affect bundle (tree-shaken) but clutter the repo.
+4. **`framer-motion` and `motion` both installed** (both v12.40.0). `framer-motion` used for Navbar/ScrollReveal; `motion/react` used for compare/glowing-effect and 3 unused components. Consolidate to one.
+5. **`radix-ui` meta-package** (v1.6.0) pulls in every Radix package. Only `Slot` is used (in `button.tsx`). Switch to `@radix-ui/react-slot` to reduce install size.
+6. **`SparklesCore` is a stub** — renders CSS gradient pulses, not real particles. Original aceternity implementation replaced.
+7. **`@tabler/icons-react`** used only for `IconDotsVertical` in compare.tsx. All other icons come from `lucide-react`. Could remove tabler.
+8. **Hardcoded `#faf5ed` background** in `index.css` body block and in Navbar scroll state (`bg-[#faf5ed]/70`). Doesn't use a CSS variable like all other colors.
+9. **Section backgrounds vary inconsistently**: Hero = transparent, Problem = `bg-white`, Features = `bg-stone-50`, Proof = `bg-white`, HowItWorks = `bg-[#faf5ed]`, Testimonials = `bg-white`, CTA = `bg-[#faf5ed]`. No single source of truth.
+10. **No README.md.** `college-fest-app-readme.md` exists but GitHub won't render it as the project README.
+11. **No image optimization pipeline.** Hero Compare uses responsive `srcSet`/`sizes` (good), but Testimonials carousel and Proof analytics don't.
+12. **Commented-out code** in multiple files: Hero (badge, "Drag the slider"), Problem (40+ hours stat), CTA (response time, "Currently serving"), Testimonials (ExternalLink icon), Footer ("Made with ♥").
+13. **`.gitignore` lists `TODO.md` and `PROMPTS.md`** as ignored, preventing them from being tracked.
 
 ## Where to Start (by task type)
 
 ### Adding a new page section
-1. Create `src/components/sections/YourSection.tsx` with a named export.
-2. Add a section `id` for anchor navigation (e.g., `id="your-section"`).
-3. In `App.tsx`, add a `React.lazy()` import and a `<Suspense>` wrapper with `<SectionFallback />`.
-4. If the section should appear in the Navbar, add an entry to `navLinks` in `Navbar.tsx` with a matching `href`.
+1. Create `src/components/sections/YourSection.tsx` (named export).
+2. Add a section `id` for anchor nav.
+3. In `App.tsx`: add `React.lazy()` import + `<Suspense>` + `<SectionDivider />` before it.
+4. To add a nav link: edit `navLinks` array in `Navbar.tsx`.
 
-### Adding a new UI design-system component
+### Adding a UI component
 1. Create `src/components/ui/your-component.tsx`.
 2. Use `cn()` from `@/lib/utils` for className merging.
-3. Follow shadcn/ui conventions: `data-slot` attribute, `React.ComponentProps<"element">` type, named exports.
+3. Follow shadcn conventions: `data-slot`, `React.ComponentProps<"element">`, named export.
 
-### Changing design tokens (colors, fonts, radii)
-1. Edit `src/index.css`. Colors are in the `:root` block as oklch values. Font families in `@theme inline`. Radius scale in `@theme inline`.
-2. The background color is hardcoded on `body` and also referenced in Navbar as `bg-[#faf5ed]` — change both places.
+### Changing design tokens
+Edit `src/index.css`. Colors in `:root` block. Fonts and radii in `@theme inline`. Background is hardcoded on `body` and referenced as `bg-[#faf5ed]` — change both places.
 
-### Adding a new animation wrapper
-1. Use the existing `useIntersectionObserver` hook from `@/hooks/useIntersectionObserver`.
-2. Wrap with `motion.div` from `framer-motion`.
-3. Follow the `ScrollReveal` pattern: `ref` on the motion element, `isInView` drives `animate` vs `initial`.
+### Adding an animation wrapper
+Use `useIntersectionObserver` from `@/hooks/useIntersectionObserver`. Wrap with `motion.div` from `framer-motion`. Follow `ScrollReveal` pattern.
 
 ### Replacing placeholder assets
-- **WhatsApp number:** Edit `whatsappNumber` in `CTA.tsx`.
-- **Testimonial images:** Edit the `testimonialImages` array in `Testimonials.tsx`.
-- **Hero Compare images:** Edit `firstImage` and `secondImage` props in `Hero.tsx`.
-- **Analytics screenshot:** Replace the placeholder div in `Proof.tsx` (lines 78-84).
+- **Testimonial images:** `testimonialImages` array in `Testimonials.tsx`.
+- **Hero Compare images:** Replace files in `public/` (old*.webp, new*.webp).
+- **Analytics screenshot:** Replace `public/analytics.webp`.
+- **WhatsApp numbers:** `CTA.tsx` line 4 and `HowItWorks.tsx` line 7.
 
-### Building for production
+### Building
 ```
-npm run build    # tsc -b && vite build → outputs to dist/
-npm run preview   # vite preview — serves dist/ locally
+npm run build     # tsc -b && vite build → dist/
+npm run preview   # serve dist/ locally
 ```
-The `dist/` folder is committed to the repo. After `npm run build`, the new output should be staged and committed.
+`dist/` is not committed to git — build before deploying.
