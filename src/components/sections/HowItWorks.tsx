@@ -39,7 +39,7 @@ const steps = [
     title: "Launch & Go Live",
     description:
       "Your platform goes live on your domain. Registration links shared, emails flowing. You focus on making the fest amazing — I'll keep the platform up & running.",
-    color: "bg-stone-100 text-stone-700",
+    color: "bg-amber-100 text-amber-700",
   },
   {
     step: "05",

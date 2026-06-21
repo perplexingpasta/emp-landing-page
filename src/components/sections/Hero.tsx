@@ -25,18 +25,13 @@ export function Hero() {
             Forms
           </h1>
           <p className="mt-6 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
-            <span>Presenting FestFlow</span>
+            <span>Presenting FestFlow ✨</span>
             <br />
             <span>
               The all-in-one fest management platform for Indian medical
               colleges.
             </span>
           </p>
-          {/*<p className="mt-6 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
-            The all-in-one fest management platform. Registrations, payments,
-            merch, live dashboards, and QR check-ins — everything handled
-            seamlessly. Built by a medic, for medics.
-          </p>*/}
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               size="lg"
@@ -57,7 +52,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See Live Demo
+                Visit Live Website
               </a>
             </Button>
           </div>
@@ -65,9 +60,9 @@ export function Hero() {
 
         {/* Before/After Comparison */}
         <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center gap-4 md:mt-20">
-          <p className="font-sans text-sm font-medium text-stone-400">
+          {/*<p className="font-sans text-sm font-medium text-stone-400">
             Drag the slider to compare
-          </p>
+          </p>*/}
           <Compare
             firstImage="/old.webp"
             firstImageSrcSet="/old-mobile.webp 960w, /old-tablet.webp 1440w, /old.webp 1920w"
@@ -80,11 +75,11 @@ export function Hero() {
             slideMode="hover"
             showHandlebar
             autoplay
-            autoplayDuration={4000}
-            className="h-[220px] w-full max-w-[900px] rounded-2xl border border-stone-200 shadow-xl sm:h-[320px] md:h-[450px]"
+            autoplayDuration={6000}
+            className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 shadow-xl sm:h-80 md:h-[450px]"
           />
-          <div className="mt-2 flex w-full max-w-[900px] justify-between px-2">
-            <span className="font-sans text-xs text-stone-400 line-through">
+          <div className="mt-2 flex w-full max-w-225 justify-between px-2">
+            <span className="font-sans text-xs text-stone-400">
               Typical fest website
             </span>
             <span className="font-sans text-xs font-medium text-amber-700">

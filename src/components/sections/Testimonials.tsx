@@ -21,7 +21,7 @@ export function Testimonials() {
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="mb-3 inline-block rounded-full border border-stone-200 bg-stone-100 px-3 py-1 font-sans text-xs font-medium tracking-wider text-stone-600 uppercase">
-            Social proof
+            REVIEWS
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             What people are{" "}
