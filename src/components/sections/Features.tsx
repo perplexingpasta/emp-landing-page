@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 const delegateFeatures: { headline: string; body: string }[] = [
   {
     headline: "No more 'did you register me?'",
-    body: "A Unique Delegate ID gets created for each delegate. You stop being the human registration desk.",
+    body: "A unique Delegate ID gets created for each delegate.",
   },
   {
     headline: "No chaos at the registration counter",
@@ -39,7 +39,7 @@ const delegateFeatures: { headline: string; body: string }[] = [
 const organiserFeatures: { headline: string; body: string }[] = [
   {
     headline: "Every registration is clean",
-    body: "Export every delegate's data — events, sports, merch — instantly. No copy-pasting from google forms.",
+    body: "Export every delegate's data — events, sports, merch instantly. No copy-pasting from google forms.",
   },
   {
     headline: "Your sheet updates itself",
@@ -108,7 +108,7 @@ export function Features() {
                   <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
-              <ul className="space-y-5 pl-6 max-w-80">
+              <ul className="mx-auto max-w-md space-y-5">
                 {delegateFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
@@ -138,7 +138,7 @@ export function Features() {
                   <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
-              <ul className="space-y-5 pl-6 max-w-80">
+              <ul className="mx-auto max-w-md space-y-5">
                 {organiserFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
