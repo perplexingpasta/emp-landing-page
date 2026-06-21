@@ -10,8 +10,8 @@ const delegateFeatures: { text: string; negative?: boolean }[] = [
   { text: "Confirmation Emails" },
   { text: "Live Fest Schedule" },
   { text: "Merch Store" },
-  { text: "Duplicate Delegate Registrations", negative: true },
-  { text: "Duplicate Event Registrations", negative: true },
+  // { text: "Duplicate Delegate Registrations", negative: true },
+  // { text: "Duplicate Event Registrations", negative: true },
 ];
 
 const organiserFeatures: { text: string; negative?: boolean }[] = [
@@ -23,8 +23,9 @@ const organiserFeatures: { text: string; negative?: boolean }[] = [
   { text: "Zero Data Loss" },
   { text: "Custom Domain" },
   { text: "Live Admin Dashboard" },
-  { text: "System Health & Diagnostics" },
-  { text: "Event Organization Headache", negative: true },
+  // { text: "System Health & Diagnostics" },
+  { text: "No Duplicate Registrations" },
+  // { text: "Event Organization Headache", negative: true },
 ];
 
 export function Features() {
