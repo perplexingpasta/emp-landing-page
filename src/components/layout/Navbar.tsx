@@ -106,18 +106,26 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-stone-600 transition-colors hover:bg-stone-100 md:hidden"
-            aria-label="Toggle menu"
-          >
-            {isMobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
+          {/* Mobile CTA pill + menu button */}
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={() => handleNavClick('#cta')}
+              className="rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1.5 font-sans text-xs font-semibold text-amber-700 transition-colors hover:bg-amber-200/60 active:scale-95"
+            >
+              Get Started!
+            </button>
+            <button
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              className="inline-flex items-center justify-center rounded-lg p-2 text-stone-600 transition-colors hover:bg-stone-100"
+              aria-label="Toggle menu"
+            >
+              {isMobileOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
+          </div>
         </nav>
       </motion.header>
 

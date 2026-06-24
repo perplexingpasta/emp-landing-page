@@ -33,7 +33,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto"
+              className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-full"
               onClick={scrollToCTA}
             >
               Get This for Your Fest
@@ -42,7 +42,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full rounded-xl border-amber-200 font-sans text-base text-stone-600 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto"
+              className="w-5/6 rounded-xl border-amber-200 font-sans text-base text-stone-600 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-full"
               asChild
             >
               <a
