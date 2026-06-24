@@ -2,7 +2,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function Prestige() {
   return (
-    <section id="prestige" className="bg-white py-16 md:py-20">
+    <section id="prestige" className="bg-[#faf5ed] py-16 md:py-20">
       <div className="mx-auto max-w-265 px-5 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>

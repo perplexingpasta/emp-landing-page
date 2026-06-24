@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 // import { ChevronRight } from 'lucide-react';
 import { ImageCarousel } from '@/components/shared/ImageCarousel';
 import { ScrollReveal } from '@/components/shared/ScrollReveal';
+import { ShieldCheck } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
 const sourceImages = [
@@ -31,8 +32,9 @@ export function TestimonialsWhatsApp() {
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-violet-200 bg-violet-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-violet-600 uppercase">
-            TRUST
+          <span className="mb-3 inline-flex gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            <ShieldCheck className="h-4 w-4" />
+            Trusted by JSS Medical College, Mysuru
           </span>
           <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
             What people are{' '}

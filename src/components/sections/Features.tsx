@@ -49,7 +49,7 @@ const delegateFeatures: { headline: string; body: string }[] = [
 
 export function Features() {
   return (
-    <section id="features" className="bg-stone-50 py-16 md:py-20">
+    <section id="features" className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">

@@ -58,7 +58,7 @@ function PricingTier({
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-stone-50 py-16 px-2 md:py-20">
+    <section id="pricing" className="bg-white py-16 px-2 md:py-20">
       <div className="mx-auto max-w-265 px-5 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
