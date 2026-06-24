@@ -69,7 +69,7 @@ export function Navbar() {
             : "bg-transparent",
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
           <a
             href="#hero"
             onClick={(e) => {
@@ -82,7 +82,7 @@ export function Navbar() {
               FestFlow
             </span>
             <span className="hidden rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[10px] font-semibold text-amber-700 sm:inline-block">
-              by Rexon
+              by Rishabh J.
             </span>
           </a>
 
@@ -141,7 +141,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-y-0 left-0 z-50 w-[280px] bg-[#faf5ed] shadow-2xl md:hidden"
+              className="fixed inset-y-0 left-0 z-50 w-70 bg-[#faf5ed] shadow-2xl md:hidden"
             >
               {/* Drawer header */}
               <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">

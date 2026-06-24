@@ -99,7 +99,7 @@ Headline, two CTA buttons (one scrolls to `#cta`, one links to `https://www.tatv
 Aceternity UI component. Two `<img>` elements clipped via `clipPath`. Supports `hover` and `drag` slide modes, optional autoplay with ping-pong. Uses `motion/react` for clip-path animation and `SparklesCore` (stub) for divider effects. Handles mouse and touch. ~230 lines.
 
 ### 7. `src/components/layout/Navbar.tsx` — Fixed nav + mobile drawer
-Scroll-aware (transparent → blurred after 20px). Desktop: horizontal link buttons + "Get Started" CTA. Mobile: slide-in drawer from left with staggered link animations, backdrop, body scroll lock. Branded "FestFlow" + "by Rexon" badge. **Only links to 6 of 10 sections** — missing ImagineThis, Prestige, and Pricing (see tech debt).
+Scroll-aware (transparent → blurred after 20px). Desktop: horizontal link buttons + "Get Started" CTA. Mobile: slide-in drawer from left with staggered link animations, backdrop, body scroll lock. Branded "FestFlow" + "by Rishabh J." badge. **Only links to 6 of 10 sections** — missing ImagineThis, Prestige, and Pricing (see tech debt).
 
 ### 8. `src/components/sections/Proof.tsx` — Social proof
 `AnimatedCounter` stats (1768 delegates, 51 events, ₹7.97L handled, 99.9% uptime) in a 2×2 / 4-col grid inside `GlowingEffect` bordered cards. Analytics screenshot (`/analytics.webp`) in a mock browser chrome. Mobile-only stats row (visitors, page views, bounce rate).

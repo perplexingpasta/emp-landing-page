@@ -16,7 +16,7 @@ export function CTA() {
       {/* Subtle background accent */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(217,119,6,0.06)_0%,transparent_70%)]" />
 
-      <div className="relative mx-auto max-w-265 px-4 md:px-6">
+      <div className="relative mx-auto max-w-265 px-5 md:px-8">
         <div className="mx-auto max-w-2xl">
           <ScrollReveal>
             <div className="rounded-3xl border border-amber-200 bg-linear-to-b from-amber-50/80 to-white p-8 text-center shadow-lg shadow-amber-100/50 md:p-12">
@@ -52,16 +52,17 @@ export function CTA() {
                 </Button>
 
                 {/*<p className="font-sans text-sm text-stone-400">
-                  Typical response time: under 30 minutes
+                  Typical response time: under 15 minutes
                 </p>*/}
               </div>
 
-              {/*<div className="mt-8 border-t border-amber-100 pt-6">
+              <div className="mt-6 border-t border-amber-100 pt-5">
                 <p className="font-sans text-xs text-stone-400">
-                  Currently serving medical colleges across India. Built by a
-                  medic who understands how college fests actually work.
+                  Currently helping medical colleges organise fests across
+                  India. Built by a medico who understands how college fests
+                  actually work.
                 </p>
-              </div>*/}
+              </div>
             </div>
           </ScrollReveal>
         </div>

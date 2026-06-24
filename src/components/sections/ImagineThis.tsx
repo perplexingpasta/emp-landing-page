@@ -2,12 +2,12 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 export function ImagineThis() {
   return (
-    <section id="imagine" className="bg-[#faf5ed] py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-4 md:px-6">
+    <section id="imagine" className="bg-[#faf5ed] py-16 px-2 md:py-20">
+      <div className="mx-auto max-w-265 px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
-              THE DIFFERENCE
+              THIS COULD BE YOU
             </span>
             <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
               Picture the morning of <span className="italic">your fest</span>
@@ -36,7 +36,7 @@ export function ImagineThis() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="mt-8 text-center font-heading text-base font-semibold text-stone-800 md:text-xl">
+            <p className="mt-8 text-center font-heading text-base font-bold text-stone-800 md:text-xl">
               JSS Medical College didn't touch a single spreadsheet for Tatvam
               2026.
             </p>

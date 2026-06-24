@@ -31,15 +31,15 @@ const painPoints = [
 export function Problem() {
   return (
     <section id="problem" className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-4 md:px-6">
+      <div className="mx-auto max-w-265 px-6 md:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase">
             The problem
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Managing a college fest shouldn't feel like running a{" "}
-            <span className="italic text-amber-600">startup</span>
+            Last year's fest cost your team 50+ hours of{" "}
+            <span className="italic text-amber-600">spreadsheet hell</span>.
           </h2>
         </div>
 
@@ -77,8 +77,9 @@ export function Problem() {
         </ScrollReveal>
 
         {/* Bridge transition */}
-        <p className="mt-8 text-center font-heading text-xl font-bold italic text-stone-600 md:mt-10 md:text-2xl">
-          It doesn't have to be this way.
+        <p className="mt-8 text-center font-sans italic px-4 text-base font-light text-stone-600 md:mt-10 md:text-lg">
+          This year, imagine walking into the auditorium knowing every delegate,
+          every payment, every event — handled. Automatically.
         </p>
       </div>
     </section>

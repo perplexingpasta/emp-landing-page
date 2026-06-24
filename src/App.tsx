@@ -36,6 +36,11 @@ const Testimonials = lazy(() =>
     default: m.Testimonials,
   })),
 );
+const AboutFounder = lazy(() =>
+  import("@/components/sections/AboutFounder").then((m) => ({
+    default: m.AboutFounder,
+  })),
+);
 const Pricing = lazy(() =>
   import("@/components/sections/Pricing").then((m) => ({
     default: m.Pricing,
@@ -87,6 +92,10 @@ function App() {
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Testimonials />
+        </Suspense>
+        <SectionDivider />
+        <Suspense fallback={<SectionFallback />}>
+          <AboutFounder />
         </Suspense>
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>

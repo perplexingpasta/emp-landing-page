@@ -13,21 +13,22 @@ export function Hero() {
       <div className="relative mx-auto max-w-265 px-4 pb-12 pt-22 md:px-6 md:pb-20 md:pt-30">
         {/* Headline */}
         <div className="mx-auto max-w-3xl text-center">
-          {/*<span className="mb-4 inline-block rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
-            Trusted by 1700+ delegates at JSS Medical College
-          </span>*/}
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            <ShieldCheck className="h-4 w-4" />
+            Trusted by 1,700+ delegates at JSSMC
+          </span>
           <h1 className="font-heading text-4xl font-bold leading-tight text-stone-800 md:text-5xl lg:text-6xl">
-            Your college fest deserves{" "}
-            <span className="italic text-amber-600">better</span> than Google
-            Forms
+            Your fest,{" "}
+            <span className="italic text-amber-600">fully handled</span>, before
+            you even wake up
           </h1>
-          <p className="mt-6 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
-            <span>Presenting FestFlow ✨</span>
+          <p className="mt-6 mx-auto max-w-76 md:max-w-md font-sans text-base leading-relaxed text-stone-500 md:text-lg">
+            3,500+ delegates registered. <br />
+            64 events. <br />
+            0 spreadsheets.
             <br />
-            <span>
-              The all-in-one fest management platform for Indian medical
-              colleges.
-            </span>
+            <br />
+            Your phone stays silent — because everything just works.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
@@ -61,9 +62,7 @@ export function Hero() {
             Drag the slider to compare
           </p>*/}
           <Compare
-            firstImage="/old.webp"
-            firstImageSrcSet="/old-mobile.webp 960w, /old-tablet.webp 1440w, /old.webp 1920w"
-            firstImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
+            firstImage="/old-v2.webp"
             secondImage="/new.webp"
             secondImageSrcSet="/new-mobile.webp 960w, /new-tablet.webp 1440w, /new.webp 1920w"
             secondImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
@@ -73,25 +72,25 @@ export function Hero() {
             showHandlebar
             autoplay
             autoplayDuration={6000}
-            className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 shadow-xl sm:h-80 md:h-[450px]"
+            className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 shadow-xl sm:h-80 md:h-112.5"
           />
-          <div className="mt-2 flex w-full max-w-225 justify-between px-2">
-            <span className="font-sans text-xs text-stone-400">
-              Typical fest website
+          <div className="flex w-full max-w-225 justify-between px-4">
+            <span className="font-sans text-base font-medium text-stone-400">
+              BEFORE
             </span>
-            <span className="font-sans text-xs font-medium text-amber-700">
-              FestFlow powered
+            <span className="font-sans text-base font-medium text-amber-700">
+              AFTER
             </span>
           </div>
         </div>
 
         {/* Quick trust stats */}
-        <div className="mx-auto mt-10 flex justify-center md:mt-14">
+        {/*<div className="mx-auto mt-10 flex justify-center md:mt-14">
           <span className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 font-sans text-xs font-medium text-amber-700">
             <ShieldCheck className="h-4 w-4" />
             Trusted by JSS Medical College, Mysuru
           </span>
-        </div>
+        </div>*/}
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ const stats = [
 export function Proof() {
   return (
     <section id="proof" className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-4 md:px-6">
+      <div className="mx-auto max-w-265 px-5 md:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
@@ -25,9 +25,9 @@ export function Proof() {
         </div>
 
         {/* Framing */}
-        <p className="mt-6 text-center font-sans text-base text-stone-500 md:text-lg">
-          These aren't projected numbers. This is what FestFlow processed at
-          Tatvam 2026, JSSMC.
+        <p className="mt-6 px-4 text-center font-sans text-base text-stone-500 md:text-lg">
+          Not a demo. FestFlow handled 1,768 real delegates at Tatvam 2026, JSS
+          Medical College, Mysuru — a real fest, with real stakes.
         </p>
 
         {/* Animated stats with glowing borders */}

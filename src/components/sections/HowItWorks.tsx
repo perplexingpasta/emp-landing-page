@@ -19,7 +19,7 @@ const steps = [
   {
     step: "01",
     icon: <MessageCircle className="h-5 w-5" />,
-    title: "You Reach Out on WhatsApp",
+    title: "You tell me about your fest",
     description:
       "We talk about your fest — how many delegates you're expecting, what events you're running, your fest requirements.",
     color: "bg-amber-100 text-amber-700",
@@ -27,40 +27,40 @@ const steps = [
   {
     step: "02",
     icon: <Settings className="h-5 w-5" />,
-    title: "I Set Up Your Platform",
+    title: "I build everything",
     description:
-      "Give me 4-6 weeks and I'll have your branded platform completely ready.",
+      "Your branded platform takes shape — registration, events, schedule, merch. Give me 4-6 weeks. You focus on the fest. I handle the tech.",
     color: "bg-amber-100 text-amber-700",
   },
   {
     step: "03",
     icon: <Eye className="h-5 w-5" />,
-    title: "Your Team Reviews",
+    title: "You see it. Your committee is impressed.",
     description:
-      "You test out the website. I'll hop on a call and walk your team through everything.",
+      "I walk your team through the platform on a quick call. It's beautiful. It's fast. It just works.",
     color: "bg-amber-100 text-amber-700",
   },
   {
     step: "04",
     icon: <Rocket className="h-5 w-5" />,
-    title: "Launch & Go Live",
+    title: "Registration opens. Delegates pour in.",
     description:
-      "Your platform goes live! You focus on making the fest amazing — I'll keep the platform up & running.",
+      "Your platform goes live. Registrations come in clean. Payments are logged. You don't touch a single spreadsheet.",
     color: "bg-amber-100 text-amber-700",
   },
   {
     step: "05",
     icon: <Headphones className="h-5 w-5" />,
-    title: "Real-Time Support",
+    title: "You actually enjoy your own fest",
     description:
-      "I'll be active and monitoring throughout the fest to see if anything breaks and fix it right away.",
+      "I monitor everything throughout the fest. If anything needs fixing, I handle it. You're in the auditorium, watching it all come together.",
     color: "bg-amber-100 text-amber-700",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-[#faf5ed] py-16 md:py-20">
+    <section id="how-it-works" className="bg-[#faf5ed] py-16 px-2 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">

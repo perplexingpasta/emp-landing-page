@@ -1,77 +1,49 @@
 import { Users, LayoutDashboard, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
-const delegateFeatures: { headline: string; body: string }[] = [
-  {
-    headline: "No more 'did you register me?'",
-    body: "A unique Delegate ID gets created for each delegate.",
-  },
-  {
-    headline: "No chaos at the registration counter",
-    body: "Different registration tiers, different kits. The system tracks who gets what — automatically.",
-  },
-  {
-    headline: "No google forms for every single event",
-    body: "Delegates pick everything they want in one go. One checkout. Done.",
-  },
-  {
-    headline: "You don't send 800 links",
-    body: "Delegates get directed to the right WhatsApp group automatically on registration.",
-  },
-  {
-    headline: "Blazing fast to load",
-    body: "The site loads instantly on all devices. No one waits. No one pinches to zoom.",
-  },
-  {
-    headline: "'Did my registration go through?'",
-    body: "Every delegate gets a confirmation email the moment they register.",
-  },
-  // {
-  //   headline: "You stop being the human timetable",
-  //   body: "The entire schedule is live on the website. Any changes reflect instantly.",
-  // },
-  {
-    headline: "Sell merch and make money",
-    body: "Orders come in, payments are tracked. No cash counters, no chaos on the day.",
-  },
-];
-
 const organiserFeatures: { headline: string; body: string }[] = [
   {
-    headline: "Every registration is clean",
-    body: "Export every delegate's data — events, sports, merch instantly. No copy-pasting from google forms.",
+    headline: "You send ONE report to your head. And it's correct.",
+    body: "Export every registration in one click. No copy-pasting from ten different Google Forms.",
   },
   {
-    headline: "Your sheet updates itself",
-    body: "Every new registration appears in your Google Sheet automatically. No manual data entry.",
+    headline: "Your Google Sheet fills itself automatically",
+    body: "Every new registration appears in your sheet without you touching anything. No manual data entry. No errors.",
   },
   {
-    headline: "No more screenshot hassle",
-    body: "Every payment is logged. No digging through WhatsApp to confirm who paid.",
+    headline: "You stop being the human payment detective",
+    body: "Every payment is logged and verified. No digging through WhatsApp screenshots.",
   },
-  // {
-  //   headline: "Reach every delegate. In one send.",
-  //   body: "Send updates, reminders, and announcements to every registered delegate. No copying email IDs from a spreadsheet.",
-  // },
   {
     headline: "Know exactly how your fest is performing",
-    body: "See which events are filling up, where delegates are coming from, etc.",
-  },
-  {
-    headline: "Your data is always safe",
-    body: "Every registration, every payment, every delegate detail is backed up.",
-  },
-  // {
-  //   headline: "It's your fest. It's your domain.",
-  //   body: "Your website lives at yourcollegefest2026.com — not a subdomain of someone else's platform.",
-  // },
-  {
-    headline: "Monitor the entire fest from your phone",
-    body: "See registrations, delegate counts, payment status — live, from anywhere.",
+    body: "Live registrations, delegate counts, payment status. All from your phone.",
   },
   {
     headline: "One person. One entry. Always.",
-    body: "The system flags duplicates so you never chase the same person or registration twice.",
+    body: "The system flags duplicates automatically. You never chase the same person or payment twice.",
+  },
+];
+
+const delegateFeatures: { headline: string; body: string }[] = [
+  {
+    headline: "Your delegates register for everything in one go",
+    body: "Events, sports, merch — one checkout. Done. No ten forms, no confusion, no 'which link do I click?' messages.",
+  },
+  {
+    headline: "Every delegate gets a confirmation email instantly",
+    body: "The moment they register, it's confirmed. Your inbox stays quiet — because nobody needs to ask 'did it go through?'",
+  },
+  {
+    headline: "The website loads instantly on any device",
+    body: "No one waits. No one pinches to zoom. No one complains that the form 'isn't working on my phone.'",
+  },
+  {
+    headline: "Your delegates find their WhatsApp groups automatically",
+    body: "Delegates get routed to the right group/community on registration. You stop sending WhatsApp links.",
+  },
+  {
+    headline: "Merch sold out during pre-registration",
+    body: "Orders come in online, payments are tracked. No cash handling, no haggling, no 'I already paid' arguments on fest day.",
   },
 ];
 
@@ -94,22 +66,22 @@ export function Features() {
 
         {/* Two-column feature lists */}
         <ScrollReveal>
-          <div className="mt-12 pl-4 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
-            {/* Delegates */}
+          <div className="mt-12 grid gap-10 pl-4 md:mt-14 md:grid-cols-2 md:gap-16">
+            {/* Organisers (buyer) — first column */}
             <div>
               <div className="mb-5 flex items-start gap-2.5">
                 <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
-                  <Users className="h-4 w-4" />
+                  <LayoutDashboard className="h-4 w-4" />
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-semibold text-stone-800">
-                    For delegates
+                    For organisers
                   </h3>
-                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
+                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-linear-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
               <ul className="mx-auto max-w-md space-y-5">
-                {delegateFeatures.map((feature) => (
+                {organiserFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
                     <div>
@@ -125,21 +97,21 @@ export function Features() {
               </ul>
             </div>
 
-            {/* Organisers */}
+            {/* Delegates — second column, framed as what your delegates experience */}
             <div>
               <div className="mb-5 flex items-start gap-2.5">
                 <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
-                  <LayoutDashboard className="h-4 w-4" />
+                  <Users className="h-4 w-4" />
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-semibold text-stone-800">
-                    For organisers
+                    For delegates
                   </h3>
-                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-gradient-to-r from-amber-400 to-amber-600" />
+                  <div className="mt-1.5 h-0.5 w-14 rounded-full bg-linear-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
               <ul className="mx-auto max-w-md space-y-5">
-                {organiserFeatures.map((feature) => (
+                {delegateFeatures.map((feature) => (
                   <li key={feature.headline} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />
                     <div>

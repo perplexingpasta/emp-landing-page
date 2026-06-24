@@ -58,8 +58,8 @@ function PricingTier({
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-stone-50 py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-4 md:px-6">
+    <section id="pricing" className="bg-stone-50 py-16 px-2 md:py-20">
+      <div className="mx-auto max-w-265 px-5 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
@@ -72,11 +72,16 @@ export function Pricing() {
             <p className="mt-3 font-sans text-base text-stone-500">
               No hidden charges. No surprises.
             </p>
+            <p className="mt-8 font-sans px-2 text-base text-stone-400">
+              Your team spends 300+ hours on manual admin every fest. At even
+              ₹300/hour of your team's time, that's ₹90,000 of invisible cost —
+              before the errors.
+            </p>
           </ScrollReveal>
         </div>
 
         <ScrollReveal delay={0.1}>
-          <div className="mx-auto mt-12 grid max-w-3xl gap-6 md:mt-14 md:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-3xl gap-6 md:mt-14 md:grid-cols-2">
             {/*
               PRICE_TIER_1: Replace "₹—" with the actual starting price for the Essentials tier.
               Example format: "Starting from ₹XX,XXX"
@@ -85,14 +90,14 @@ export function Pricing() {
               name="Essentials"
               bestFor="Smaller fests, first-time organisers"
               includes={[
-                "Delegate registration with unique IDs",
-                "Registration tiers & kits",
-                "Event registration & checkout",
-                "WhatsApp group auto-routing",
-                "Confirmation emails",
-                "Live fest schedule",
-                "Google Sheets auto-sync",
-                "Basic admin dashboard",
+                "Unique Delegate IDs",
+                "Registration Tiers & Kits",
+                "Event Registration & Checkout",
+                "WhatsApp Group Auto-Routing",
+                "Confirmation Emails",
+                "Live Fest Schedule",
+                "Google Sheets Auto-Sync",
+                "Basic Admin Dashboard",
               ]}
               price="₹49,997"
             />
@@ -105,13 +110,13 @@ export function Pricing() {
               bestFor="Large intercollegiate fests, flagship annual events"
               includes={[
                 "Everything in Essentials",
-                "Merch store with payment tracking",
-                "Full data export (cultural, sports, merch)",
-                "Payment verification system",
-                "Marketing email campaigns",
-                "Advanced analytics dashboard",
-                "Custom domain setup",
-                "Real-time support during fest",
+                "Merch Store with payment tracking",
+                "Full Data Export (cultural, sports, merch)",
+                "Payment Verification System",
+                "Marketing Email Campaigns",
+                "Advanced Admin Dashboard",
+                "Custom Domain Setup",
+                "Real-time Support During Fest",
               ]}
               price="₹1,09,997"
               highlighted
@@ -127,7 +132,7 @@ export function Pricing() {
             <Button
               variant="outline"
               size="lg"
-              className="group w-full rounded-xl border-2 !border-amber-600 bg-amber-50/50 font-sans text-base font-semibold text-stone-900 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:!border-amber-400 hover:bg-amber-100 md:w-auto"
+              className="group w-full rounded-xl border-2 border-amber-600! bg-amber-50/50 font-sans text-base font-semibold text-stone-900 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-400! hover:bg-amber-100 md:w-auto"
               asChild
             >
               <a
@@ -140,8 +145,11 @@ export function Pricing() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
-            <p className="mt-4 font-sans text-sm text-stone-400">
+            <p className="mt-4 font-sans px-4 text-sm text-stone-400">
               50% upfront, 50% on launch.
+              <br />
+              Not happy before your fest? Full refund on the upfront. No
+              questions.
             </p>
           </div>
         </ScrollReveal>
