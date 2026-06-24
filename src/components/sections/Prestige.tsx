@@ -19,7 +19,7 @@ export function Prestige() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mx-auto mt-6 md:max-w-xl font-sans text-base leading-relaxed text-stone-500 max-w-88 md:text-lg">
+            <p className="mx-auto mt-6 max-w-88 font-sans text-base leading-relaxed text-stone-500 md:max-w-xl md:text-lg">
               When a delegate from another college opens your registration link,
               they make a judgment in seconds. A fast, beautifully designed
               website tells them this fest is serious. It reflects on you, your
