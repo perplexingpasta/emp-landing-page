@@ -20,14 +20,14 @@ export function Proof() {
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             Proven at scale.{' '}
-            <span className="italic text-amber-600">Not a prototype.</span>
+            <span className="text-amber-600 italic">Not a demo.</span>
           </h2>
         </div>
 
         {/* Framing */}
         <p className="mt-6 px-4 text-center font-sans text-base text-stone-500 md:text-lg">
-          Not a demo. FestFlow handled 1,768 real delegates at Tatvam 2026, JSS
-          Medical College, Mysuru — a real fest, with real stakes.
+          My website handled 1,768 real delegates at Tatvam 2026, JSS Medical
+          College, Mysuru — a real fest, with real stakes.
         </p>
 
         {/* Animated stats with glowing borders */}
@@ -79,7 +79,7 @@ export function Proof() {
               loading="lazy"
             />
           </div>
-          <div className="mt-8 md:hidden max-w-3xs mx-auto">
+          <div className="mx-auto mt-8 max-w-3xs md:hidden">
             <div className="grid grid-cols-2 divide-x divide-stone-200 rounded-2xl border border-stone-200 bg-white">
               <div className="flex flex-col items-center py-2">
                 <span className="font-sans text-lg font-semibold text-stone-900">

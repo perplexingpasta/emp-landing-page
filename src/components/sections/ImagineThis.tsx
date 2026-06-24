@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function ImagineThis() {
   return (
@@ -6,12 +6,17 @@ export function ImagineThis() {
       <div className="mx-auto max-w-265 px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
-            <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            {/*<span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
               THIS COULD BE YOU
-            </span>
+            </span>*/}
             <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-              Picture the morning of <span className="italic">your fest</span>
+              Imagine having <br />
+              <span className="italic text-amber-600">zero problems</span> on
+              the morning of your fest
             </h2>
+            {/*<h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+              Picture the morning of <span className="italic">your fest</span>
+            </h2>*/}
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
@@ -36,7 +41,7 @@ export function ImagineThis() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="mt-8 text-center font-heading text-base font-bold text-stone-800 md:text-xl">
+            <p className="mt-8 px-2 text-center font-sans text-lg font-bold text-stone-800 md:text-2xl">
               JSS Medical College didn't touch a single spreadsheet for Tatvam
               2026.
             </p>

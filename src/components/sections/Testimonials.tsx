@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="bg-white py-16 px-2 md:py-20">
+    <section id="testimonials" className="bg-white px-2 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-5 md:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -54,7 +54,7 @@ export function Testimonials() {
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             What people are{' '}
-            <span className="italic text-amber-600">saying</span>
+            <span className="text-amber-600 italic">saying</span>
           </h2>
         </div>
 
@@ -71,7 +71,7 @@ export function Testimonials() {
                 }}
               >
                 {/* Quote */}
-                <blockquote className="flex-1 font-sans text-sm leading-relaxed italic text-stone-600 md:text-base">
+                <blockquote className="flex-1 font-sans text-sm leading-relaxed text-stone-600 italic md:text-base">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
 

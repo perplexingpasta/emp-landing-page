@@ -7,7 +7,7 @@ export function AboutFounder() {
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
-              BUILT BY A MEDIC
+              MY STORY
             </span>
             <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
               I've been <span className="italic">in your shoes</span>

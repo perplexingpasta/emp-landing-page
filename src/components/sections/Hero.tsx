@@ -10,19 +10,19 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative min-h-svh overflow-hidden pt-20">
-      <div className="relative mx-auto max-w-265 px-4 pb-12 pt-22 md:px-6 md:pb-20 md:pt-30">
+      <div className="relative mx-auto max-w-265 px-4 pt-22 pb-12 md:px-6 md:pt-30 md:pb-20">
         {/* Headline */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
             <ShieldCheck className="h-4 w-4" />
             Trusted by 1,700+ delegates at JSSMC
           </span>
-          <h1 className="font-heading text-4xl font-bold leading-tight text-stone-800 md:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-4xl leading-tight font-bold text-stone-800 md:text-5xl lg:text-6xl">
             Your fest,{' '}
-            <span className="italic text-amber-600">fully handled</span>, before
+            <span className="text-amber-600 italic">fully handled</span>, before
             you even wake up
           </h1>
-          <p className="mt-6 mx-auto max-w-76 md:max-w-md font-sans text-base leading-relaxed text-stone-500 md:text-lg">
+          <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-lg">
             3,500+ delegates registered. <br />
             64 events. <br />
             0 spreadsheets.
@@ -33,7 +33,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02] sm:w-auto"
+              className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto"
               onClick={scrollToCTA}
             >
               Get This for Your Fest

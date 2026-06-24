@@ -5,7 +5,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 export function CTA() {
   const whatsappNumber = '+916362840780'; // Replace with your WhatsApp number
   const whatsappMessage = encodeURIComponent(
-    "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
+    "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?"
   );
 
   return (
@@ -21,12 +21,12 @@ export function CTA() {
           <ScrollReveal>
             <div className="rounded-3xl border border-amber-200 bg-linear-to-b from-amber-50/80 to-white p-8 text-center shadow-lg shadow-amber-100/50 md:p-12">
               <span className="mb-4 inline-block rounded-full border border-amber-200 bg-amber-100 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
-                Limited slots per fest season
+                Limited slots only
               </span>
 
               <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
                 Ready to make your fest{' '}
-                <span className="italic text-amber-600">unforgettable</span>?
+                <span className="text-amber-600 italic">unforgettable</span>?
               </h2>
 
               <p className="mt-4 font-sans text-base leading-relaxed text-stone-500">
@@ -37,7 +37,7 @@ export function CTA() {
               <div className="mt-8 flex flex-col items-center gap-4">
                 <Button
                   size="lg"
-                  className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02] sm:w-auto"
+                  className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto"
                   asChild
                 >
                   <a
@@ -56,13 +56,13 @@ export function CTA() {
                 </p>*/}
               </div>
 
-              <div className="mt-6 border-t border-amber-100 pt-5">
+              {/*<div className="mt-6 border-t border-amber-100 pt-5">
                 <p className="font-sans text-xs text-stone-400">
                   Currently helping medical colleges organise fests across
                   India. Built by a medico who understands how college fests
                   actually work.
                 </p>
-              </div>
+              </div>*/}
             </div>
           </ScrollReveal>
         </div>

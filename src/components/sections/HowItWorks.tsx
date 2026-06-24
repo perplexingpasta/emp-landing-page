@@ -12,7 +12,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
-  "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
+  "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?"
 );
 
 const steps = [
@@ -60,22 +60,22 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-[#faf5ed] py-16 px-2 md:py-20">
+    <section id="how-it-works" className="bg-[#faf5ed] px-2 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-sky-600 uppercase">
+          <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase">
             How it works
           </span>
-          <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+          <h2 className="font-heading mt-2 text-3xl font-bold text-stone-900 md:text-4xl">
             From first message to{' '}
-            <span className="italic text-amber-600">live platform</span> in days
+            <span className="text-amber-600 italic">live platform</span> in days
           </h2>
         </div>
 
         <div className="relative mx-auto mt-12 max-w-3xl md:mt-14">
           {/* Connector line */}
-          <div className="absolute top-8 bottom-8 left-[23px] w-px bg-stone-200 md:left-1/2 md:-translate-x-px" />
+          <div className="absolute top-8 bottom-8 left-5.75 w-px bg-stone-200 md:left-1/2 md:-translate-x-px" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -84,7 +84,7 @@ export function HowItWorks() {
                   key={step.step}
                   className={cn(
                     'relative flex gap-6 md:gap-0',
-                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',
+                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   )}
                 >
                   {/* Step circle */}
@@ -92,7 +92,7 @@ export function HowItWorks() {
                     <div
                       className={cn(
                         'flex h-full w-full items-center justify-center rounded-full',
-                        step.color,
+                        step.color
                       )}
                     >
                       {step.icon}
@@ -103,26 +103,26 @@ export function HowItWorks() {
                   <div
                     className={cn(
                       'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm md:w-[calc(50%-2rem)] md:flex-none',
-                      i % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto',
+                      i % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'
                     )}
                     style={{
                       transition:
                         'border-color 180ms cubic-bezier(0.22, 1, 0.36, 1)',
                     }}
                   >
-                    <span className="font-heading text-xs font-bold tracking-wider text-amber-600 uppercase">
+                    <span className="font-heading text-base font-bold tracking-wider text-amber-600 uppercase">
                       Step {step.step}
                     </span>
-                    <h3 className="mt-1 font-heading text-lg font-semibold text-stone-900">
+                    <h3 className="font-heading mt-1 text-xl font-semibold text-stone-900">
                       {step.title}
                     </h3>
-                    <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
+                    <p className="mt-2 font-sans text-base leading-relaxed text-stone-500">
                       {step.description}
                     </p>
                     {step.step === '01' && (
                       <div className="mt-3">
                         <Button
-                          className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02]"
+                          className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30"
                           asChild
                         >
                           <a
