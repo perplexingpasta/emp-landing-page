@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function Prestige() {
   return (
@@ -10,7 +10,7 @@ export function Prestige() {
               FIRST IMPRESSIONS
             </p>*/}
             <h2 className="mt-4 font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-              First impression happens{" "}
+              First impression happens{' '}
               <span className="italic">
                 <span className="text-amber-600">before</span> anyone arrives
               </span>

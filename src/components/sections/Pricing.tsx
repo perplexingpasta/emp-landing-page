@@ -1,9 +1,9 @@
-import { MessageCircle, ArrowRight, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { cn } from "@/lib/utils";
+import { MessageCircle, ArrowRight, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
+import { cn } from '@/lib/utils';
 
-const whatsappNumber = "+916362840780";
+const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
   "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
 );
@@ -26,10 +26,10 @@ function PricingTier({
   return (
     <div
       className={cn(
-        "relative flex flex-col rounded-2xl border p-6 md:p-8",
+        'relative flex flex-col rounded-2xl border p-6 md:p-8',
         highlighted
-          ? "border-amber-300 bg-linear-to-b from-amber-50/50 to-white shadow-lg shadow-amber-100/30"
-          : "border-stone-200 bg-white",
+          ? 'border-amber-300 bg-linear-to-b from-amber-50/50 to-white shadow-lg shadow-amber-100/30'
+          : 'border-stone-200 bg-white',
       )}
     >
       {highlighted && (
@@ -45,7 +45,7 @@ function PricingTier({
         </span>
       </div>
       <ul className="mt-6 flex-1 space-y-3">
-        {includes.map((item) => (
+        {includes.map(item => (
           <li key={item} className="flex items-start gap-3">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
             <span className="font-sans text-sm text-stone-600">{item}</span>
@@ -66,7 +66,7 @@ export function Pricing() {
               PRICING
             </span>
             <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-              Simple, transparent{" "}
+              Simple, transparent{' '}
               <span className="italic text-amber-600">pricing</span>.
             </h2>
             <p className="mt-3 font-sans text-base text-stone-500">
@@ -90,14 +90,14 @@ export function Pricing() {
               name="Essentials"
               bestFor="Smaller fests, first-time organisers"
               includes={[
-                "Unique Delegate IDs",
-                "Registration Tiers & Kits",
-                "Event Registration & Checkout",
-                "WhatsApp Group Auto-Routing",
-                "Confirmation Emails",
-                "Live Fest Schedule",
-                "Google Sheets Auto-Sync",
-                "Basic Admin Dashboard",
+                'Unique Delegate IDs',
+                'Registration Tiers & Kits',
+                'Event Registration & Checkout',
+                'WhatsApp Group Auto-Routing',
+                'Confirmation Emails',
+                'Live Fest Schedule',
+                'Google Sheets Auto-Sync',
+                'Basic Admin Dashboard',
               ]}
               price="₹49,997"
             />
@@ -109,14 +109,14 @@ export function Pricing() {
               name="Full Platform"
               bestFor="Large intercollegiate fests, flagship annual events"
               includes={[
-                "Everything in Essentials",
-                "Merch Store with payment tracking",
-                "Full Data Export (cultural, sports, merch)",
-                "Payment Verification System",
-                "Marketing Email Campaigns",
-                "Advanced Admin Dashboard",
-                "Custom Domain Setup",
-                "Real-time Support During Fest",
+                'Everything in Essentials',
+                'Merch Store with payment tracking',
+                'Full Data Export (cultural, sports, merch)',
+                'Payment Verification System',
+                'Marketing Email Campaigns',
+                'Advanced Admin Dashboard',
+                'Custom Domain Setup',
+                'Real-time Support During Fest',
               ]}
               price="₹1,09,997"
               highlighted

@@ -1,9 +1,9 @@
-"use client";
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { SparklesCore } from "@/components/ui/sparkles";
-import { AnimatePresence, motion } from "motion/react";
-import { cn } from "@/lib/utils";
-import { IconDotsVertical } from "@tabler/icons-react";
+'use client';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { SparklesCore } from '@/components/ui/sparkles';
+import { AnimatePresence, motion } from 'motion/react';
+import { cn } from '@/lib/utils';
+import { IconDotsVertical } from '@tabler/icons-react';
 
 interface CompareProps {
   firstImage?: string;
@@ -16,14 +16,14 @@ interface CompareProps {
   firstImageClassName?: string;
   secondImageClassname?: string;
   initialSliderPercentage?: number;
-  slideMode?: "hover" | "drag";
+  slideMode?: 'hover' | 'drag';
   showHandlebar?: boolean;
   autoplay?: boolean;
   autoplayDuration?: number;
 }
 export const Compare = ({
-  firstImage = "",
-  secondImage = "",
+  firstImage = '',
+  secondImage = '',
   firstImageSrcSet,
   firstImageSizes,
   secondImageSrcSet,
@@ -32,7 +32,7 @@ export const Compare = ({
   firstImageClassName,
   secondImageClassname,
   initialSliderPercentage = 50,
-  slideMode = "hover",
+  slideMode = 'hover',
   showHandlebar = true,
   autoplay = false,
   autoplayDuration = 5000,
@@ -82,26 +82,23 @@ export const Compare = ({
 
   function mouseLeaveHandler() {
     setIsMouseOver(false);
-    if (slideMode === "hover") {
+    if (slideMode === 'hover') {
       setSliderXPercent(initialSliderPercentage);
     }
-    if (slideMode === "drag") {
+    if (slideMode === 'drag') {
       setIsDragging(false);
     }
     startAutoplay();
   }
 
-  const handleStart = useCallback(
-    () => {
-      if (slideMode === "drag") {
-        setIsDragging(true);
-      }
-    },
-    [slideMode]
-  );
+  const handleStart = useCallback(() => {
+    if (slideMode === 'drag') {
+      setIsDragging(true);
+    }
+  }, [slideMode]);
 
   const handleEnd = useCallback(() => {
-    if (slideMode === "drag") {
+    if (slideMode === 'drag') {
       setIsDragging(false);
     }
   }, [slideMode]);
@@ -109,7 +106,7 @@ export const Compare = ({
   const handleMove = useCallback(
     (clientX: number) => {
       if (!sliderRef.current) return;
-      if (slideMode === "hover" || (slideMode === "drag" && isDragging)) {
+      if (slideMode === 'hover' || (slideMode === 'drag' && isDragging)) {
         const rect = sliderRef.current.getBoundingClientRect();
         const x = clientX - rect.left;
         const percent = (x / rect.width) * 100;
@@ -118,27 +115,21 @@ export const Compare = ({
         });
       }
     },
-    [slideMode, isDragging]
+    [slideMode, isDragging],
   );
 
-  const handleMouseDown = useCallback(
-    () => handleStart(),
-    [handleStart]
-  );
+  const handleMouseDown = useCallback(() => handleStart(), [handleStart]);
   const handleMouseUp = useCallback(() => handleEnd(), [handleEnd]);
   const handleMouseMove = useCallback(
     (e: React.MouseEvent) => handleMove(e.clientX),
-    [handleMove]
+    [handleMove],
   );
 
-  const handleTouchStart = useCallback(
-    () => {
-      if (!autoplay) {
-        handleStart();
-      }
-    },
-    [handleStart, autoplay]
-  );
+  const handleTouchStart = useCallback(() => {
+    if (!autoplay) {
+      handleStart();
+    }
+  }, [handleStart, autoplay]);
 
   const handleTouchEnd = useCallback(() => {
     if (!autoplay) {
@@ -152,16 +143,16 @@ export const Compare = ({
         handleMove(e.touches[0].clientX);
       }
     },
-    [handleMove, autoplay]
+    [handleMove, autoplay],
   );
 
   return (
     <div
       ref={sliderRef}
-      className={cn("w-[400px] h-[400px] overflow-hidden", className)}
+      className={cn('w-[400px] h-[400px] overflow-hidden', className)}
       style={{
-        position: "relative",
-        cursor: slideMode === "drag" ? "grab" : "col-resize",
+        position: 'relative',
+        cursor: slideMode === 'drag' ? 'grab' : 'col-resize',
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={mouseLeaveHandler}
@@ -177,7 +168,7 @@ export const Compare = ({
           className="h-full w-px absolute top-0 m-auto z-30 bg-gradient-to-b from-transparent from-[5%] to-[95%] via-indigo-500 to-transparent"
           style={{
             left: `${sliderXPercent}%`,
-            top: "0",
+            top: '0',
             zIndex: 40,
           }}
           transition={{ duration: 0 }}
@@ -206,8 +197,8 @@ export const Compare = ({
           {firstImage ? (
             <motion.div
               className={cn(
-                "absolute inset-0 z-20 rounded-2xl shrink-0 w-full h-full select-none overflow-hidden",
-                firstImageClassName
+                'absolute inset-0 z-20 rounded-2xl shrink-0 w-full h-full select-none overflow-hidden',
+                firstImageClassName,
               )}
               style={{
                 clipPath: `inset(0 ${100 - sliderXPercent}% 0 0)`,
@@ -220,8 +211,8 @@ export const Compare = ({
                 srcSet={firstImageSrcSet}
                 sizes={firstImageSizes}
                 className={cn(
-                  "absolute inset-0  z-20 rounded-2xl shrink-0 w-full h-full select-none",
-                  firstImageClassName
+                  'absolute inset-0  z-20 rounded-2xl shrink-0 w-full h-full select-none',
+                  firstImageClassName,
                 )}
                 draggable={false}
               />
@@ -234,8 +225,8 @@ export const Compare = ({
         {secondImage ? (
           <motion.img
             className={cn(
-              "absolute top-0 left-0 z-[19]  rounded-2xl w-full h-full select-none",
-              secondImageClassname
+              'absolute top-0 left-0 z-[19]  rounded-2xl w-full h-full select-none',
+              secondImageClassname,
             )}
             alt="second image"
             src={secondImage}

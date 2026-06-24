@@ -1,6 +1,6 @@
-import { type ReactNode } from "react";
-import { motion } from "framer-motion";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { type ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -8,7 +8,11 @@ interface ScrollRevealProps {
   delay?: number;
 }
 
-export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealProps) {
+export function ScrollReveal({
+  children,
+  className,
+  delay = 0,
+}: ScrollRevealProps) {
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1 });
 
   return (

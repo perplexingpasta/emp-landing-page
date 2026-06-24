@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 interface UseIntersectionObserverOptions {
   threshold?: number;
@@ -8,7 +8,7 @@ interface UseIntersectionObserverOptions {
 
 export function useIntersectionObserver({
   threshold = 0.1,
-  rootMargin = "0px",
+  rootMargin = '0px',
   triggerOnce = true,
 }: UseIntersectionObserverOptions = {}) {
   const ref = useRef<HTMLDivElement>(null);

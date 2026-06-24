@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from 'react';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { cn } from '@/lib/utils';
 
 interface AnimatedCounterProps {
   value: number;
@@ -13,8 +13,8 @@ interface AnimatedCounterProps {
 
 export function AnimatedCounter({
   value,
-  suffix = "",
-  prefix = "",
+  suffix = '',
+  prefix = '',
   label,
   duration = 2000,
   className,
@@ -43,7 +43,7 @@ export function AnimatedCounter({
   }, [isInView, value, duration]);
 
   return (
-    <div ref={ref} className={cn("text-center", className)}>
+    <div ref={ref} className={cn('text-center', className)}>
       <div className="font-heading text-4xl font-bold text-stone-900 md:text-5xl lg:text-6xl">
         {prefix}
         {count.toLocaleString()}

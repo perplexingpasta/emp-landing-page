@@ -1,9 +1,9 @@
-import { MessageCircle, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { MessageCircle, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function CTA() {
-  const whatsappNumber = "+916362840780"; // Replace with your WhatsApp number
+  const whatsappNumber = '+916362840780'; // Replace with your WhatsApp number
   const whatsappMessage = encodeURIComponent(
     "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
   );
@@ -25,7 +25,7 @@ export function CTA() {
               </span>
 
               <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-                Ready to make your fest{" "}
+                Ready to make your fest{' '}
                 <span className="italic text-amber-600">unforgettable</span>?
               </h2>
 

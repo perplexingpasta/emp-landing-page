@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function AboutFounder() {
   return (

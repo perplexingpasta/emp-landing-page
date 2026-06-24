@@ -1,11 +1,11 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Compare } from "@/components/ui/compare";
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Compare } from '@/components/ui/compare';
 
 export function Hero() {
   const scrollToCTA = () => {
-    const el = document.querySelector("#cta");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const el = document.querySelector('#cta');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -18,7 +18,7 @@ export function Hero() {
             Trusted by 1,700+ delegates at JSSMC
           </span>
           <h1 className="font-heading text-4xl font-bold leading-tight text-stone-800 md:text-5xl lg:text-6xl">
-            Your fest,{" "}
+            Your fest,{' '}
             <span className="italic text-amber-600">fully handled</span>, before
             you even wake up
           </h1>

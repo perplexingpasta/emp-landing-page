@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 interface Testimonial {
   quote: string;
@@ -12,26 +12,26 @@ const testimonials: Testimonial[] = [
   {
     quote:
       "Your Tatvam website was really amazing. I reached out because I saw how well organized and seamlessly integrated everything was. But i was so so fascinated by your website. You're incredibly talented to have built something like this built on your own.",
-    name: "Arjun Menon",
-    role: "Student Council President",
-    college: "Kasturba Medical College",
-    city: "Manipal, Karnataka",
+    name: 'Arjun Menon',
+    role: 'Student Council President',
+    college: 'Kasturba Medical College',
+    city: 'Manipal, Karnataka',
   },
   {
     quote:
       "I was honestly skeptical. We'd always done everything manually. But by Day 1, every single delegate had their ID, their kits, their schedule — and I didn't touch a spreadsheet once. My HOD personally called to congratulate the committee.",
-    name: "Dr. Ananya Sharma",
-    role: "Cultural Secretary",
-    college: "Kasturba Medical College",
-    city: "Manipal, Karnataka",
+    name: 'Dr. Ananya Sharma',
+    role: 'Cultural Secretary',
+    college: 'Kasturba Medical College',
+    city: 'Manipal, Karnataka',
   },
   {
     quote:
-      "The WhatsApp auto-routing alone saved us. We used to manually add everyone. And the live schedule meant we could make last-minute changes and everyone saw it instantly. No running around with printed sheets.",
-    name: "Priya Venkatesh",
-    role: "Technical Head",
-    college: "Madras Medical College",
-    city: "Chennai, Tamil Nadu",
+      'The WhatsApp auto-routing alone saved us. We used to manually add everyone. And the live schedule meant we could make last-minute changes and everyone saw it instantly. No running around with printed sheets.',
+    name: 'Priya Venkatesh',
+    role: 'Technical Head',
+    college: 'Madras Medical College',
+    city: 'Chennai, Tamil Nadu',
   },
   // {
   //   quote:
@@ -53,7 +53,7 @@ export function Testimonials() {
             FROM FEST ORGANISERS
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            What people are{" "}
+            What people are{' '}
             <span className="italic text-amber-600">saying</span>
           </h2>
         </div>
@@ -61,13 +61,13 @@ export function Testimonials() {
         {/* Quote cards grid */}
         <ScrollReveal>
           <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-2">
-            {testimonials.map((t) => (
+            {testimonials.map(t => (
               <div
                 key={t.name}
                 className="flex flex-col rounded-2xl border border-stone-200/80 bg-white p-5 shadow-sm transition-colors hover:border-amber-200/50 md:p-6"
                 style={{
                   transition:
-                    "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)",
+                    'border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
                 {/* Quote */}
@@ -81,9 +81,9 @@ export function Testimonials() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700">
                     <span className="font-heading text-sm font-bold">
                       {t.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")
+                        .split(' ')
+                        .map(n => n[0])
+                        .join('')
                         .slice(0, 2)}
                     </span>
                   </div>

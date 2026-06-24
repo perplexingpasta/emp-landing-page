@@ -81,33 +81,43 @@ Static client-side landing page for FestFlow, a white-label fest management plat
 ## Key Modules (ranked by importance)
 
 ### 1. `src/App.tsx` — Shell & lazy loading
+
 Single `<div>` with `<Navbar>`, then `<main>` containing `<Hero>` (eager) + 9 lazy-loaded sections separated by `<SectionDivider />`, then `<Footer>`. Uses `React.lazy()` + `React.Suspense` with a spinner `<SectionFallback>`. No router — anchor-scroll via `scrollIntoView`.
 
 ### 2. `src/index.css` — Design tokens
+
 Tailwind v4 with `@theme inline` defining `--font-sans` (DM Sans), `--font-heading` (Playfair Display), color primitives (map to CSS vars in `:root`), radius scale, and `animate-scroll` keyframe for the carousel. Colors are oklch() in `:root`. Background is hardcoded `#faf5ed` on `body` (not using the CSS variable). Includes `prefers-reduced-motion` handling and custom scrollbar styles.
 
 ### 3. `src/hooks/useIntersectionObserver.ts` — Animation trigger
+
 Returns `{ ref, isInView }`. Uses native `IntersectionObserver`. Fires once by default (`triggerOnce: true`). Powers `ScrollReveal` and `AnimatedCounter`.
 
 ### 4. `src/components/shared/ScrollReveal.tsx` — Entrance animation
+
 Wraps children in `motion.div` (from `framer-motion`) that fades up on scroll. Accepts `delay` prop. Used by all 9 below-fold sections.
 
 ### 5. `src/components/sections/Hero.tsx` — Above-fold
+
 Headline, two CTA buttons (one scrolls to `#cta`, one links to `https://www.tatvam2026.in`), a `Compare` before/after slider using `/public/` images with responsive `srcSet`/`sizes`, and a trust badge.
 
 ### 6. `src/components/ui/compare.tsx` — Before/after slider
+
 Aceternity UI component. Two `<img>` elements clipped via `clipPath`. Supports `hover` and `drag` slide modes, optional autoplay with ping-pong. Uses `motion/react` for clip-path animation and `SparklesCore` (stub) for divider effects. Handles mouse and touch. ~230 lines.
 
 ### 7. `src/components/layout/Navbar.tsx` — Fixed nav + mobile drawer
+
 Scroll-aware (transparent → blurred after 20px). Desktop: horizontal link buttons + "Get Started" CTA. Mobile: slide-in drawer from left with staggered link animations, backdrop, body scroll lock. Branded "FestFlow" + "by Rishabh J." badge. **Only links to 6 of 10 sections** — missing ImagineThis, Prestige, and Pricing (see tech debt).
 
 ### 8. `src/components/sections/Proof.tsx` — Social proof
+
 `AnimatedCounter` stats (1768 delegates, 51 events, ₹7.97L handled, 99.9% uptime) in a 2×2 / 4-col grid inside `GlowingEffect` bordered cards. Analytics screenshot (`/analytics.webp`) in a mock browser chrome. Mobile-only stats row (visitors, page views, bounce rate).
 
 ### 9. `src/components/sections/Pricing.tsx` — Pricing with real prices
+
 Two-tier pricing: Essentials (₹49,997) and Full Platform (₹1,09,997). Each has a feature checklist. Full Platform is highlighted ("Most popular"). WhatsApp CTA with 50/50 payment terms.
 
 ### 10. `src/components/shared/ImageCarousel.tsx` — Infinite scroll carousel
+
 Clones children into two sets, uses CSS `animate-scroll` keyframe for infinite horizontal scroll. Pauses on hover. Used only by Testimonials.
 
 ## Data Flow
@@ -121,17 +131,18 @@ There is no data flow. This is a static page:
 - **No environment variables.** No `.env`, no `import.meta.env`.
 
 External references (all hardcoded):
+
 - Google Fonts (CDN `<link>` in `index.html`)
 - `https://www.tatvam2026.in` (live demo link, used in Hero + Testimonials)
 - WhatsApp: `+916362840780` (CTA.tsx, HowItWorks.tsx, Pricing.tsx — same number everywhere now)
 
 ## External Integrations & Env Vars
 
-| Integration | Where | Notes |
-|---|---|---|
-| Google Fonts | `index.html` | DM Sans + Playfair Display via CDN `<link>` |
-| WhatsApp | `CTA.tsx`, `HowItWorks.tsx`, `Pricing.tsx` | Same number: `+916362840780` |
-| tatvam2026.in | `Hero.tsx`, `Testimonials.tsx` | External demo link |
+| Integration   | Where                                      | Notes                                       |
+| ------------- | ------------------------------------------ | ------------------------------------------- |
+| Google Fonts  | `index.html`                               | DM Sans + Playfair Display via CDN `<link>` |
+| WhatsApp      | `CTA.tsx`, `HowItWorks.tsx`, `Pricing.tsx` | Same number: `+916362840780`                |
+| tatvam2026.in | `Hero.tsx`, `Testimonials.tsx`             | External demo link                          |
 
 **No environment variables needed.** Zero-config static site.
 
@@ -168,23 +179,28 @@ External references (all hardcoded):
 ## Where to Start (by task type)
 
 ### Adding a new page section
+
 1. Create `src/components/sections/YourSection.tsx` (named export).
 2. Add a section `id` for anchor nav.
 3. In `App.tsx`: add `React.lazy()` import + `<Suspense>` + `<SectionDivider />` at the correct position in section order.
 4. To add a nav link: edit `navLinks` array in `Navbar.tsx`.
 
 ### Adding a UI component
+
 1. Create `src/components/ui/your-component.tsx`.
 2. Use `cn()` from `@/lib/utils` for className merging.
 3. Follow shadcn conventions: `data-slot`, `React.ComponentProps<"element">`, named export.
 
 ### Changing design tokens
+
 Edit `src/index.css`. Colors in `:root` block. Fonts and radii in `@theme inline`. Background is hardcoded `#faf5ed` on `body` and referenced as `bg-[#faf5ed]` in 4 places — change both if updating the background color.
 
 ### Adding an animation wrapper
+
 Use `useIntersectionObserver` from `@/hooks/useIntersectionObserver`. Wrap with `motion.div` from `framer-motion`. Follow `ScrollReveal` pattern.
 
 ### Replacing assets
+
 - **Testimonial images:** `sourceImages` array in `Testimonials.tsx` + files in `public/testimonials/`.
 - **Hero Compare images:** Replace files in `public/` (old*.webp, new*.webp).
 - **Analytics screenshot:** Replace `public/analytics.webp`.
@@ -192,8 +208,10 @@ Use `useIntersectionObserver` from `@/hooks/useIntersectionObserver`. Wrap with 
 - **Pricing:** `price` props in `Pricing.tsx` `PricingTier` components (Essentials and Full Platform).
 
 ### Building
+
 ```
 npm run build     # tsc -b && vite build → dist/
 npm run preview   # serve dist/ locally
 ```
+
 `dist/` is not committed to git — build before deploying.

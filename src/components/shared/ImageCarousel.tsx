@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface ImageCarouselProps {
   images: string[];
-  speed?: "fast" | "normal" | "slow";
+  speed?: 'fast' | 'normal' | 'slow';
   className?: string;
 }
 
 export function ImageCarousel({
   images,
-  speed = "normal",
+  speed = 'normal',
   className,
 }: ImageCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,17 +19,17 @@ export function ImageCarousel({
   useEffect(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-      scrollerContent.forEach((item) => {
+      scrollerContent.forEach(item => {
         const clone = item.cloneNode(true);
         scrollerRef.current?.appendChild(clone);
       });
 
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+      if (speed === 'fast') {
+        containerRef.current.style.setProperty('--animation-duration', '20s');
+      } else if (speed === 'normal') {
+        containerRef.current.style.setProperty('--animation-duration', '40s');
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty('--animation-duration', '80s');
       }
 
       setStart(true);
@@ -39,17 +39,14 @@ export function ImageCarousel({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        "scroller relative z-20 w-full overflow-hidden",
-        className,
-      )}
+      className={cn('scroller relative z-20 w-full overflow-hidden', className)}
     >
       <div
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
-          start && "animate-scroll",
-          "hover:[animation-play-state:paused]",
+          'flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4',
+          start && 'animate-scroll',
+          'hover:[animation-play-state:paused]',
         )}
       >
         {images.map((src, idx) => (

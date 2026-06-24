@@ -1,12 +1,12 @@
-import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 const stats = [
-  { value: 1768, label: "Delegates registered" },
-  { value: 51, label: "Events managed" },
-  { value: 7, prefix: "₹", suffix: ".97L", label: "Amount handled" },
-  { value: 99, suffix: ".9%", label: "Uptime during fest" },
+  { value: 1768, label: 'Delegates registered' },
+  { value: 51, label: 'Events managed' },
+  { value: 7, prefix: '₹', suffix: '.97L', label: 'Amount handled' },
+  { value: 99, suffix: '.9%', label: 'Uptime during fest' },
 ];
 
 export function Proof() {
@@ -19,7 +19,7 @@ export function Proof() {
             The numbers
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Proven at scale.{" "}
+            Proven at scale.{' '}
             <span className="italic text-amber-600">Not a prototype.</span>
           </h2>
         </div>
@@ -33,7 +33,7 @@ export function Proof() {
         {/* Animated stats with glowing borders */}
         <ScrollReveal>
           <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">
-            {stats.map((stat) => (
+            {stats.map(stat => (
               <div
                 key={stat.label}
                 className="relative rounded-2xl border border-stone-200 bg-white p-5 md:p-6"

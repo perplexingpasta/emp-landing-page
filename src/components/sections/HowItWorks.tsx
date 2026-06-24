@@ -5,56 +5,56 @@ import {
   Rocket,
   Headphones,
   ArrowRight,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
-const whatsappNumber = "+916362840780";
+const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
   "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
 );
 
 const steps = [
   {
-    step: "01",
+    step: '01',
     icon: <MessageCircle className="h-5 w-5" />,
-    title: "You tell me about your fest",
+    title: 'You tell me about your fest',
     description:
       "We talk about your fest — how many delegates you're expecting, what events you're running, your fest requirements.",
-    color: "bg-amber-100 text-amber-700",
+    color: 'bg-amber-100 text-amber-700',
   },
   {
-    step: "02",
+    step: '02',
     icon: <Settings className="h-5 w-5" />,
-    title: "I build everything",
+    title: 'I build everything',
     description:
-      "Your branded platform takes shape — registration, events, schedule, merch. Give me 4-6 weeks. You focus on the fest. I handle the tech.",
-    color: "bg-amber-100 text-amber-700",
+      'Your branded platform takes shape — registration, events, schedule, merch. Give me 4-6 weeks. You focus on the fest. I handle the tech.',
+    color: 'bg-amber-100 text-amber-700',
   },
   {
-    step: "03",
+    step: '03',
     icon: <Eye className="h-5 w-5" />,
-    title: "You see it. Your committee is impressed.",
+    title: 'You see it. Your committee is impressed.',
     description:
       "I walk your team through the platform on a quick call. It's beautiful. It's fast. It just works.",
-    color: "bg-amber-100 text-amber-700",
+    color: 'bg-amber-100 text-amber-700',
   },
   {
-    step: "04",
+    step: '04',
     icon: <Rocket className="h-5 w-5" />,
-    title: "Registration opens. Delegates pour in.",
+    title: 'Registration opens. Delegates pour in.',
     description:
       "Your platform goes live. Registrations come in clean. Payments are logged. You don't touch a single spreadsheet.",
-    color: "bg-amber-100 text-amber-700",
+    color: 'bg-amber-100 text-amber-700',
   },
   {
-    step: "05",
+    step: '05',
     icon: <Headphones className="h-5 w-5" />,
-    title: "You actually enjoy your own fest",
+    title: 'You actually enjoy your own fest',
     description:
       "I monitor everything throughout the fest. If anything needs fixing, I handle it. You're in the auditorium, watching it all come together.",
-    color: "bg-amber-100 text-amber-700",
+    color: 'bg-amber-100 text-amber-700',
   },
 ];
 
@@ -68,7 +68,7 @@ export function HowItWorks() {
             How it works
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            From first message to{" "}
+            From first message to{' '}
             <span className="italic text-amber-600">live platform</span> in days
           </h2>
         </div>
@@ -83,15 +83,15 @@ export function HowItWorks() {
                 <div
                   key={step.step}
                   className={cn(
-                    "relative flex gap-6 md:gap-0",
-                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse",
+                    'relative flex gap-6 md:gap-0',
+                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',
                   )}
                 >
                   {/* Step circle */}
                   <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
                     <div
                       className={cn(
-                        "flex h-full w-full items-center justify-center rounded-full",
+                        'flex h-full w-full items-center justify-center rounded-full',
                         step.color,
                       )}
                     >
@@ -102,12 +102,12 @@ export function HowItWorks() {
                   {/* Content card */}
                   <div
                     className={cn(
-                      "flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm md:w-[calc(50%-2rem)] md:flex-none",
-                      i % 2 === 0 ? "md:mr-auto" : "md:ml-auto",
+                      'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm md:w-[calc(50%-2rem)] md:flex-none',
+                      i % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto',
                     )}
                     style={{
                       transition:
-                        "border-color 180ms cubic-bezier(0.22, 1, 0.36, 1)",
+                        'border-color 180ms cubic-bezier(0.22, 1, 0.36, 1)',
                     }}
                   >
                     <span className="font-heading text-xs font-bold tracking-wider text-amber-600 uppercase">
@@ -119,7 +119,7 @@ export function HowItWorks() {
                     <p className="mt-2 font-sans text-sm leading-relaxed text-stone-500">
                       {step.description}
                     </p>
-                    {step.step === "01" && (
+                    {step.step === '01' && (
                       <div className="mt-3">
                         <Button
                           className="group w-full rounded-xl bg-linear-to-r from-amber-500 to-amber-600 font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02]"

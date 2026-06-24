@@ -1,30 +1,30 @@
-import { FileSpreadsheet, Users, DollarSign, Clock } from "lucide-react";
-import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { FileSpreadsheet, Users, DollarSign, Clock } from 'lucide-react';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 const painPoints = [
   {
     icon: <FileSpreadsheet className="h-5 w-5" />,
-    title: "Google Forms chaos",
+    title: 'Google Forms chaos',
     description:
-      "Ten sheets, three forms, zero coherence. Someone always breaks a formula.",
+      'Ten sheets, three forms, zero coherence. Someone always breaks a formula.',
   },
   {
     icon: <Users className="h-5 w-5" />,
-    title: "Duplicate registrations",
+    title: 'Duplicate registrations',
     description:
-      "Same person, different emails — no way to tell who actually paid.",
+      'Same person, different emails — no way to tell who actually paid.',
   },
   {
     icon: <DollarSign className="h-5 w-5" />,
-    title: "Payment tracking hell",
+    title: 'Payment tracking hell',
     description:
-      "Screenshots buried in WhatsApp. Manual bank statement cross-checking. Every. Single. Student.",
+      'Screenshots buried in WhatsApp. Manual bank statement cross-checking. Every. Single. Student.',
   },
   {
     icon: <Clock className="h-5 w-5" />,
-    title: "Hours lost to admin work",
+    title: 'Hours lost to admin work',
     description:
-      "Your team spends more time on spreadsheets than on the actual fest.",
+      'Your team spends more time on spreadsheets than on the actual fest.',
   },
 ];
 
@@ -38,8 +38,8 @@ export function Problem() {
             The problem
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-            Last year's fest cost your team 50+ hours of{" "}
-            <span className="italic text-amber-600">spreadsheet hell</span>.
+            Last year's fest cost your team 50+ hours of{' '}
+            <span className="italic text-amber-600">spreadsheet hell</span>
           </h2>
         </div>
 
@@ -51,13 +51,13 @@ export function Problem() {
         {/* Pain points — 2×2 grid */}
         <ScrollReveal>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
-            {painPoints.map((point) => (
+            {painPoints.map(point => (
               <div
                 key={point.title}
                 className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
                 style={{
                   transition:
-                    "border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)",
+                    'border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
@@ -78,8 +78,8 @@ export function Problem() {
 
         {/* Bridge transition */}
         <p className="mt-8 text-center font-sans italic px-4 text-base font-light text-stone-600 md:mt-10 md:text-lg">
-          This year, imagine walking into the auditorium knowing every delegate,
-          every payment, every event — handled. Automatically.
+          This year, you can walk into the auditorium knowing every delegate,
+          every payment, every event is handled. Automatically.
         </p>
       </div>
     </section>
