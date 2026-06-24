@@ -62,7 +62,9 @@ export function Hero() {
             Drag the slider to compare
           </p>*/}
           <Compare
-            firstImage="/old-v2.webp"
+            firstImage="/old.webp"
+            firstImageSrcSet="/old-mobile.webp 960w, /old-tablet.webp 1440w, /old.webp 1920w"
+            firstImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
             secondImage="/new.webp"
             secondImageSrcSet="/new-mobile.webp 960w, /new-tablet.webp 1440w, /new.webp 1920w"
             secondImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
