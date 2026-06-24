@@ -23,14 +23,14 @@ export function Hero() {
             you even wake up
           </h1>
           <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-lg">
-            3,500+ delegates registered. <br />
-            64 events. <br />
+            4,500+ delegates. <br />
+            80+ events. <br />
             0 spreadsheets.
             <br />
             <br />
             Your phone stays silent — because everything just works.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3">
             <Button
               size="lg"
               className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-700 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-full"
@@ -42,7 +42,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-5/6 rounded-xl border-amber-200 font-sans text-base text-stone-600 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-full"
+              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-full"
               asChild
             >
               <a

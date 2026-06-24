@@ -12,7 +12,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
-  "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?"
+  "Hi! Can you tell me more about how you can make our upcoming fest 10x better?"
 );
 
 const steps = [
@@ -67,7 +67,7 @@ export function HowItWorks() {
           <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase">
             How it works
           </span>
-          <h2 className="font-heading mt-2 text-3xl font-bold text-stone-900 md:text-4xl">
+          <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
             From first message to{' '}
             <span className="text-amber-600 italic">live platform</span> in days
           </h2>

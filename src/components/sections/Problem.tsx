@@ -37,7 +37,7 @@ export function Problem() {
           <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase">
             The problem
           </span>
-          <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+          <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
             Last year's fest cost your team 50+ hours of{' '}
             <span className="text-amber-600 italic">spreadsheet hell</span>
           </h2>

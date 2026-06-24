@@ -9,8 +9,8 @@ export function AboutFounder() {
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
               MY STORY
             </span>
-            <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
-              I've been <span className="italic">in your shoes</span>
+            <h2 className="font-heading italic text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+              I've been in your shoes
             </h2>
           </ScrollReveal>
 
@@ -19,23 +19,22 @@ export function AboutFounder() {
               <p>
                 I'm Rishabh, a third-year MBBS student at JSS Medical College,
                 Mysuru. I taught myself coding in the first two years of med
-                school . I built landing pages, brochures, and graphics for
-                college fests. Over 20 websites later, I know exactly what a
+                school. I built landing pages, brochures, and graphics for
+                college fests & events. Over 30 websites later, I know exactly what a
                 fest committee needs because I've been on both sides.
               </p>
               <p>
-                FestFlow started because I watched my own college's fest
+                I started this because I watched my own college's fest
                 committee drown in Google Forms every year. Duplicate
-                registrations. Payment WhatsApp screenshots. Spreadsheets that
+                registrations, payment WhatsApp screenshots, spreadsheets that
                 broke mid-fest. I knew there had to be a better way, so I built
                 it.
               </p>
               <p>
-                This isn't a startup trying to disrupt the "event management
-                space." It's a tool built by someone who understands that you
-                have postings at 9 AM, an exam next week, record submission and
-                a fest to organize. I built FestFlow so you can focus on the
-                fest — not the backend.
+                This is a tool built by someone who understands that you
+                have daily clinical postings, exams every now and then, projects, and
+                a fest to organize. I have built this so you can focus on the
+                fest and not the backend.
               </p>
             </div>
           </ScrollReveal>

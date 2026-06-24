@@ -9,7 +9,7 @@ export function Prestige() {
             {/*<p className="font-sans text-xs font-medium tracking-wider text-amber-600 uppercase">
               FIRST IMPRESSIONS
             </p>*/}
-            <h2 className="font-heading mt-4 text-3xl font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading mt-4 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
               First impression happens{' '}
               <span className="italic">
                 <span className="text-amber-600">before</span> anyone arrives
@@ -42,7 +42,7 @@ export function Prestige() {
               src="/new.webp"
               srcSet="/new-mobile.webp 600w, /new-tablet.webp 900w, /new.webp 1200w"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, 1200px"
-              alt="Tatvam 2026 fest website — a fast, branded registration platform built with FestFlow"
+              alt="Tatvam 2026 fest website — a fast, branded registration platform built by Rishabh J."
               className="w-full"
               width={1200}
               height={750}

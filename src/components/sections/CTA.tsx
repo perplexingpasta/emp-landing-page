@@ -5,7 +5,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 export function CTA() {
   const whatsappNumber = '+916362840780'; // Replace with your WhatsApp number
   const whatsappMessage = encodeURIComponent(
-    "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?"
+    "Hi! Can you tell me more about how you can make our upcoming fest 10x better?"
   );
 
   return (
@@ -24,7 +24,7 @@ export function CTA() {
                 Limited slots only
               </span>
 
-              <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+              <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
                 Ready to make your fest{' '}
                 <span className="text-amber-600 italic">unforgettable</span>?
               </h2>

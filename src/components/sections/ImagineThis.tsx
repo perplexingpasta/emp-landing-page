@@ -9,12 +9,12 @@ export function ImagineThis() {
             {/*<span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
               THIS COULD BE YOU
             </span>*/}
-            <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
               Imagine having <br />
               <span className="italic text-amber-600">zero problems</span> on
               the morning of your fest
             </h2>
-            {/*<h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+            {/*<h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
               Picture the morning of <span className="italic">your fest</span>
             </h2>*/}
           </ScrollReveal>

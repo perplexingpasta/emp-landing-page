@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
-  "Hi! I'm interested in getting FestFlow for our college fest. Can you share more details?",
+  "Hi! Can you tell me more about how you can make our upcoming fest 10x better?",
 );
 
 interface TierProps {
@@ -40,7 +40,7 @@ function PricingTier({
       <h3 className="font-heading text-xl font-bold text-stone-900">{name}</h3>
       <p className="mt-1 font-sans text-sm text-stone-500">{bestFor}</p>
       <div className="mt-5">
-        <span className="font-heading text-3xl font-bold text-stone-900">
+        <span className="font-heading text-[2.2rem] font-bold text-stone-900">
           {price}
         </span>
       </div>
@@ -65,7 +65,7 @@ export function Pricing() {
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
               PRICING
             </span>
-            <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
               Simple, transparent{' '}
               <span className="italic text-amber-600">pricing</span>.
             </h2>

@@ -79,11 +79,11 @@ export function Navbar() {
             className="flex items-center gap-2"
           >
             <span className="font-heading text-xl font-bold text-stone-800">
-              FestFlow
+              Rishabh J.
             </span>
-            <span className="hidden rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[10px] font-semibold text-amber-700 sm:inline-block">
+            {/*<span className="hidden rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[10px] font-semibold text-amber-700 sm:inline-block">
               by Rishabh J.
-            </span>
+            </span>*/}
           </a>
 
           {/* Desktop links */}
@@ -154,7 +154,7 @@ export function Navbar() {
               {/* Drawer header */}
               <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">
                 <span className="font-heading text-lg font-bold text-stone-800">
-                  FestFlow
+                  Rishabh J.
                 </span>
                 <button
                   onClick={() => setIsMobileOpen(false)}

@@ -56,7 +56,7 @@ export function Features() {
           <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
             The solution
           </span>
-          <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
+          <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
             Everything handled.{' '}
             <span className="text-amber-600 italic">
               Nothing left to chance.
