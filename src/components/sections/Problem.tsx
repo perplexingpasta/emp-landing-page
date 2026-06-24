@@ -39,7 +39,7 @@ export function Problem() {
           </span>
           <h2 className="font-heading text-3xl font-bold text-stone-900 md:text-4xl">
             Last year's fest cost your team 50+ hours of{' '}
-            <span className="italic text-amber-600">spreadsheet hell</span>
+            <span className="text-amber-600 italic">spreadsheet hell</span>
           </h2>
         </div>
 
@@ -64,10 +64,10 @@ export function Problem() {
                   {point.icon}
                 </div>
                 <div>
-                  <h3 className="font-heading text-base font-bold text-stone-800 tracking-wide">
+                  <h3 className="font-heading text-lg font-bold tracking-wide text-stone-800">
                     {point.title}
                   </h3>
-                  <p className="mt-1 font-sans text-sm leading-relaxed text-stone-500">
+                  <p className="mt-1 font-sans text-base leading-relaxed text-stone-500">
                     {point.description}
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export function Problem() {
         </ScrollReveal>
 
         {/* Bridge transition */}
-        <p className="mt-8 text-center font-sans italic px-4 text-base font-light text-stone-600 md:mt-10 md:text-lg">
+        <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-lg">
           This year, you can walk into the auditorium knowing every delegate,
           every payment, every event is handled. Automatically.
         </p>
