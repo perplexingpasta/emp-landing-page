@@ -5,7 +5,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row">
           <p className="font-sans text-sm text-stone-400">
             {' '}
-            Built by a medical students, for medical students. <br /> &copy;{' '}
+            Built by a medical student, for medical students. <br /> &copy;{' '}
             {new Date().getFullYear()} Rishabh J.
           </p>
           {/*<p className="font-sans text-sm text-stone-400">
