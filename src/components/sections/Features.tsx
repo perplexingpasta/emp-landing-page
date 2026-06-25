@@ -1,5 +1,6 @@
 import { Users, LayoutDashboard, CheckCircle2 } from 'lucide-react';
 import { ScrollReveal } from '@/components/shared/ScrollReveal';
+import { AmbientBlobs } from '@/components/shared/AmbientBlobs';
 
 const organiserFeatures: { headline: string; body: string }[] = [
   {
@@ -49,8 +50,9 @@ const delegateFeatures: { headline: string; body: string }[] = [
 
 export function Features() {
   return (
-    <section id="features" className="cv-auto bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-4 md:px-6">
+    <section id="features" className="cv-auto relative bg-white py-16 md:py-20">
+      <AmbientBlobs colorTop="bg-amber-500" colorBottom="bg-emerald-500" />
+      <div className="relative mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -67,10 +69,10 @@ export function Features() {
         </ScrollReveal>
 
         {/* Two-column feature lists */}
-        <ScrollReveal>
-          <div className="mt-12 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
-            {/* Organisers (buyer) — first column */}
-            <div>
+        <div className="mt-12 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
+          {/* Organisers (buyer) — first column */}
+          <div>
+            <ScrollReveal>
               <div className="mb-5 flex items-start gap-2.5">
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                   <LayoutDashboard className="h-5 w-5" />
@@ -82,9 +84,11 @@ export function Features() {
                   <div className="mt-1.5 h-0.5 w-14 rounded-full bg-linear-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
-              <ul className="mx-auto max-w-md space-y-6 px-2.5">
-                {organiserFeatures.map(feature => (
-                  <li key={feature.headline} className="flex items-start gap-3">
+            </ScrollReveal>
+            <ul className="mx-auto max-w-md space-y-6 px-2.5">
+              {organiserFeatures.map((feature, i) => (
+                <ScrollReveal as="li" key={feature.headline} delay={i * 0.06}>
+                  <div className="flex items-start gap-3 rounded-lg transition-colors duration-200 hover:bg-amber-50/60">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-500" />
                     <div>
                       <p className="font-sans text-base font-semibold text-stone-800">
@@ -94,13 +98,15 @@ export function Features() {
                         {feature.body}
                       </p>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </ul>
+          </div>
 
-            {/* Delegates — second column, framed as what your delegates experience */}
-            <div>
+          {/* Delegates — second column, framed as what your delegates experience */}
+          <div>
+            <ScrollReveal delay={0.12}>
               <div className="mb-5 flex items-start gap-2.5">
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                   <Users className="h-5 w-5" />
@@ -112,9 +118,11 @@ export function Features() {
                   <div className="mt-1.5 h-0.5 w-14 rounded-full bg-linear-to-r from-amber-400 to-amber-600" />
                 </div>
               </div>
-              <ul className="mx-auto max-w-md space-y-6 px-2.5">
-                {delegateFeatures.map(feature => (
-                  <li key={feature.headline} className="flex items-start gap-3">
+            </ScrollReveal>
+            <ul className="mx-auto max-w-md space-y-6 px-2.5">
+              {delegateFeatures.map((feature, i) => (
+                <ScrollReveal as="li" key={feature.headline} delay={0.12 + i * 0.06}>
+                  <div className="flex items-start gap-3 rounded-lg transition-colors duration-200 hover:bg-amber-50/60">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-500" />
                     <div>
                       <p className="font-sans text-base font-semibold text-stone-800">
@@ -124,12 +132,12 @@ export function Features() {
                         {feature.body}
                       </p>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </ul>
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

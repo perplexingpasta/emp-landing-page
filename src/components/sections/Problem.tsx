@@ -1,5 +1,6 @@
 import { FileSpreadsheet, Users, DollarSign, Clock } from 'lucide-react';
 import { ScrollReveal } from '@/components/shared/ScrollReveal';
+import { AmbientBlobs } from '@/components/shared/AmbientBlobs';
 
 const painPoints = [
   {
@@ -30,8 +31,9 @@ const painPoints = [
 
 export function Problem() {
   return (
-    <section id="problem" className="cv-auto bg-[#faf5ed] py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-6 md:px-8">
+    <section id="problem" className="cv-auto relative bg-[#faf5ed] py-16 md:py-20">
+      <AmbientBlobs colorTop="bg-red-500" colorBottom="bg-amber-500" />
+      <div className="relative mx-auto max-w-265 px-6 md:px-8">
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -51,15 +53,14 @@ export function Problem() {
         </p>*/}
 
         {/* Pain points — 2×2 grid */}
-        <ScrollReveal>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
-            {painPoints.map(point => (
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
+          {painPoints.map((point, i) => (
+            <ScrollReveal key={point.title} delay={i * 0.08}>
               <div
-                key={point.title}
-                className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 transition-colors hover:border-red-200/50 md:p-5"
+                className="flex gap-4 rounded-xl border border-stone-200/80 bg-white p-4 hover:-translate-y-1 hover:border-red-200/50 hover:shadow-md md:p-5"
                 style={{
                   transition:
-                    'border-color 250ms cubic-bezier(0.22, 1, 0.36, 1)',
+                    'border-color 250ms cubic-bezier(0.22, 1, 0.36, 1), transform 250ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 250ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500">
@@ -74,9 +75,9 @@ export function Problem() {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </div>
 
         {/* Bridge transition */}
         <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-lg">

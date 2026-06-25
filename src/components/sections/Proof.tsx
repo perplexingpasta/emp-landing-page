@@ -31,14 +31,11 @@ export function Proof() {
           College, Mysuru — a real fest, with real stakes.
         </p>
 
-        {/* Animated stats with glowing borders */}
-        <ScrollReveal>
-          <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">
-            {stats.map(stat => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-stone-200 bg-white p-5 md:p-6"
-              >
+        {/* Animated stats */}
+        <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">
+          {stats.map((stat, i) => (
+            <ScrollReveal key={stat.label} delay={i * 0.08}>
+              <div className="rounded-2xl border border-stone-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-6">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}
@@ -46,9 +43,9 @@ export function Proof() {
                   label={stat.label}
                 />
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </div>
 
         {/* Analytics */}
         <ScrollReveal>
