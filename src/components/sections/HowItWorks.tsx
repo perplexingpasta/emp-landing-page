@@ -64,15 +64,17 @@ export function HowItWorks() {
     <section id="how-it-works" className="cv-auto bg-[#faf5ed] px-2 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase">
-            How it works
-          </span>
-          <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
-            From first message to{' '}
-            <span className="text-amber-600 italic">live platform</span> in days
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase">
+              How it works
+            </span>
+            <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+              From first message to{' '}
+              <span className="text-amber-600 italic">live platform</span> in days
+            </h2>
+          </div>
+        </ScrollReveal>
 
         <div className="relative mx-auto mt-12 max-w-3xl md:mt-14">
           {/* Connector line */}

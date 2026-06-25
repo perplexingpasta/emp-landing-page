@@ -13,15 +13,17 @@ export function Proof() {
     <section id="proof" className="cv-auto bg-white py-16 md:py-20">
       <div className="mx-auto max-w-265 px-5 md:px-8">
         {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
-            The numbers
-          </span>
-          <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
-            Proven at scale.{' '}
-            <span className="text-amber-600 italic">Not a demo.</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
+              The numbers
+            </span>
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+              Proven at scale.{' '}
+              <span className="text-amber-600 italic">Not a demo.</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Framing */}
         <p className="mt-6 px-4 text-center font-sans text-base text-stone-500 md:text-lg">

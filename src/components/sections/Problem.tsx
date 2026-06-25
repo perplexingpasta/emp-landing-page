@@ -33,15 +33,17 @@ export function Problem() {
     <section id="problem" className="cv-auto bg-[#faf5ed] py-16 md:py-20">
       <div className="mx-auto max-w-265 px-6 md:px-8">
         {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase">
-            The problem
-          </span>
-          <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
-            Last year's fest cost your team 50+ hours of{' '}
-            <span className="text-amber-600 italic">spreadsheet hell</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase">
+              The problem
+            </span>
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+              Last year's fest cost your team 50+ hours of{' '}
+              <span className="text-amber-600 italic">spreadsheet hell</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Compact stat callout */}
         {/*<p className="mt-4 text-center font-sans text-sm font-medium text-red-600 md:text-base">
