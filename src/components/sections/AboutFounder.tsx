@@ -46,6 +46,8 @@ export function AboutFounder() {
                 alt="Rishabh"
                 className="h-16 w-16 rounded-full object-cover ring-4 ring-amber-50"
                 loading="lazy"
+                width={64}
+                height={64}
               />
               <p className="font-heading text-lg font-semibold text-stone-800">
                 — Rishabh

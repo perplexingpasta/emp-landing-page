@@ -49,7 +49,7 @@ const CTA = lazy(() =>
 
 function SectionFallback() {
   return (
-    <div className="flex items-center justify-center py-24">
+    <div className="flex min-h-[400px] items-center justify-center py-24">
       <div className="h-6 w-6 animate-spin rounded-full border-2 border-amber-200 border-t-amber-600" />
     </div>
   );
@@ -58,9 +58,15 @@ function SectionFallback() {
 function App() {
   return (
     <div className="min-h-screen">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-amber-600 focus:px-4 focus:py-2 focus:text-white focus:outline-none"
+      >
+        Skip to content
+      </a>
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <Hero />
         <SectionDivider />
         <ImagineThis />

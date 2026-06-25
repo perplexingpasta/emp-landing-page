@@ -5,12 +5,14 @@ interface ImageCarouselProps {
   images: string[];
   speed?: 'fast' | 'normal' | 'slow';
   className?: string;
+  altPrefix?: string;
 }
 
 export function ImageCarousel({
   images,
   speed = 'normal',
   className,
+  altPrefix = 'Testimonial',
 }: ImageCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -56,10 +58,12 @@ export function ImageCarousel({
           >
             <img
               src={src}
-              alt={`Testimonial ${idx + 1}`}
+              alt={`${altPrefix} ${idx + 1}`}
               className="h-full w-full object-cover"
               loading="lazy"
               draggable={false}
+              decoding="async"
+              fetchPriority="low"
             />
           </div>
         ))}

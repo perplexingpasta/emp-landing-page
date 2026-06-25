@@ -19,6 +19,8 @@ interface CompareProps {
   showHandlebar?: boolean;
   autoplay?: boolean;
   autoplayDuration?: number;
+  firstImageAlt?: string;
+  secondImageAlt?: string;
 }
 export const Compare = ({
   firstImage = '',
@@ -35,6 +37,8 @@ export const Compare = ({
   showHandlebar = true,
   autoplay = false,
   autoplayDuration = 5000,
+  firstImageAlt = '',
+  secondImageAlt = '',
 }: CompareProps) => {
   const [sliderXPercent, setSliderXPercent] = useState(initialSliderPercentage);
   const [isDragging, setIsDragging] = useState(false);
@@ -46,11 +50,14 @@ export const Compare = ({
 
   const autoplayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const autoplayWasRunning = useRef(false);
+  const keyboardTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const { ref: visibilityRef, isInView } = useIntersectionObserver({ threshold: 0, triggerOnce: false });
 
   const startAutoplay = useCallback(() => {
     if (!autoplay) return;
+    // Respect OS reduced-motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const startTime = Date.now();
     const animate = () => {
@@ -164,6 +171,38 @@ export const Compare = ({
     [handleMove, autoplay]
   );
 
+  // Keyboard support: Arrow keys, Home, End
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (
+        e.key === 'ArrowLeft' ||
+        e.key === 'ArrowRight' ||
+        e.key === 'Home' ||
+        e.key === 'End'
+      ) {
+        e.preventDefault();
+        stopAutoplay();
+        if (keyboardTimeoutRef.current)
+          clearTimeout(keyboardTimeoutRef.current);
+        keyboardTimeoutRef.current = setTimeout(
+          () => startAutoplay(),
+          3000
+        );
+
+        if (e.key === 'ArrowLeft') {
+          setSliderXPercent(prev => Math.max(0, prev - 5));
+        } else if (e.key === 'ArrowRight') {
+          setSliderXPercent(prev => Math.min(100, prev + 5));
+        } else if (e.key === 'Home') {
+          setSliderXPercent(0);
+        } else if (e.key === 'End') {
+          setSliderXPercent(100);
+        }
+      }
+    },
+    [stopAutoplay, startAutoplay]
+  );
+
   return (
     <div
       ref={(node) => {
@@ -183,6 +222,13 @@ export const Compare = ({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       onTouchMove={handleTouchMove}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="slider"
+      aria-valuenow={Math.round(sliderXPercent)}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label="Compare before and after images. Use arrow keys to slide."
     >
       <AnimatePresence initial={false}>
         <motion.div
@@ -226,7 +272,7 @@ export const Compare = ({
               transition={{ duration: 0 }}
             >
               <img
-                alt="first image"
+                alt={firstImageAlt || 'Before image'}
                 src={firstImage}
                 srcSet={firstImageSrcSet}
                 sizes={firstImageSizes}
@@ -249,7 +295,7 @@ export const Compare = ({
               'absolute top-0 left-0 z-19 h-full w-full rounded-2xl select-none',
               secondImageClassname
             )}
-            alt="second image"
+            alt={secondImageAlt || 'After image'}
             src={secondImage}
             srcSet={secondImageSrcSet}
             sizes={secondImageSizes}

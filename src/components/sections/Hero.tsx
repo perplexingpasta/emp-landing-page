@@ -70,11 +70,13 @@ export function Hero() {
             secondImageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 900px"
             firstImageClassName="object-cover object-left-top"
             secondImageClassname="object-cover object-left-top"
+            firstImageAlt="Before: spreadsheet-based manual registration process"
+            secondImageAlt="After: Tatvam 2026 automated fest management platform"
             slideMode="hover"
             showHandlebar
             autoplay
             autoplayDuration={6000}
-            className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 shadow-xl sm:h-80 md:h-112.5"
+            className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 bg-stone-100 shadow-xl sm:h-80 md:h-112.5"
           />
           <div className="flex w-full max-w-225 justify-between px-4">
             <span className="font-sans text-base font-medium text-stone-400">

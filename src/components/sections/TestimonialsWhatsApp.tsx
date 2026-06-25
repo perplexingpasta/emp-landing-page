@@ -54,6 +54,7 @@ export function TestimonialsWhatsApp() {
             images={testimonialImages}
             speed="normal"
             className="mask-none"
+            altPrefix="Fest organiser testimonial"
           />
         </div>
       </ScrollReveal>
