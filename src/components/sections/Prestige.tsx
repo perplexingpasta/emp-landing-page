@@ -39,8 +39,8 @@ export function Prestige() {
               </span>
             </div>
             <img
-              src="/new.webp"
-              srcSet="/new-mobile.webp 600w, /new-tablet.webp 900w, /new.webp 1200w"
+              src="/new-tablet.webp"
+              srcSet="/new-mobile.webp 600w, /new-tablet.webp 1200w"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, 1200px"
               alt="Tatvam 2026 fest website — a fast, branded registration platform built by Rishabh J."
               className="w-full"
