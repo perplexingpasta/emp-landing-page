@@ -1,5 +1,4 @@
 import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
-import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 const stats = [
@@ -11,7 +10,7 @@ const stats = [
 
 export function Proof() {
   return (
-    <section id="proof" className="bg-white py-16 md:py-20">
+    <section id="proof" className="cv-auto bg-white py-16 md:py-20">
       <div className="mx-auto max-w-265 px-5 md:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -36,18 +35,8 @@ export function Proof() {
             {stats.map(stat => (
               <div
                 key={stat.label}
-                className="relative rounded-2xl border border-stone-200 bg-white p-5 md:p-6"
+                className="rounded-2xl border border-stone-200 bg-white p-5 md:p-6"
               >
-                <GlowingEffect
-                  disabled={false}
-                  glow
-                  blur={15}
-                  spread={30}
-                  proximity={64}
-                  inactiveZone={0.5}
-                  borderWidth={1.5}
-                  movementDuration={3}
-                />
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}

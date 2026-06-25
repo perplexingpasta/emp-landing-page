@@ -27,7 +27,7 @@ export function TestimonialsWhatsApp() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-white py-16 md:py-20"
+      className="cv-auto relative overflow-hidden bg-white py-16 md:py-20"
     >
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}

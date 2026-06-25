@@ -11,7 +11,7 @@ export function CTA() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden bg-white py-16 pb-56 md:py-20"
+      className="cv-auto relative overflow-hidden bg-white py-16 pb-56 md:py-20"
     >
       {/* Subtle background accent */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(217,119,6,0.06)_0%,transparent_70%)]" />

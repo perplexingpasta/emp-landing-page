@@ -2,7 +2,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 
 export function AboutFounder() {
   return (
-    <section id="about" className="bg-[#faf5ed] px-3 py-16 md:py-20">
+    <section id="about" className="cv-auto bg-[#faf5ed] px-3 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
@@ -45,6 +45,7 @@ export function AboutFounder() {
                 src="/pfp.webp"
                 alt="Rishabh"
                 className="h-16 w-16 rounded-full object-cover ring-4 ring-amber-50"
+                loading="lazy"
               />
               <p className="font-heading text-lg font-semibold text-stone-800">
                 — Rishabh

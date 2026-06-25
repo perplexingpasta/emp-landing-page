@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react';
-import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 interface ScrollRevealProps {
@@ -16,18 +15,16 @@ export function ScrollReveal({
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-      transition={{
-        duration: 0.5,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? 'translateY(0)' : 'translateY(24px)',
+        transition: `opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s`,
       }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

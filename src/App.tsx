@@ -2,25 +2,17 @@ import { lazy, Suspense } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
+import { ImagineThis } from '@/components/sections/ImagineThis';
+import { Prestige } from '@/components/sections/Prestige';
 import { SectionDivider } from '@/components/shared/SectionDivider';
 
 // Lazy-load below-fold sections for performance
 const Problem = lazy(() =>
   import('@/components/sections/Problem').then(m => ({ default: m.Problem }))
 );
-const ImagineThis = lazy(() =>
-  import('@/components/sections/ImagineThis').then(m => ({
-    default: m.ImagineThis,
-  }))
-);
 const Features = lazy(() =>
   import('@/components/sections/Features').then(m => ({
     default: m.Features,
-  }))
-);
-const Prestige = lazy(() =>
-  import('@/components/sections/Prestige').then(m => ({
-    default: m.Prestige,
   }))
 );
 const Proof = lazy(() =>
@@ -71,9 +63,7 @@ function App() {
       <main>
         <Hero />
         <SectionDivider />
-        <Suspense fallback={<SectionFallback />}>
-          <ImagineThis />
-        </Suspense>
+        <ImagineThis />
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Problem />
@@ -83,9 +73,7 @@ function App() {
           <Features />
         </Suspense>
         <SectionDivider />
-        <Suspense fallback={<SectionFallback />}>
-          <Prestige />
-        </Suspense>
+        <Prestige />
         <SectionDivider />
         <Suspense fallback={<SectionFallback />}>
           <Proof />

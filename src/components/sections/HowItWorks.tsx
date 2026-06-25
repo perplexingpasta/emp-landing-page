@@ -60,7 +60,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-[#faf5ed] px-2 py-16 md:py-20">
+    <section id="how-it-works" className="cv-auto bg-[#faf5ed] px-2 py-16 md:py-20">
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
