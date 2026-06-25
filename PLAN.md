@@ -169,7 +169,7 @@ There is no data flow. This is a static page:
 ### Adding a new page section
 1. Create `src/components/sections/YourSection.tsx` (named export).
 2. Add a section `id` for anchor nav.
-3. In `App.tsx`: add `React.lazy()` import + `<Suspense>` + `<SectionDivider />` at the correct position.
+3. In `App.tsx`: add `React.lazy()` import + `<Suspense>`
 4. To add a nav link: edit `navLinks` array in `Navbar.tsx`. Uncomment existing entries where possible.
 
 ### Changing design tokens
@@ -182,7 +182,7 @@ Edit the `whatsappNumber` variable in `CTA.tsx` (line ~5), `HowItWorks.tsx` (lin
 In `App.tsx`, swap the commented `Testimonials` lazy import (named cards) with the active `TestimonialsWhatsApp` import. The named-card version in `Testimonials.tsx` has hardcoded placeholder names/roles — update those before activating.
 
 ### Enabling/disabling the Pricing section
-In `App.tsx`, uncomment/comment the `Pricing` lazy import and its `<Suspense>` + `<SectionDivider />` block. The `Pricing.tsx` file itself has real prices and doesn't need changes.
+In `App.tsx`, uncomment/comment the `Pricing` lazy import and its `<Suspense>` block. The `Pricing.tsx` file itself has real prices and doesn't need changes.
 
 ### Building
 ```

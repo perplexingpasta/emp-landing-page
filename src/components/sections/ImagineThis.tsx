@@ -30,7 +30,7 @@ export function ImagineThis() {
                 up at the wrong venue and then it's all chaos from there on.
               </p>
               <p>
-                Now picture this instead. It's 8 AM on Day 1 of your fest. 3,200
+                Now picture this instead. It's 8 AM on Day 1 of your fest. 4,500
                 delegates have registered. Every one of them has a delegate ID
                 and have received a confirmation email. The schedule is live on
                 the website. Merch sold out during pre-fest registration. The

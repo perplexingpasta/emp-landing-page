@@ -15,7 +15,8 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
             <ShieldCheck className="h-4 w-4" />
-            Trusted by 1,700+ delegates at JSSMC
+            {/*Trusted by 1,700+ delegates at JSSMC*/}
+            Trusted by JSS Medical College
           </span>
           <h1 className="font-heading text-4xl leading-tight font-bold text-stone-800 md:text-5xl lg:text-6xl">
             Your fest,{' '}
