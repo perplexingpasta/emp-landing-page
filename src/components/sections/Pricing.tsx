@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/shared/ScrollReveal';
 import { cn } from '@/lib/utils';
 
-const whatsappNumber = '+916362840780';
+const whatsappNumber = '+918123655765';
 const whatsappMessage = encodeURIComponent(
   "Hi! Can you tell me more about how you can make our upcoming fest 10x better?",
 );

@@ -129,7 +129,7 @@ There is no data flow. This is a static page:
 | Integration | Where | Notes |
 |---|---|---|
 | Google Fonts | `index.html` | DM Sans + Playfair Display via CDN `<link>` |
-| WhatsApp | `CTA.tsx`, `HowItWorks.tsx`, `Pricing.tsx` | Same number: `+916362840780`. Prefill message: `"Hi! Can you tell me more about how you can make our upcoming fest 10x better?"` |
+| WhatsApp | `CTA.tsx`, `HowItWorks.tsx`, `Pricing.tsx` | Same number: `+918123655765`. Prefill message: `"Hi! Can you tell me more about how you can make our upcoming fest 10x better?"` |
 | tatvam2026.in | `Hero.tsx` | External demo link |
 | WhatsApp icon | `CTA.tsx`, `HowItWorks.tsx` | Inline SVG path (not lucide `MessageCircle`). Button uses green `#25D366` / `#20bd5a`. |
 

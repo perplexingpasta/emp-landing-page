@@ -4,7 +4,7 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 import { WhatsAppIcon } from '@/components/shared/WhatsAppIcon';
 
 export function CTA() {
-  const whatsappNumber = '+916362840780'; // Replace with your WhatsApp number
+  const whatsappNumber = '+918123655765'; // Replace with your WhatsApp number
   const whatsappMessage = encodeURIComponent(
     'Hi! Can you tell me more about how you can make our upcoming fest 10x better?'
   );
