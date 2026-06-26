@@ -205,7 +205,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[51] bg-black/30 backdrop-blur-sm lg:hidden"
               onClick={() => setIsMobileOpen(false)}
             />
 
@@ -216,7 +216,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-y-0 left-0 z-50 w-70 bg-[#faf5ed] shadow-2xl lg:hidden"
+              className="fixed inset-y-0 left-0 z-[52] w-70 bg-[#faf5ed] shadow-2xl lg:hidden"
             >
               {/* Drawer header */}
               <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">
