@@ -13,7 +13,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-265 px-4 pt-22 pb-12 md:px-6 md:pt-30 md:pb-20">
         {/* Headline */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase md:text-base">
             <ShieldCheck className="h-4 w-4" />
             {/*Trusted by 1,700+ delegates at JSSMC*/}
             Trusted by JSS Medical College
@@ -23,7 +23,7 @@ export function Hero() {
             <span className="text-amber-600 italic">fully handled</span>, before
             you even wake up
           </h1>
-          <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-2xl">
+          <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-xl">
             4,500+ delegates. <br />
             80+ events. <br />
             0 spreadsheets.
@@ -43,7 +43,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-96 lg:w-full"
+              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-96 md:text-xl lg:w-full"
               asChild
             >
               <a

@@ -3,14 +3,14 @@ import { ScrollReveal } from '@/components/shared/ScrollReveal';
 export function ImagineThis() {
   return (
     <section id="imagine" className="bg-white px-2 py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-6 md:px-8">
+      <div className="mx-auto max-w-265 px-6">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
             {/*<span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
               THIS COULD BE YOU
             </span>*/}
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
-              Imagine having <br />
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+              Imagine having <br className="block md:hidden" />
               <span className="text-amber-600 italic">zero problems</span> on
               the morning of your fest
             </h2>
@@ -20,7 +20,7 @@ export function ImagineThis() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="mx-auto mt-8 max-w-88 space-y-6 font-sans text-base leading-relaxed text-stone-600 md:text-lg">
+            <div className="mx-auto mt-8 space-y-6 font-sans text-base leading-relaxed text-stone-600 md:text-xl">
               <p>
                 It's 11 PM, the night before. Your phone has 47 unread WhatsApp
                 messages — most of them asking "how do I register?" You're

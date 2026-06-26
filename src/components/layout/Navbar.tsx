@@ -114,11 +114,9 @@ export function Navbar() {
       // Move focus to the section for keyboard/screen-reader users
       el.setAttribute('tabindex', '-1');
       el.focus({ preventScroll: true });
-      el.addEventListener(
-        'blur',
-        () => el.removeAttribute('tabindex'),
-        { once: true }
-      );
+      el.addEventListener('blur', () => el.removeAttribute('tabindex'), {
+        once: true,
+      });
     }
   }, []);
 
@@ -132,7 +130,7 @@ export function Navbar() {
           'fixed top-0 right-0 left-0 z-50 transition-all duration-300',
           isScrolled
             ? 'border-b border-stone-200/40 bg-[#faf5ed]/70 shadow-sm backdrop-blur-lg'
-            : 'bg-transparent',
+            : 'bg-transparent'
         )}
       >
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
@@ -144,7 +142,7 @@ export function Navbar() {
             }}
             className="flex items-center gap-2"
           >
-            <span className="font-heading text-xl font-bold text-stone-800">
+            <span className="font-heading text-xl font-bold text-stone-800 md:text-2xl">
               Rishabh J.
             </span>
             {/*<span className="hidden rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[10px] font-semibold text-amber-700 sm:inline-block">
@@ -177,7 +175,7 @@ export function Navbar() {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => handleNavClick('#cta')}
-              className="rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1.5 font-sans text-xs font-semibold text-amber-700 transition-colors hover:bg-amber-200/60 active:scale-95"
+              className="rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1.5 font-sans text-xs font-semibold text-amber-700 transition-colors hover:bg-amber-200/60 active:scale-95 md:text-base"
             >
               Get Started
             </button>
@@ -248,7 +246,7 @@ export function Navbar() {
                       ease: [0.22, 1, 0.36, 1],
                     }}
                     onClick={() => handleNavClick(link.href)}
-                    className="flex w-full items-center justify-between rounded-xl px-4 py-4 font-heading text-lg font-semibold text-stone-800 transition-colors hover:bg-stone-100"
+                    className="font-heading flex w-full items-center justify-between rounded-xl px-4 py-4 text-lg font-semibold text-stone-800 transition-colors hover:bg-stone-100"
                   >
                     {link.label}
                     <link.icon className="h-5 w-5 shrink-0 text-stone-400" />
@@ -268,7 +266,7 @@ export function Navbar() {
                 >
                   <Button
                     size="lg"
-                    className="w-full font-heading font-bold text-lg"
+                    className="font-heading w-full text-lg font-bold"
                     onClick={() => handleNavClick('#cta')}
                   >
                     Get Started
