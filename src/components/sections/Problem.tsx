@@ -40,10 +40,10 @@ export function Problem() {
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase">
+            <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase md:text-base">
               The problem
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
               Last year's fest cost your team 50+ hours of{' '}
               <span className="text-amber-600 italic">spreadsheet hell</span>
             </h2>
@@ -70,10 +70,10 @@ export function Problem() {
                   {point.icon}
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold tracking-wide text-stone-800">
+                  <h3 className="font-heading text-lg font-bold tracking-wide text-stone-800 md:text-xl">
                     {point.title}
                   </h3>
-                  <p className="mt-1 font-sans text-base leading-relaxed text-stone-500">
+                  <p className="mt-1 font-sans text-base leading-relaxed text-stone-500 md:text-lg">
                     {point.description}
                   </p>
                 </div>
@@ -83,7 +83,7 @@ export function Problem() {
         </div>
 
         {/* Bridge transition */}
-        <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-lg">
+        <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-xl">
           This year, you can walk into the auditorium knowing every delegate,
           every payment, every event is handled. Automatically.
         </p>

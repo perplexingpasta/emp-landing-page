@@ -6,16 +6,16 @@ export function AboutFounder() {
       <div className="mx-auto max-w-265 px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
-            <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase md:text-sm">
               MY STORY
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 italic md:text-4xl">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 italic md:text-[2.5rem]">
               I've been in your shoes
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="mx-auto mt-8 max-w-2xl space-y-5 font-sans text-base leading-relaxed text-stone-600 md:text-lg">
+            <div className="mx-auto mt-8 max-w-2xl space-y-5 font-sans text-base leading-relaxed text-stone-600 md:text-xl">
               <p>
                 I'm Rishabh, a third-year MBBS student at JSS Medical College,
                 Mysuru. I taught myself coding in the first two years of med
@@ -44,15 +44,15 @@ export function AboutFounder() {
               <img
                 src="/pfp.webp"
                 alt="Rishabh"
-                className="h-16 w-16 rounded-full object-cover ring-4 ring-amber-50"
+                className="h-16 w-16 rounded-full object-cover ring-4 ring-amber-50 md:h-24 md:w-24"
                 loading="lazy"
                 width={64}
                 height={64}
               />
-              <p className="font-heading text-lg font-semibold text-stone-800">
+              <p className="font-heading text-lg font-semibold text-stone-800 md:text-2xl">
                 — Rishabh
               </p>
-              <p className="font-sans text-sm text-stone-400">
+              <p className="font-sans text-sm text-stone-400 md:text-lg">
                 3rd Year MBBS, <br /> JSS Medical College, Mysuru
               </p>
             </div>

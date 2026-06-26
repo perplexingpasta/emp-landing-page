@@ -13,13 +13,13 @@ import { WhatsAppIcon } from '@/components/shared/WhatsAppIcon';
 
 const whatsappNumber = '+916362840780';
 const whatsappMessage = encodeURIComponent(
-  "Hi! Can you tell me more about how you can make our upcoming fest 10x better?"
+  'Hi! Can you tell me more about how you can make our upcoming fest 10x better?'
 );
 
 const steps = [
   {
     step: '01',
-    icon: <MessageCircle className="h-5 w-5" />,
+    icon: <MessageCircle className="h-5 w-5 md:h-7 md:w-7" />,
     title: 'You tell me about your fest',
     description:
       "We talk about your fest — how many delegates you're expecting, what events you're running, your fest requirements.",
@@ -27,7 +27,7 @@ const steps = [
   },
   {
     step: '02',
-    icon: <Settings className="h-5 w-5" />,
+    icon: <Settings className="h-5 w-5 md:h-7 md:w-7" />,
     title: 'I build everything',
     description:
       'Your branded platform takes shape — registration, events, schedule, merch. Give me 4-6 weeks. You focus on the fest. I handle the tech.',
@@ -35,7 +35,7 @@ const steps = [
   },
   {
     step: '03',
-    icon: <Eye className="h-5 w-5" />,
+    icon: <Eye className="h-5 w-5 md:h-7 md:w-7" />,
     title: 'You see it. Your committee is impressed.',
     description:
       "I walk your team through the platform on a quick call. It's beautiful. It's fast. It just works.",
@@ -43,7 +43,7 @@ const steps = [
   },
   {
     step: '04',
-    icon: <Rocket className="h-5 w-5" />,
+    icon: <Rocket className="h-5 w-5 md:h-7 md:w-7" />,
     title: 'Registration opens. Delegates pour in.',
     description:
       "Your platform goes live. Registrations come in clean. Payments are logged. You don't touch a single spreadsheet.",
@@ -51,7 +51,7 @@ const steps = [
   },
   {
     step: '05',
-    icon: <Headphones className="h-5 w-5" />,
+    icon: <Headphones className="h-5 w-5 md:h-7 md:w-7" />,
     title: 'You actually enjoy your own fest',
     description:
       "I monitor everything throughout the fest. If anything needs fixing, I handle it. You're in the auditorium, watching it all come together.",
@@ -61,24 +61,28 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="cv-auto bg-[#faf5ed] px-2 py-16 md:py-20">
+    <section
+      id="how-it-works"
+      className="cv-auto bg-[#faf5ed] px-2 py-16 md:py-20"
+    >
       <div className="mx-auto max-w-265 px-4 md:px-6">
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase">
+            <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase md:text-sm">
               How it works
             </span>
-            <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
               From first message to{' '}
-              <span className="text-amber-600 italic">live platform</span> in days
+              <span className="text-amber-600 italic">live platform</span> in
+              days
             </h2>
           </div>
         </ScrollReveal>
 
         <div className="relative mx-auto mt-12 max-w-3xl md:mt-14">
           {/* Connector line */}
-          <div className="absolute top-8 bottom-8 left-5.75 w-px bg-stone-200 md:left-1/2 md:-translate-x-px" />
+          <div className="absolute top-8 bottom-8 left-5.75 w-px bg-stone-200 lg:left-1/2 lg:-translate-x-px" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -86,12 +90,12 @@ export function HowItWorks() {
                 <div
                   key={step.step}
                   className={cn(
-                    'relative flex gap-6 md:gap-0',
-                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    'relative flex gap-6 lg:gap-0',
+                    i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   )}
                 >
                   {/* Step circle */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:h-16 md:w-16 lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div
                       className={cn(
                         'flex h-full w-full items-center justify-center rounded-full',
@@ -105,27 +109,27 @@ export function HowItWorks() {
                   {/* Content card */}
                   <div
                     className={cn(
-                      'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm md:w-[calc(50%-2rem)] md:flex-none',
-                      i % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'
+                      'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm lg:w-[calc(50%-2rem)] lg:flex-none',
+                      i % 2 === 0 ? 'lg:mr-auto' : 'lg:ml-auto'
                     )}
                     style={{
                       transition:
                         'border-color 180ms cubic-bezier(0.22, 1, 0.36, 1)',
                     }}
                   >
-                    <span className="font-heading text-base font-bold tracking-wider text-amber-600 uppercase">
+                    <span className="font-heading text-base font-bold tracking-wider text-amber-600 uppercase md:text-xl">
                       Step {step.step}
                     </span>
-                    <h3 className="font-heading mt-1 text-xl font-semibold text-stone-900">
+                    <h3 className="font-heading mt-1 text-xl font-semibold text-stone-900 md:text-2xl">
                       {step.title}
                     </h3>
-                    <p className="mt-2 font-sans text-base leading-relaxed text-stone-500">
+                    <p className="mt-2 font-sans text-base leading-relaxed text-stone-500 md:text-xl">
                       {step.description}
                     </p>
                     {step.step === '01' && (
-                      <div className="mt-3">
+                      <div className="mt-3 flex justify-center">
                         <Button
-                          className="group w-full rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30"
+                          className="group w-full rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30 md:w-96 md:text-xl"
                           asChild
                         >
                           <a

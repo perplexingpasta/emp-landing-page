@@ -15,11 +15,11 @@ export function Proof() {
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
-              The numbers/
+            <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase md:text-sm">
+              The numbers
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
-              Proven at scale.{' '}
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+              Proven at scale. <br />
               <span className="text-amber-600 italic">Not a demo.</span>
             </h2>
           </div>
@@ -49,7 +49,7 @@ export function Proof() {
 
         {/* Analytics */}
         <ScrollReveal>
-          <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-14">
+          <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-14 md:max-w-2xl">
             <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <div className="h-3 w-3 rounded-full bg-amber-400" />

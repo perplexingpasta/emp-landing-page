@@ -33,11 +33,11 @@ export function TestimonialsWhatsApp() {
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="mb-3 inline-flex gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase">
+            <span className="mb-3 inline-flex gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase md:text-sm">
               <ShieldCheck className="h-4 w-4" />
               Trusted by JSS Medical College
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
               What people are{' '}
               <span className="text-amber-600 italic">saying</span>
             </h2>
@@ -47,7 +47,7 @@ export function TestimonialsWhatsApp() {
 
       {/* Edge-to-edge carousel */}
       <ScrollReveal>
-        <div className="relative mt-2 md:mt-12">
+        <div className="relative mt-2 md:mt-8">
           {/* Gradient fades on edges */}
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-white to-transparent md:w-32" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-r from-transparent to-white md:w-32" />
@@ -62,7 +62,7 @@ export function TestimonialsWhatsApp() {
       </ScrollReveal>
 
       <div className="mt-6 px-14 md:flex md:justify-center">
-        <p className="text-center font-sans text-base text-stone-600">
+        <p className="text-center font-sans text-base text-stone-600 md:text-xl">
           Real feedback from fest organisers from different colleges.
         </p>
         {/*<Button

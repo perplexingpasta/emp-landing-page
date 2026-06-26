@@ -9,7 +9,7 @@ export function Prestige() {
             {/*<p className="font-sans text-xs font-medium tracking-wider text-amber-600 uppercase">
               FIRST IMPRESSIONS
             </p>*/}
-            <h2 className="font-heading mt-4 text-[2.2rem] font-bold text-stone-900 md:text-4xl">
+            <h2 className="font-heading mt-4 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
               First impression happens{' '}
               <span className="italic">
                 <span className="text-amber-600">before</span> anyone arrives
@@ -19,7 +19,7 @@ export function Prestige() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-88 font-sans text-base leading-relaxed text-stone-500 md:max-w-xl md:text-lg">
+            <p className="mx-auto mt-6 max-w-88 font-sans text-base leading-relaxed text-stone-500 md:max-w-xl md:text-xl">
               When a delegate from another college opens your registration link,
               they make a judgment in seconds. A fast, beautifully designed
               website tells them this fest is serious. It reflects on you, your
@@ -29,7 +29,7 @@ export function Prestige() {
         </div>
 
         <ScrollReveal delay={0.15}>
-          <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-12">
+          <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-12 md:max-w-2xl">
             <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <div className="h-3 w-3 rounded-full bg-amber-400" />
@@ -52,7 +52,7 @@ export function Prestige() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="mt-8 text-center font-sans text-lg text-stone-700 md:text-2xl">
+          <p className="mt-8 text-center font-sans text-lg text-stone-700 md:mt-12 md:text-2xl">
             That's what delegates see. <br />
             That's what they remember.
           </p>
