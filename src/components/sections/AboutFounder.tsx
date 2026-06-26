@@ -9,7 +9,7 @@ export function AboutFounder() {
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase md:text-sm">
               MY STORY
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 italic md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 italic md:text-[2.5rem] lg:text-5xl">
               I've been in your shoes
             </h2>
           </ScrollReveal>
@@ -50,11 +50,14 @@ export function AboutFounder() {
                 height={64}
               />
               <p className="font-heading text-lg font-semibold text-stone-800 md:text-2xl">
+                Rishabh Jindal
+              </p>
+              {/*<p className="font-heading text-lg font-semibold text-stone-800 md:text-2xl">
                 — Rishabh
-              </p>
-              <p className="font-sans text-sm text-stone-400 md:text-lg">
+              </p>*/}
+              {/*<p className="font-sans text-sm text-stone-400 md:text-lg">
                 3rd Year MBBS, <br /> JSS Medical College, Mysuru
-              </p>
+              </p>*/}
             </div>
           </ScrollReveal>
         </div>

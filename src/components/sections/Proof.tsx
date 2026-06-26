@@ -11,7 +11,7 @@ const stats = [
 export function Proof() {
   return (
     <section id="proof" className="cv-auto bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-265 px-5 md:px-8">
+      <div className="mx-auto max-w-265 px-5 md:px-8 xl:max-w-[1280px]">
         {/* Section header */}
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -31,63 +31,65 @@ export function Proof() {
           College, Mysuru — a real fest, with real stakes.
         </p>*/}
 
-        {/* Animated stats */}
-        <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">
-          {stats.map((stat, i) => (
-            <ScrollReveal key={stat.label} delay={i * 0.08}>
-              <div className="rounded-2xl border border-stone-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-6">
-                <AnimatedCounter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  prefix={stat.prefix}
-                  label={stat.label}
-                />
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
+        <div className="mt-12 md:mt-14 xl:grid xl:grid-cols-12 xl:gap-8 xl:items-start">
+          {/* Animated stats */}
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 xl:col-span-6 xl:order-2 xl:grid-cols-2">
+            {stats.map((stat, i) => (
+              <ScrollReveal key={stat.label} delay={i * 0.08}>
+                <div className="rounded-2xl border border-stone-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-6">
+                  <AnimatedCounter
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    prefix={stat.prefix}
+                    label={stat.label}
+                  />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
 
-        {/* Analytics */}
-        <ScrollReveal>
-          <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-14 md:max-w-2xl">
-            <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
-              <div className="h-3 w-3 rounded-full bg-red-400" />
-              <div className="h-3 w-3 rounded-full bg-amber-400" />
-              <div className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-3 font-sans text-xs text-stone-400">
-                Analytics — Tatvam 2026
-              </span>
-            </div>
-            <img
-              src="/analytics.webp"
-              alt="Analytics dashboard showing traffic and performance metrics for Tatvam 2026"
-              className="w-full"
-              width={1225}
-              height={690}
-              loading="lazy"
-            />
-          </div>
-          <div className="mx-auto mt-8 max-w-3xs md:hidden">
-            <div className="grid grid-cols-2 divide-x divide-stone-200 rounded-2xl border border-stone-200 bg-white">
-              <div className="flex flex-col items-center py-2">
-                <span className="font-sans text-lg font-semibold text-stone-900">
-                  8,846
-                </span>
-                <span className="font-sans text-xs text-stone-500">
-                  Visitors
+          {/* Analytics */}
+          <ScrollReveal className="xl:col-span-6 xl:order-1">
+            <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-lg md:mt-14 md:max-w-2xl xl:mt-0">
+              <div className="flex items-center gap-2 border-b border-stone-100 px-4 py-3">
+                <div className="h-3 w-3 rounded-full bg-red-400" />
+                <div className="h-3 w-3 rounded-full bg-amber-400" />
+                <div className="h-3 w-3 rounded-full bg-green-400" />
+                <span className="ml-3 font-sans text-xs text-stone-400">
+                  Analytics — Tatvam 2026
                 </span>
               </div>
-              <div className="flex flex-col items-center py-2">
-                <span className="font-sans text-lg font-semibold text-stone-900">
-                  26,036
-                </span>
-                <span className="font-sans text-xs text-stone-500">
-                  Page views
-                </span>
+              <img
+                src="/analytics.webp"
+                alt="Analytics dashboard showing traffic and performance metrics for Tatvam 2026"
+                className="w-full"
+                width={1225}
+                height={690}
+                loading="lazy"
+              />
+            </div>
+            <div className="mx-auto mt-8 max-w-3xs md:hidden">
+              <div className="grid grid-cols-2 divide-x divide-stone-200 rounded-2xl border border-stone-200 bg-white">
+                <div className="flex flex-col items-center py-2">
+                  <span className="font-sans text-lg font-semibold text-stone-900">
+                    8,846
+                  </span>
+                  <span className="font-sans text-xs text-stone-500">
+                    Visitors
+                  </span>
+                </div>
+                <div className="flex flex-col items-center py-2">
+                  <span className="font-sans text-lg font-semibold text-stone-900">
+                    26,036
+                  </span>
+                  <span className="font-sans text-xs text-stone-500">
+                    Page views
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   );

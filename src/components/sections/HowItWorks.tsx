@@ -72,7 +72,7 @@ export function HowItWorks() {
             <span className="mb-3 inline-block rounded-full border border-sky-200 bg-sky-50 px-3 py-1 font-sans text-xs tracking-wider text-sky-600 uppercase md:text-sm">
               How it works
             </span>
-            <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading mt-2 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] lg:text-5xl">
               From first message to{' '}
               <span className="text-amber-600 italic">live platform</span> in
               days
@@ -95,7 +95,7 @@ export function HowItWorks() {
                   )}
                 >
                   {/* Step circle */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:h-16 md:w-16 xl:absolute xl:top-0 xl:left-1/2 xl:-translate-x-1/2">
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:h-16 md:w-16 xl:absolute xl:top-0 xl:left-1/2 xl:h-14 xl:w-14 xl:-translate-x-1/2">
                     <div
                       className={cn(
                         'flex h-full w-full items-center justify-center rounded-full',
@@ -129,7 +129,7 @@ export function HowItWorks() {
                     {step.step === '01' && (
                       <div className="mt-3 flex justify-center">
                         <Button
-                          className="group w-full rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30 md:w-96 md:text-xl"
+                          className="group w-full rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-sm text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30 md:w-96 lg:w-72 md:text-xl"
                           asChild
                         >
                           <a

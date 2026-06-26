@@ -25,7 +25,7 @@ export function CTA() {
                 only 3 slots per month
               </span>
 
-              <h2 className="font-heading md:text-[2.5rem text-[2.2rem] font-bold text-stone-900">
+              <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] lg:text-5xl">
                 Ready to make your fest{' '}
                 <span className="text-amber-600 italic">unforgettable</span>?
               </h2>
@@ -38,7 +38,7 @@ export function CTA() {
 
               <div className="mt-8 flex flex-col items-center gap-4">
                 <Button
-                  size="lg"
+                  size="xl"
                   className="group w-full rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:text-xl"
                   asChild
                 >

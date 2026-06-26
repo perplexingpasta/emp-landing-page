@@ -37,7 +37,7 @@ export function TestimonialsWhatsApp() {
               <ShieldCheck className="h-4 w-4" />
               Trusted by JSS Medical College
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] lg:text-5xl">
               What people are{' '}
               <span className="text-amber-600 italic">saying</span>
             </h2>
