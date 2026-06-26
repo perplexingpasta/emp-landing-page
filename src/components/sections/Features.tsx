@@ -69,7 +69,7 @@ export function Features() {
         </ScrollReveal>
 
         {/* Two-column feature lists */}
-        <div className="mt-12 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-16">
+        <div className="mt-12 grid gap-10 md:mt-14 lg:grid-cols-2 md:gap-16">
           {/* Organisers (buyer) — first column */}
           <div>
             <ScrollReveal>

@@ -135,7 +135,7 @@ export function Navbar() {
             : 'bg-transparent',
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a
             href="#hero"
             onClick={e => {
@@ -153,7 +153,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map(link => (
               <button
                 key={link.href}
@@ -174,7 +174,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile CTA pill + menu button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => handleNavClick('#cta')}
               className="rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1.5 font-sans text-xs font-semibold text-amber-700 transition-colors hover:bg-amber-200/60 active:scale-95"
@@ -207,7 +207,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden"
               onClick={() => setIsMobileOpen(false)}
             />
 
@@ -218,7 +218,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-y-0 left-0 z-50 w-70 bg-[#faf5ed] shadow-2xl md:hidden"
+              className="fixed inset-y-0 left-0 z-50 w-70 bg-[#faf5ed] shadow-2xl lg:hidden"
             >
               {/* Drawer header */}
               <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">

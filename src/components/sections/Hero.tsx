@@ -23,7 +23,7 @@ export function Hero() {
             <span className="text-amber-600 italic">fully handled</span>, before
             you even wake up
           </h1>
-          <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-lg">
+          <p className="mx-auto mt-6 max-w-76 font-sans text-base leading-relaxed text-stone-500 md:max-w-md md:text-2xl">
             4,500+ delegates. <br />
             80+ events. <br />
             0 spreadsheets.
@@ -34,7 +34,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3">
             <Button
               size="lg"
-              className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-700 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-full"
+              className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-700 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-96 md:text-xl lg:w-full"
               onClick={scrollToCTA}
             >
               Get This for Your Fest
@@ -43,7 +43,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-full"
+              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-96 lg:w-full"
               asChild
             >
               <a
@@ -79,11 +79,11 @@ export function Hero() {
             autoplayDuration={6000}
             className="h-55 w-full max-w-225 rounded-2xl border border-stone-200 bg-stone-100 shadow-xl sm:h-80 md:h-112.5"
           />
-          <div className="flex w-full max-w-225 justify-between px-4">
-            <span className="font-sans text-base font-medium text-stone-400">
+          <div className="flex w-full max-w-225 justify-between px-4 md:px-6">
+            <span className="font-sans text-base font-medium text-stone-400 md:text-xl">
               BEFORE
             </span>
-            <span className="font-sans text-base font-medium text-amber-700">
+            <span className="font-sans text-base font-medium text-amber-700 md:text-xl">
               AFTER
             </span>
           </div>
