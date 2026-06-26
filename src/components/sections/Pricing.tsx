@@ -131,7 +131,7 @@ export function Pricing() {
             </p>
             <Button
               variant="outline"
-              size="lg"
+              size="xl"
               className="group w-full rounded-xl border-2 border-amber-600! bg-amber-50/50 font-sans text-base font-semibold text-stone-900 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:border-amber-400! hover:bg-amber-100 md:w-auto"
               asChild
             >
