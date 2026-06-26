@@ -18,12 +18,12 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { label: 'The Problem', href: '#problem', icon: AlertTriangle },
   // { label: "Imagine This", href: "#imagine", icon: Sparkles },
-  { label: 'Features', href: '#features', icon: Star },
+  { label: 'The Solution', href: '#features', icon: Star },
   // { label: "Prestige", href: "#prestige", icon: Star },
   { label: 'Proof', href: '#proof', icon: BarChart3 },
   { label: 'How It Works', href: '#how-it-works', icon: Route },
   { label: 'Testimonials', href: '#testimonials', icon: MessageSquareHeart },
-  { label: 'Get in Touch', href: '#cta', icon: MessageCircle },
+  // { label: 'Get in Touch', href: '#cta', icon: MessageCircle },
 ];
 
 export function Navbar() {
