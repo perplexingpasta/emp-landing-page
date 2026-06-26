@@ -9,7 +9,7 @@ export function Prestige() {
             {/*<p className="font-sans text-xs font-medium tracking-wider text-amber-600 uppercase">
               FIRST IMPRESSIONS
             </p>*/}
-            <h2 className="font-heading mt-4 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading mt-4 text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] lg:text-5xl">
               First impression happens{' '}
               <span className="italic">
                 <span className="text-amber-600">before</span> anyone arrives

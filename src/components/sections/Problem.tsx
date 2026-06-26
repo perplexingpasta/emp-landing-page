@@ -19,7 +19,7 @@ const painPoints = [
     icon: <DollarSign className="h-5 w-5" />,
     title: 'Payment tracking hell',
     description:
-      'Screenshots buried in WhatsApp. Manual bank statement cross-checking. Every. Single. Student.',
+      'Screenshots buried in WhatsApp. Manual bank statement cross-checking.',
   },
   {
     icon: <Clock className="h-5 w-5" />,
@@ -43,7 +43,7 @@ export function Problem() {
             <span className="mb-3 inline-block rounded-full border border-red-200 bg-red-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-red-600 uppercase md:text-base">
               The problem
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] xl:text-5xl">
               Last year's fest cost your team 50+ hours of{' '}
               <span className="text-amber-600 italic">spreadsheet hell</span>
             </h2>
@@ -83,7 +83,7 @@ export function Problem() {
         </div>
 
         {/* Bridge transition */}
-        <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-xl">
+        <p className="mt-8 px-4 text-center font-sans text-base font-light text-stone-600 italic md:mt-10 md:text-xl xl:mx-auto xl:max-w-xl">
           This year, you can walk into the auditorium knowing every delegate,
           every payment, every event is handled. Automatically.
         </p>

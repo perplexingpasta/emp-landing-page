@@ -59,7 +59,7 @@ export function Features() {
             <span className="mb-3 inline-block rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-amber-700 uppercase md:text-sm">
               The solution
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] xl:text-5xl">
               Everything handled.{' '}
               <span className="text-amber-600 italic">
                 Nothing left to chance.
@@ -69,7 +69,7 @@ export function Features() {
         </ScrollReveal>
 
         {/* Two-column feature lists */}
-        <div className="mt-12 grid gap-10 md:mt-14 md:gap-16 lg:grid-cols-2">
+        <div className="mt-12 grid gap-10 md:mt-14 md:gap-16 xl:mt-20 xl:grid-cols-2">
           {/* Organisers (buyer) — first column */}
           <div>
             <ScrollReveal>
@@ -85,7 +85,7 @@ export function Features() {
                 </div>
               </div>
             </ScrollReveal>
-            <ul className="mx-auto max-w-md space-y-6 px-2.5 md:max-w-xl md:px-1">
+            <ul className="mx-auto max-w-md space-y-6 px-2.5 md:max-w-xl md:px-1 xl:pt-4">
               {organiserFeatures.map((feature, i) => (
                 <ScrollReveal as="li" key={feature.headline} delay={i * 0.06}>
                   <div className="flex items-start gap-3 rounded-lg transition-colors duration-200 hover:bg-amber-50/60">
@@ -119,7 +119,7 @@ export function Features() {
                 </div>
               </div>
             </ScrollReveal>
-            <ul className="mx-auto max-w-md space-y-6 px-2.5 md:max-w-xl md:px-1">
+            <ul className="mx-auto max-w-md space-y-6 px-2.5 md:max-w-xl md:px-1 xl:pt-4">
               {delegateFeatures.map((feature, i) => (
                 <ScrollReveal
                   as="li"

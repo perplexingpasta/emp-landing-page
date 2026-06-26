@@ -82,7 +82,7 @@ export function HowItWorks() {
 
         <div className="relative mx-auto mt-12 max-w-3xl md:mt-14">
           {/* Connector line */}
-          <div className="absolute top-8 bottom-8 left-5.75 w-px bg-stone-200 lg:left-1/2 lg:-translate-x-px" />
+          <div className="absolute top-8 bottom-8 left-5.75 w-px bg-stone-200 xl:left-1/2 xl:-translate-x-px" />
 
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -90,12 +90,12 @@ export function HowItWorks() {
                 <div
                   key={step.step}
                   className={cn(
-                    'relative flex gap-6 lg:gap-0',
-                    i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    'relative flex gap-6 xl:gap-0',
+                    i % 2 === 0 ? 'xl:flex-row' : 'xl:flex-row-reverse'
                   )}
                 >
                   {/* Step circle */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:h-16 md:w-16 lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-white bg-white shadow-sm md:h-16 md:w-16 xl:absolute xl:top-0 xl:left-1/2 xl:-translate-x-1/2">
                     <div
                       className={cn(
                         'flex h-full w-full items-center justify-center rounded-full',
@@ -109,8 +109,8 @@ export function HowItWorks() {
                   {/* Content card */}
                   <div
                     className={cn(
-                      'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm lg:w-[calc(50%-2rem)] lg:flex-none',
-                      i % 2 === 0 ? 'lg:mr-auto' : 'lg:ml-auto'
+                      'flex-1 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm xl:w-[calc(50%-2rem)] xl:flex-none',
+                      i % 2 === 0 ? 'xl:mr-auto' : 'xl:ml-auto'
                     )}
                     style={{
                       transition:

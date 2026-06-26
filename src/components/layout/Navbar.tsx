@@ -10,7 +10,7 @@ import {
   BarChart3,
   Route,
   MessageSquareHeart,
-  MessageCircle,
+  // MessageCircle,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -133,7 +133,7 @@ export function Navbar() {
             : 'bg-transparent'
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8 xl:max-w-360">
           <a
             href="#hero"
             onClick={e => {
@@ -156,14 +156,14 @@ export function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="flex items-center gap-1.5 rounded-lg px-3 py-2 font-sans text-sm font-medium text-stone-600 transition-colors hover:bg-stone-200/60 hover:text-stone-800"
+                className="flex items-center gap-1.5 rounded-lg px-3 py-2 font-sans text-sm font-medium text-stone-600 transition-colors hover:bg-stone-200/60 hover:text-stone-800 xl:text-base"
               >
                 <link.icon className="h-4 w-4" />
                 {link.label}
               </button>
             ))}
             <Button
-              size="lg"
+              size="xl"
               className="ml-3 font-sans"
               onClick={() => handleNavClick('#cta')}
             >
@@ -205,7 +205,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-[51] bg-black/30 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-51 bg-black/30 backdrop-blur-sm lg:hidden"
               onClick={() => setIsMobileOpen(false)}
             />
 
@@ -216,7 +216,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-y-0 left-0 z-[52] w-70 bg-[#faf5ed] shadow-2xl lg:hidden"
+              className="fixed inset-y-0 left-0 z-52 w-70 bg-[#faf5ed] shadow-2xl lg:hidden"
             >
               {/* Drawer header */}
               <div className="flex h-16 items-center justify-between border-b border-stone-200/40 px-5">
@@ -265,7 +265,7 @@ export function Navbar() {
                   className="mt-3 px-2"
                 >
                   <Button
-                    size="lg"
+                    size="xl"
                     className="font-heading w-full text-lg font-bold"
                     onClick={() => handleNavClick('#cta')}
                   >

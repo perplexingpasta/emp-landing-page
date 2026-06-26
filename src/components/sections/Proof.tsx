@@ -18,7 +18,7 @@ export function Proof() {
             <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase md:text-sm">
               The numbers
             </span>
-            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-[2.5rem] lg:text-5xl">
               Proven at scale. <br />
               <span className="text-amber-600 italic">Not a demo.</span>
             </h2>
