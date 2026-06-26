@@ -16,7 +16,7 @@ export function Proof() {
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
             <span className="mb-3 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-sans text-xs font-medium tracking-wider text-emerald-600 uppercase">
-              The numbers
+              The numbers/
             </span>
             <h2 className="font-heading text-[2.2rem] font-bold text-stone-900 md:text-4xl">
               Proven at scale.{' '}
@@ -26,10 +26,10 @@ export function Proof() {
         </ScrollReveal>
 
         {/* Framing */}
-        <p className="mt-6 px-4 text-center font-sans text-base text-stone-500 md:text-lg">
-          My website handled 1,768 real delegates at Tatvam 2026, JSS Medical
+        {/*<p className="mt-6 px-4 text-center font-sans text-base text-stone-500 md:text-lg">
+          My website handled all the registrations for TATVAM 2026, JSS Medical
           College, Mysuru — a real fest, with real stakes.
-        </p>
+        </p>*/}
 
         {/* Animated stats */}
         <div className="mt-12 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-4 md:gap-6">

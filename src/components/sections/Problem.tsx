@@ -31,7 +31,10 @@ const painPoints = [
 
 export function Problem() {
   return (
-    <section id="problem" className="cv-auto relative bg-[#faf5ed] py-16 md:py-20">
+    <section
+      id="problem"
+      className="cv-auto relative bg-[#faf5ed] py-16 md:py-20"
+    >
       <AmbientBlobs colorTop="bg-red-500" colorBottom="bg-amber-500" />
       <div className="relative mx-auto max-w-265 px-6 md:px-8">
         {/* Section header */}
