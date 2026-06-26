@@ -11,8 +11,10 @@ import {
   Route,
   MessageSquareHeart,
   // MessageCircle,
+  ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { WhatsAppIcon } from '@/components/shared/WhatsAppIcon';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -25,6 +27,11 @@ const navLinks = [
   { label: 'Testimonials', href: '#testimonials', icon: MessageSquareHeart },
   // { label: 'Get in Touch', href: '#cta', icon: MessageCircle },
 ];
+
+const whatsappNumber = '+918123655765';
+const whatsappMessage = encodeURIComponent(
+  'Hi! Can you tell me more about how you can make our upcoming fest 10x better?'
+);
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 20);
@@ -164,21 +171,32 @@ export function Navbar() {
             ))}
             <Button
               size="xl"
-              className="ml-3 font-sans"
-              onClick={() => handleNavClick('#cta')}
+              className="group ml-3 bg-[#25D366] font-sans text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30"
+              asChild
             >
-              Get Started
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsAppIcon />
+                Chat on WhatsApp
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
             </Button>
           </div>
 
           {/* Mobile CTA pill + menu button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => handleNavClick('#cta')}
-              className="rounded-full border border-amber-300/60 bg-amber-100/60 px-3 py-1.5 font-sans text-xs font-semibold text-amber-700 transition-colors hover:bg-amber-200/60 active:scale-95 md:text-base"
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-3 py-1.5 font-sans text-xs font-semibold text-white transition-all duration-200 hover:bg-[#20bd5a] active:scale-95 md:text-base"
             >
-              Get Started
-            </button>
+              <WhatsAppIcon className="h-4 w-4" />
+              Chat on WhatsApp
+            </a>
             <button
               ref={hamburgerRef}
               onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -266,10 +284,20 @@ export function Navbar() {
                 >
                   <Button
                     size="xl"
-                    className="font-heading w-full text-lg font-bold"
-                    onClick={() => handleNavClick('#cta')}
+                    className="group font-heading w-full bg-[#25D366] text-lg font-bold text-white shadow-md transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg"
+                    asChild
                   >
-                    Get Started
+                    <a
+                      href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <WhatsAppIcon />
+                      <span className="font-sans font-normal">
+                        Chat on WhatsApp
+                      </span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </a>
                   </Button>
                 </motion.div>
               </nav>

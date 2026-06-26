@@ -2,11 +2,18 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Compare } from '@/components/ui/compare';
 
+import { WhatsAppIcon } from '@/components/shared/WhatsAppIcon';
+
 export function Hero() {
-  const scrollToCTA = () => {
-    const el = document.querySelector('#cta');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  const whatsappNumber = '+918123655765'; // Replace with your WhatsApp number
+  const whatsappMessage = encodeURIComponent(
+    'Hi! Can you tell me more about how you can make our upcoming fest 10x better?'
+  );
+
+  // const scrollToCTA = () => {
+  //   const el = document.querySelector('#cta');
+  //   if (el) el.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   return (
     <section
@@ -35,18 +42,32 @@ export function Hero() {
             Your phone stays silent — because everything just works.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 xl:items-start">
-            <Button
+            {/*<Button
               size="xl"
               className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-700 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-96 md:text-xl"
               onClick={scrollToCTA}
             >
               Get This for Your Fest
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Button>*/}
+            <Button
+              size="xl"
+              className="group w-5/6 rounded-xl border border-amber-300/40 bg-[#25D366] font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-96 md:text-xl"
+              asChild
+            >
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+                <WhatsAppIcon />
+                {/*<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />*/}
+              </a>
             </Button>
             <Button
-              variant="outline"
               size="xl"
-              className="w-5/6 rounded-xl border-2 border-amber-400! font-sans text-base text-amber-600 shadow-sm shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 sm:w-auto md:w-96 md:text-xl"
+              className="group w-5/6 rounded-xl bg-linear-to-r from-amber-500 to-amber-700 font-sans text-base text-white shadow-md shadow-amber-500/20 transition-all duration-200 hover:scale-[1.02] hover:from-amber-600 hover:to-amber-700 hover:shadow-lg hover:shadow-amber-500/30 sm:w-auto md:w-96 md:text-xl"
               asChild
             >
               <a
@@ -55,6 +76,7 @@ export function Hero() {
                 rel="noopener noreferrer"
               >
                 Visit Live Website
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
           </div>
