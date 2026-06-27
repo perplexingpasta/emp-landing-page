@@ -103,7 +103,7 @@ export function Testimonials() {
 
         {/* Subtle note */}
         <p className="mt-6 text-center font-sans text-xs text-stone-400">
-          Real feedback from fest organisers who used FestFlow.
+          Real feedback from fest organisers who worked with me.
         </p>
       </div>
     </section>
