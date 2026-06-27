@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-svh overflow-hidden pt-20 xl:min-h-5/6 xl:py-32"
+      className="relative min-h-svh overflow-hidden pt-20 xl:my-auto xl:pt-56"
     >
       <div className="relative mx-auto max-w-265 px-4 pt-22 pb-12 md:px-6 md:pt-30 md:pb-20 xl:grid xl:max-w-[1280px] xl:grid-cols-12 xl:items-center xl:pt-16 xl:pb-0">
         {/* Headline */}
