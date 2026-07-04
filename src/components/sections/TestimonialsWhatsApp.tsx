@@ -10,6 +10,7 @@ const sourceImages = [
   '/testimonials/2.webp',
   '/testimonials/3.webp',
   '/testimonials/4.webp',
+  '/testimonials/5.webp',
 ];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -47,10 +48,10 @@ export function TestimonialsWhatsApp() {
 
       {/* Edge-to-edge carousel */}
       <ScrollReveal>
-        <div className="relative mt-2 md:mt-8">
+        <div className="relative mt-2 md:mt-8 xl:mx-auto xl:max-w-4xl">
           {/* Gradient fades on edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-white to-transparent md:w-32" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-r from-transparent to-white md:w-32" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-30 w-0 bg-linear-to-r from-white to-transparent md:w-4" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-30 w-0 bg-linear-to-r from-transparent to-white md:w-4" />
 
           <ImageCarousel
             images={testimonialImages}

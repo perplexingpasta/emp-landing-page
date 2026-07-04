@@ -48,13 +48,13 @@ export function ImageCarousel({
         className={cn(
           'flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4',
           start && 'animate-scroll',
-          'hover:[animation-play-state:paused]',
+          'hover:paused'
         )}
       >
         {images.map((src, idx) => (
           <div
             key={idx}
-            className="h-72 w-48 shrink-0 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm md:h-96 md:w-64"
+            className="h-96 w-64 shrink-0 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm md:h-96 md:w-64"
           >
             <img
               src={src}
